@@ -1,0 +1,14 @@
+*.data
+*.data.old
+damo_test/masim/m*
+damo_test/masim/pix*
+damo_test/masim/Make*
+damo_test/masim/LICEN*
+tools/
+workloads/
+kernel/multi-clock-main/
+script/memtis/effi1/
+script/memtis/effi2/
+script/memtis/effi3/
+script/memtis/data_test/
+script/memtis/results/liblinear_perf_record_mem/

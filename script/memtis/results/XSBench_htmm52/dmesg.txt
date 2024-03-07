@@ -1,0 +1,15 @@
+[ 9689.792252] pebs disable
+[ 9698.171546] run_bench.sh (24709): drop_caches: 3
+[ 9700.198733] pebs_init
+[ 9705.647827] perf: interrupt took too long (5217 > 2500), lowering kernel.perf_event_max_sample_rate to 38250
+[ 9716.747408] total_accesses: 1 max_dram_hits: 0 cur_hits: 1 
+[ 9717.301058] perf: interrupt took too long (29275 > 6521), lowering kernel.perf_event_max_sample_rate to 6750
+[ 9719.039713] perf: interrupt took too long (36671 > 36593), lowering kernel.perf_event_max_sample_rate to 5250
+[ 9733.439143] total_accesses: 21112 max_dram_hits: 3999 cur_hits: 13796 
+[ 9738.395322] perf: interrupt took too long (45881 > 45838), lowering kernel.perf_event_max_sample_rate to 4250
+[ 9742.339004] total_accesses: 21970 max_dram_hits: 1999 cur_hits: 12813 
+[ 9755.266821] total_accesses: 30876 max_dram_hits: 999 cur_hits: 16643 
+[10215.685022] audit: type=1400 audit(1706803221.622:47): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=25800 comm="cups-browsed" capability=23  capname="sys_nice"
+[10503.031566] nr_sampled: 67437, nr_throttled: 0, nr_lost: 0
+[10503.031573] total runtime: 2432959655 ns, total cputime: 802840000 us, cpu usage: 3
+[10503.031585] pebs disable

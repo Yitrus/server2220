@@ -1,0 +1,24 @@
+[ 5179.899626] pebs disable
+[ 5189.310050] run_bench.sh (11502): drop_caches: 3
+[ 5191.335916] pebs_init
+[ 5195.242776] perf: interrupt took too long (9219 > 2500), lowering kernel.perf_event_max_sample_rate to 21500
+[ 5221.988479] perf: interrupt took too long (62763 > 11523), lowering kernel.perf_event_max_sample_rate to 3000
+[ 5384.231353] total_accesses: 3996972 max_dram_hits: 3971618 cur_hits: 3996544 
+[ 5404.244011] perf: interrupt took too long (84900 > 78453), lowering kernel.perf_event_max_sample_rate to 2250
+[ 5523.438082] total_accesses: 3998486 max_dram_hits: 3430978 cur_hits: 3909518 
+[ 5564.225489] total_accesses: 3999243 max_dram_hits: 2915143 cur_hits: 3790030 
+[ 5577.920182] total_accesses: 3999621 max_dram_hits: 3379302 cur_hits: 3889497 
+[ 5598.534598] total_accesses: 3999810 max_dram_hits: 3614797 cur_hits: 3935297 
+[ 5646.178708] total_accesses: 3999905 max_dram_hits: 3767202 cur_hits: 3960075 
+[ 5666.405121] total_accesses: 3999952 max_dram_hits: 3847183 cur_hits: 3977605 
+[ 5702.018178] total_accesses: 3999976 max_dram_hits: 3888762 cur_hits: 3986522 
+[ 5722.436558] total_accesses: 3999988 max_dram_hits: 3852354 cur_hits: 3993029 
+[ 5770.325165] total_accesses: 3999994 max_dram_hits: 3864546 cur_hits: 3996284 
+[ 5847.763953] total_accesses: 3999997 max_dram_hits: 3866720 cur_hits: 3998090 
+[ 5864.259193] total_accesses: 3999998 max_dram_hits: 3896154 cur_hits: 3999025 
+[ 5897.028960] total_accesses: 3999999 max_dram_hits: 3918324 cur_hits: 3999507 
+[ 5923.159347] total_accesses: 3999999 max_dram_hits: 3959162 cur_hits: 3999752 
+[ 5986.479944] total_accesses: 3999999 max_dram_hits: 3979581 cur_hits: 3999875 
+[ 6005.008177] nr_sampled: 30238955, nr_throttled: 0, nr_lost: 0
+[ 6005.008191] total runtime: 16627149885 ns, total cputime: 813744000 us, cpu usage: 20
+[ 6005.008208] pebs disable

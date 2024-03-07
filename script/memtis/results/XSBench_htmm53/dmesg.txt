@@ -1,0 +1,12 @@
+[10506.672814] pebs disable
+[10514.881175] run_bench.sh (26338): drop_caches: 3
+[10516.908328] pebs_init
+[10518.032502] perf: interrupt took too long (3519 > 2500), lowering kernel.perf_event_max_sample_rate to 56750
+[10534.217451] perf: interrupt took too long (23753 > 4398), lowering kernel.perf_event_max_sample_rate to 8250
+[10535.420455] perf: interrupt took too long (29697 > 29691), lowering kernel.perf_event_max_sample_rate to 6500
+[10537.262013] perf: interrupt took too long (37582 > 37121), lowering kernel.perf_event_max_sample_rate to 5250
+[10544.747149] perf: interrupt took too long (46998 > 46977), lowering kernel.perf_event_max_sample_rate to 4250
+[10564.354599] perf: interrupt took too long (58779 > 58747), lowering kernel.perf_event_max_sample_rate to 3250
+[11665.200495] nr_sampled: 110168, nr_throttled: 0, nr_lost: 0
+[11665.200509] total runtime: 2357664569 ns, total cputime: 1148308000 us, cpu usage: 2
+[11665.200529] pebs disable

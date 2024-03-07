@@ -1,0 +1,2407 @@
+[    0.000000] microcode: microcode updated early to revision 0xd0003b9, date = 2023-09-01
+[    0.000000] Linux version 5.18.0 (xmu@xmu-PowerEdge-R750) (gcc (Ubuntu 8.4.0-3ubuntu2) 8.4.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #1 SMP PREEMPT_DYNAMIC Mon Dec 4 20:41:12 CST 2023
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.18.0 root=UUID=227abe24-d21b-4f64-839d-812ac630a4f4 ro quiet splash memmap=4G!60G vt.handoff=7
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/split lock detection: #AC: crashing the kernel on kernel split_locks and warning on user-space split_locks
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x200: 'Protection Keys User registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+[    0.000000] x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+[    0.000000] x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+[    0.000000] x86/fpu: xstate_offset[9]: 2432, xstate_sizes[9]:    8
+[    0.000000] x86/fpu: Enabled xstate features 0x2e7, context size is 2440 bytes, using 'compacted' format.
+[    0.000000] signal: max sigframe size: 3632
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000004a42afff] usable
+[    0.000000] BIOS-e820: [mem 0x000000004a42b000-0x000000004b42afff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000004b42b000-0x000000004b86dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000004b86e000-0x000000004baecfff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x000000004baed000-0x000000004c20efff] usable
+[    0.000000] BIOS-e820: [mem 0x000000004c20f000-0x000000004c314fff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000004c315000-0x0000000051afffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000000051b00000-0x0000000051b00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000051b01000-0x000000005eefdfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000005eefe000-0x000000006e3fefff] reserved
+[    0.000000] BIOS-e820: [mem 0x000000006e3ff000-0x000000006f3fefff] ACPI NVS
+[    0.000000] BIOS-e820: [mem 0x000000006f3ff000-0x000000006f7fefff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x000000006f7ff000-0x000000006f7fffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000006f800000-0x000000008fffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fd000000-0x00000000fe7fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fec80000-0x00000000fed00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fed40000-0x00000000fed44fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000207fffffff] usable
+[    0.000000] BIOS-e820: [mem 0x0000002080000000-0x0000011c7fffffff] persistent (type 7)
+[    0.000000] BIOS-e820: [mem 0x000037fc00000000-0x000037ffffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] user-defined physical RAM map:
+[    0.000000] user: [mem 0x0000000000000000-0x000000000009dfff] usable
+[    0.000000] user: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] user: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+[    0.000000] user: [mem 0x0000000000100000-0x000000004a42afff] usable
+[    0.000000] user: [mem 0x000000004a42b000-0x000000004b42afff] ACPI NVS
+[    0.000000] user: [mem 0x000000004b42b000-0x000000004b86dfff] usable
+[    0.000000] user: [mem 0x000000004b86e000-0x000000004baecfff] ACPI data
+[    0.000000] user: [mem 0x000000004baed000-0x000000004c20efff] usable
+[    0.000000] user: [mem 0x000000004c20f000-0x000000004c314fff] reserved
+[    0.000000] user: [mem 0x000000004c315000-0x0000000051afffff] usable
+[    0.000000] user: [mem 0x0000000051b00000-0x0000000051b00fff] reserved
+[    0.000000] user: [mem 0x0000000051b01000-0x000000005eefdfff] usable
+[    0.000000] user: [mem 0x000000005eefe000-0x000000006e3fefff] reserved
+[    0.000000] user: [mem 0x000000006e3ff000-0x000000006f3fefff] ACPI NVS
+[    0.000000] user: [mem 0x000000006f3ff000-0x000000006f7fefff] ACPI data
+[    0.000000] user: [mem 0x000000006f7ff000-0x000000006f7fffff] usable
+[    0.000000] user: [mem 0x000000006f800000-0x000000008fffffff] reserved
+[    0.000000] user: [mem 0x00000000fd000000-0x00000000fe7fffff] reserved
+[    0.000000] user: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] user: [mem 0x00000000fec80000-0x00000000fed00fff] reserved
+[    0.000000] user: [mem 0x00000000fed40000-0x00000000fed44fff] reserved
+[    0.000000] user: [mem 0x00000000ff000000-0x00000000ffffffff] reserved
+[    0.000000] user: [mem 0x0000000100000000-0x0000000effffffff] usable
+[    0.000000] user: [mem 0x0000000f00000000-0x0000000fffffffff] persistent (type 12)
+[    0.000000] user: [mem 0x0000001000000000-0x000000207fffffff] usable
+[    0.000000] user: [mem 0x0000002080000000-0x0000011c7fffffff] persistent (type 7)
+[    0.000000] user: [mem 0x000037fc00000000-0x000037ffffffffff] reserved
+[    0.000000] SMBIOS 3.3 present.
+[    0.000000] DMI: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    0.000000] tsc: Detected 3000.000 MHz processor
+[    0.020473] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.020572] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.020908] last_pfn = 0x2080000 max_arch_pfn = 0x10000000000
+[    0.026231] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.060234] total RAM covered: 2095088M
+[    0.063941]  gran_size: 64K 	chunk_size: 64K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064037]  gran_size: 64K 	chunk_size: 128K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064087]  gran_size: 64K 	chunk_size: 256K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064136]  gran_size: 64K 	chunk_size: 512K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064185]  gran_size: 64K 	chunk_size: 1M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064279]  gran_size: 64K 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064328]  gran_size: 64K 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064377]  gran_size: 64K 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064426]  gran_size: 64K 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064519]  gran_size: 64K 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064568]  gran_size: 64K 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064617]  gran_size: 64K 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064667]  gran_size: 64K 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064760]  gran_size: 64K 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064809]  gran_size: 64K 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064858]  gran_size: 64K 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.064907]  gran_size: 128K 	chunk_size: 128K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.064955]  gran_size: 128K 	chunk_size: 256K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065049]  gran_size: 128K 	chunk_size: 512K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065098]  gran_size: 128K 	chunk_size: 1M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065147]  gran_size: 128K 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065196]  gran_size: 128K 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065245]  gran_size: 128K 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065338]  gran_size: 128K 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065388]  gran_size: 128K 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065437]  gran_size: 128K 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065486]  gran_size: 128K 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065579]  gran_size: 128K 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065628]  gran_size: 128K 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065677]  gran_size: 128K 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065726]  gran_size: 128K 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.065774]  gran_size: 256K 	chunk_size: 256K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065867]  gran_size: 256K 	chunk_size: 512K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065917]  gran_size: 256K 	chunk_size: 1M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.065965]  gran_size: 256K 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066014]  gran_size: 256K 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066107]  gran_size: 256K 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066156]  gran_size: 256K 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066205]  gran_size: 256K 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066253]  gran_size: 256K 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066302]  gran_size: 256K 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066396]  gran_size: 256K 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066445]  gran_size: 256K 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066494]  gran_size: 256K 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066543]  gran_size: 256K 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.066591]  gran_size: 512K 	chunk_size: 512K 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066684]  gran_size: 512K 	chunk_size: 1M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066733]  gran_size: 512K 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066782]  gran_size: 512K 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066831]  gran_size: 512K 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066881]  gran_size: 512K 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.066974]  gran_size: 512K 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067023]  gran_size: 512K 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067072]  gran_size: 512K 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067121]  gran_size: 512K 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067213]  gran_size: 512K 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067262]  gran_size: 512K 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067312]  gran_size: 512K 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067362]  gran_size: 1M 	chunk_size: 1M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.067455]  gran_size: 1M 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.067504]  gran_size: 1M 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.067554]  gran_size: 1M 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.067603]  gran_size: 1M 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.067697]  gran_size: 1M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067746]  gran_size: 1M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067795]  gran_size: 1M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067843]  gran_size: 1M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067892]  gran_size: 1M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.067985]  gran_size: 1M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068033]  gran_size: 1M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068082]  gran_size: 2M 	chunk_size: 2M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068130]  gran_size: 2M 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068179]  gran_size: 2M 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068272]  gran_size: 2M 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068322]  gran_size: 2M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068371]  gran_size: 2M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068421]  gran_size: 2M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068470]  gran_size: 2M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068563]  gran_size: 2M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068612]  gran_size: 2M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068661]  gran_size: 2M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068711]  gran_size: 4M 	chunk_size: 4M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068758]  gran_size: 4M 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068849]  gran_size: 4M 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.068899]  gran_size: 4M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068947]  gran_size: 4M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.068996]  gran_size: 4M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069045]  gran_size: 4M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069138]  gran_size: 4M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069187]  gran_size: 4M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069237]  gran_size: 4M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069286]  gran_size: 8M 	chunk_size: 8M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.069335]  gran_size: 8M 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.069384]  gran_size: 8M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069478]  gran_size: 8M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069527]  gran_size: 8M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069576]  gran_size: 8M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069624]  gran_size: 8M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069673]  gran_size: 8M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069766]  gran_size: 8M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069815]  gran_size: 16M 	chunk_size: 16M 	num_reg: 10  	lose cover RAM: 2016G
+[    0.069864]  gran_size: 16M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069913]  gran_size: 16M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.069962]  gran_size: 16M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.070056]  gran_size: 16M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.070105]  gran_size: 16M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1024G
+[    0.070155]  gran_size: 16M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.070248]  gran_size: 16M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1024G
+[    0.070297]  gran_size: 32M 	chunk_size: 32M 	num_reg: 10  	lose cover RAM: 2031632M
+[    0.070347]  gran_size: 32M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070396]  gran_size: 32M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070489]  gran_size: 32M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070538]  gran_size: 32M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070587]  gran_size: 32M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070637]  gran_size: 32M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1048592M
+[    0.070730]  gran_size: 64M 	chunk_size: 64M 	num_reg: 10  	lose cover RAM: 1966128M
+[    0.070779]  gran_size: 64M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1048624M
+[    0.070828]  gran_size: 64M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1048624M
+[    0.070877]  gran_size: 64M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1048624M
+[    0.070971]  gran_size: 64M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1048624M
+[    0.071020]  gran_size: 64M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1048624M
+[    0.071070]  gran_size: 128M 	chunk_size: 128M 	num_reg: 10  	lose cover RAM: 1835120M
+[    0.071118]  gran_size: 128M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1048688M
+[    0.071211]  gran_size: 128M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1048688M
+[    0.071261]  gran_size: 128M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1048688M
+[    0.071310]  gran_size: 128M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1048688M
+[    0.071357]  gran_size: 256M 	chunk_size: 256M 	num_reg: 10  	lose cover RAM: 1573104M
+[    0.071449]  gran_size: 256M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1048816M
+[    0.071499]  gran_size: 256M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1048816M
+[    0.071548]  gran_size: 256M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1048816M
+[    0.071597]  gran_size: 512M 	chunk_size: 512M 	num_reg: 10  	lose cover RAM: 1049072M
+[    0.071690]  gran_size: 512M 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1049072M
+[    0.071739]  gran_size: 512M 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1049072M
+[    0.071789]  gran_size: 1G 	chunk_size: 1G 	num_reg: 10  	lose cover RAM: 1008M
+[    0.071838]  gran_size: 1G 	chunk_size: 2G 	num_reg: 10  	lose cover RAM: 1008M
+[    0.071887]  gran_size: 2G 	chunk_size: 2G 	num_reg: 9  	lose cover RAM: 2032M
+[    0.071980] mtrr_cleanup: can not find optimal value
+[    0.071982] please specify mtrr_gran_size/mtrr_chunk_size
+[    0.072079] e820: update [mem 0x7f000000-0xffffffff] usable ==> reserved
+[    0.072269] last_pfn = 0x6f800 max_arch_pfn = 0x10000000000
+[    0.293857] Using GB pages for direct mapping
+[    0.294661] RAMDISK: [mem 0x0816d000-0x37feefff]
+[    0.294669] ACPI: Early table checksum verification disabled
+[    0.294673] ACPI: RSDP 0x00000000000FE320 000024 (v02 DELL  )
+[    0.294678] ACPI: XSDT 0x000000006F41C188 0000FC (v01 DELL   PE_SC3   00000000 DELL 01000013)
+[    0.294685] ACPI: FACP 0x000000006F42F000 000114 (v06 DELL   PE_SC3   00000000 DELL 00000001)
+[    0.294691] ACPI: DSDT 0x000000004BA6D000 07FAD3 (v02 DELL   PE_SC3   00000003 DELL 00000001)
+[    0.294695] ACPI: FACS 0x000000006F332000 000040
+[    0.294698] ACPI: SSDT 0x000000006F7FB000 001571 (v02 INTEL  RAS_ACPI 00000001 INTL 20210331)
+[    0.294703] ACPI: SSDT 0x000000006F7FA000 000745 (v02 INTEL  ADDRXLAT 00000001 INTL 20210331)
+[    0.294706] ACPI: MCEJ 0x000000006F7F9000 000130 (v01 INTEL           00000001 INTL 0100000D)
+[    0.294710] ACPI: EINJ 0x000000006F7F8000 000150 (v01 DELL   PE_SC3   00000001 INTL 00000001)
+[    0.294714] ACPI: BERT 0x000000006F7F7000 000030 (v01 DELL   PE_SC3   00000001 INTL 00000001)
+[    0.294717] ACPI: ERST 0x000000006F7F6000 000230 (v01 DELL   PE_SC3   00000001 INTL 00000001)
+[    0.294721] ACPI: SSDT 0x000000006F430000 3C524E (v02 INTEL  SSDTNVDR 00001000 INTL 20210331)
+[    0.294725] ACPI: HMAT 0x000000006F42E000 000210 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294728] ACPI: HPET 0x000000006F42D000 000038 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294732] ACPI: MCFG 0x000000006F42C000 00003C (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294735] ACPI: MIGT 0x000000006F42B000 000040 (v01 DELL   PE_SC3   00000000 DELL 00000001)
+[    0.294739] ACPI: MSCT 0x000000006F42A000 000090 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294742] ACPI: PMTT 0x000000006F428000 0011E8 (v02 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294746] ACPI: WSMT 0x000000006F427000 000028 (v01 DELL   PE_SC3   00000000 DELL 00000001)
+[    0.294750] ACPI: APIC 0x000000006F426000 0001DE (v04 DELL   PE_SC3   00000000 DELL 00000001)
+[    0.294753] ACPI: SLIT 0x000000006F425000 00003C (v01 DELL   PE_SC3   00000001 DELL 01000013)
+[    0.294757] ACPI: SRAT 0x000000006F41E000 006430 (v03 DELL   PE_SC3   00000002 DELL 01000013)
+[    0.294760] ACPI: OEM4 0x000000004B8E5000 187A61 (v02 INTEL  CPU  CST 00003000 INTL 20210331)
+[    0.294764] ACPI: SSDT 0x000000004B86E000 0764A5 (v02 INTEL  SSDT  PM 00004000 INTL 20210331)
+[    0.294767] ACPI: SSDT 0x000000006F41D000 000A1F (v02 DELL   PE_SC3   00000000 DELL 00000001)
+[    0.294771] ACPI: HEST 0x000000006F7FD000 00017C (v01 DELL   PE_SC3   00000001 INTL 00000001)
+[    0.294775] ACPI: PCAT 0x000000006F41A000 00010C (v19 DELL   PE_SC3   00000002 DELL 00000001)
+[    0.294778] ACPI: SSDT 0x000000006F412000 007299 (v02 INTEL  SpsNm    00000002 INTL 20210331)
+[    0.294782] ACPI: SSDT 0x000000006F411000 000662 (v02 DELL   PE_SC3   00000002 DELL 00000001)
+[    0.294785] ACPI: NFIT 0x000000006F41B000 000488 (v01 DELL   PE_SC3   00000002 DELL 00000001)
+[    0.294789] ACPI: DMAR 0x000000006F410000 000178 (v01 DELL   PE_SC3   00000001 DELL 00000001)
+[    0.294792] ACPI: Reserving FACP table memory at [mem 0x6f42f000-0x6f42f113]
+[    0.294794] ACPI: Reserving DSDT table memory at [mem 0x4ba6d000-0x4baecad2]
+[    0.294795] ACPI: Reserving FACS table memory at [mem 0x6f332000-0x6f33203f]
+[    0.294796] ACPI: Reserving SSDT table memory at [mem 0x6f7fb000-0x6f7fc570]
+[    0.294797] ACPI: Reserving SSDT table memory at [mem 0x6f7fa000-0x6f7fa744]
+[    0.294798] ACPI: Reserving MCEJ table memory at [mem 0x6f7f9000-0x6f7f912f]
+[    0.294799] ACPI: Reserving EINJ table memory at [mem 0x6f7f8000-0x6f7f814f]
+[    0.294800] ACPI: Reserving BERT table memory at [mem 0x6f7f7000-0x6f7f702f]
+[    0.294801] ACPI: Reserving ERST table memory at [mem 0x6f7f6000-0x6f7f622f]
+[    0.294802] ACPI: Reserving SSDT table memory at [mem 0x6f430000-0x6f7f524d]
+[    0.294803] ACPI: Reserving HMAT table memory at [mem 0x6f42e000-0x6f42e20f]
+[    0.294804] ACPI: Reserving HPET table memory at [mem 0x6f42d000-0x6f42d037]
+[    0.294805] ACPI: Reserving MCFG table memory at [mem 0x6f42c000-0x6f42c03b]
+[    0.294806] ACPI: Reserving MIGT table memory at [mem 0x6f42b000-0x6f42b03f]
+[    0.294807] ACPI: Reserving MSCT table memory at [mem 0x6f42a000-0x6f42a08f]
+[    0.294807] ACPI: Reserving PMTT table memory at [mem 0x6f428000-0x6f4291e7]
+[    0.294808] ACPI: Reserving WSMT table memory at [mem 0x6f427000-0x6f427027]
+[    0.294809] ACPI: Reserving APIC table memory at [mem 0x6f426000-0x6f4261dd]
+[    0.294810] ACPI: Reserving SLIT table memory at [mem 0x6f425000-0x6f42503b]
+[    0.294811] ACPI: Reserving SRAT table memory at [mem 0x6f41e000-0x6f42442f]
+[    0.294812] ACPI: Reserving OEM4 table memory at [mem 0x4b8e5000-0x4ba6ca60]
+[    0.294813] ACPI: Reserving SSDT table memory at [mem 0x4b86e000-0x4b8e44a4]
+[    0.294814] ACPI: Reserving SSDT table memory at [mem 0x6f41d000-0x6f41da1e]
+[    0.294815] ACPI: Reserving HEST table memory at [mem 0x6f7fd000-0x6f7fd17b]
+[    0.294817] ACPI: Reserving PCAT table memory at [mem 0x6f41a000-0x6f41a10b]
+[    0.294818] ACPI: Reserving SSDT table memory at [mem 0x6f412000-0x6f419298]
+[    0.294819] ACPI: Reserving SSDT table memory at [mem 0x6f411000-0x6f411661]
+[    0.294820] ACPI: Reserving NFIT table memory at [mem 0x6f41b000-0x6f41b487]
+[    0.294821] ACPI: Reserving DMAR table memory at [mem 0x6f410000-0x6f410177]
+[    0.294878] SRAT: PXM 0 -> APIC 0x00 -> Node 0
+[    0.294880] SRAT: PXM 0 -> APIC 0x01 -> Node 0
+[    0.294880] SRAT: PXM 0 -> APIC 0x02 -> Node 0
+[    0.294881] SRAT: PXM 0 -> APIC 0x03 -> Node 0
+[    0.294882] SRAT: PXM 0 -> APIC 0x04 -> Node 0
+[    0.294883] SRAT: PXM 0 -> APIC 0x05 -> Node 0
+[    0.294884] SRAT: PXM 0 -> APIC 0x06 -> Node 0
+[    0.294884] SRAT: PXM 0 -> APIC 0x07 -> Node 0
+[    0.294885] SRAT: PXM 0 -> APIC 0x08 -> Node 0
+[    0.294886] SRAT: PXM 0 -> APIC 0x09 -> Node 0
+[    0.294887] SRAT: PXM 0 -> APIC 0x0a -> Node 0
+[    0.294887] SRAT: PXM 0 -> APIC 0x0b -> Node 0
+[    0.294888] SRAT: PXM 0 -> APIC 0x0c -> Node 0
+[    0.294889] SRAT: PXM 0 -> APIC 0x0d -> Node 0
+[    0.294890] SRAT: PXM 0 -> APIC 0x0e -> Node 0
+[    0.294891] SRAT: PXM 0 -> APIC 0x0f -> Node 0
+[    0.294892] SRAT: PXM 0 -> APIC 0x10 -> Node 0
+[    0.294893] SRAT: PXM 0 -> APIC 0x11 -> Node 0
+[    0.294894] SRAT: PXM 0 -> APIC 0x12 -> Node 0
+[    0.294895] SRAT: PXM 0 -> APIC 0x13 -> Node 0
+[    0.294896] SRAT: PXM 0 -> APIC 0x14 -> Node 0
+[    0.294896] SRAT: PXM 0 -> APIC 0x15 -> Node 0
+[    0.294897] SRAT: PXM 0 -> APIC 0x16 -> Node 0
+[    0.294898] SRAT: PXM 0 -> APIC 0x17 -> Node 0
+[    0.294899] SRAT: PXM 1 -> APIC 0x40 -> Node 1
+[    0.294900] SRAT: PXM 1 -> APIC 0x41 -> Node 1
+[    0.294900] SRAT: PXM 1 -> APIC 0x42 -> Node 1
+[    0.294901] SRAT: PXM 1 -> APIC 0x43 -> Node 1
+[    0.294902] SRAT: PXM 1 -> APIC 0x44 -> Node 1
+[    0.294903] SRAT: PXM 1 -> APIC 0x45 -> Node 1
+[    0.294903] SRAT: PXM 1 -> APIC 0x46 -> Node 1
+[    0.294904] SRAT: PXM 1 -> APIC 0x47 -> Node 1
+[    0.294905] SRAT: PXM 1 -> APIC 0x48 -> Node 1
+[    0.294906] SRAT: PXM 1 -> APIC 0x49 -> Node 1
+[    0.294907] SRAT: PXM 1 -> APIC 0x4a -> Node 1
+[    0.294907] SRAT: PXM 1 -> APIC 0x4b -> Node 1
+[    0.294908] SRAT: PXM 1 -> APIC 0x4c -> Node 1
+[    0.294909] SRAT: PXM 1 -> APIC 0x4d -> Node 1
+[    0.294910] SRAT: PXM 1 -> APIC 0x4e -> Node 1
+[    0.294910] SRAT: PXM 1 -> APIC 0x4f -> Node 1
+[    0.294911] SRAT: PXM 1 -> APIC 0x50 -> Node 1
+[    0.294912] SRAT: PXM 1 -> APIC 0x51 -> Node 1
+[    0.294913] SRAT: PXM 1 -> APIC 0x52 -> Node 1
+[    0.294913] SRAT: PXM 1 -> APIC 0x53 -> Node 1
+[    0.294914] SRAT: PXM 1 -> APIC 0x54 -> Node 1
+[    0.294915] SRAT: PXM 1 -> APIC 0x55 -> Node 1
+[    0.294916] SRAT: PXM 1 -> APIC 0x56 -> Node 1
+[    0.294917] SRAT: PXM 1 -> APIC 0x57 -> Node 1
+[    0.294941] ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0x7fffffff]
+[    0.294943] ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x107fffffff]
+[    0.294944] ACPI: SRAT: Node 2 PXM 2 [mem 0x2080000000-0x9e7fffffff] non-volatile
+[    0.294946] ACPI: SRAT: Node 1 PXM 1 [mem 0x1080000000-0x207fffffff]
+[    0.294947] ACPI: SRAT: Node 3 PXM 3 [mem 0x9e80000000-0x11c7fffffff] non-volatile
+[    0.294956] NUMA: Initialized distance table, cnt=4
+[    0.294961] NUMA: Node 0 [mem 0x00000000-0x7fffffff] + [mem 0x100000000-0x107fffffff] -> [mem 0x00000000-0x107fffffff]
+[    0.294971] NODE_DATA(0) allocated [mem 0x107ffd5000-0x107fffffff]
+[    0.294993] NODE_DATA(1) allocated [mem 0x207ffd4000-0x207fffefff]
+[    0.295500] Zone ranges:
+[    0.295501]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.295504]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.295506]   Normal   [mem 0x0000000100000000-0x000000207fffffff]
+[    0.295507]   Device   empty
+[    0.295509] Movable zone start for each node
+[    0.295512] Early memory node ranges
+[    0.295513]   node   0: [mem 0x0000000000001000-0x000000000009dfff]
+[    0.295515]   node   0: [mem 0x0000000000100000-0x000000004a42afff]
+[    0.295516]   node   0: [mem 0x000000004b42b000-0x000000004b86dfff]
+[    0.295517]   node   0: [mem 0x000000004baed000-0x000000004c20efff]
+[    0.295517]   node   0: [mem 0x000000004c315000-0x0000000051afffff]
+[    0.295518]   node   0: [mem 0x0000000051b01000-0x000000005eefdfff]
+[    0.295519]   node   0: [mem 0x000000006f7ff000-0x000000006f7fffff]
+[    0.295520]   node   0: [mem 0x0000000100000000-0x0000000effffffff]
+[    0.295526]   node   0: [mem 0x0000001000000000-0x000000107fffffff]
+[    0.295527]   node   1: [mem 0x0000001080000000-0x000000207fffffff]
+[    0.295534] Initmem setup node 0 [mem 0x0000000000001000-0x000000107fffffff]
+[    0.295538] Initmem setup node 1 [mem 0x0000001080000000-0x000000207fffffff]
+[    0.295540] Initializing node 2 as memoryless
+[    0.295571] Initmem setup node 2 as memoryless
+[    0.295571] Initializing node 3 as memoryless
+[    0.295603] Initmem setup node 3 as memoryless
+[    0.295606] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.295643] On node 0, zone DMA: 98 pages in unavailable ranges
+[    0.298046] On node 0, zone DMA32: 4096 pages in unavailable ranges
+[    0.298072] On node 0, zone DMA32: 639 pages in unavailable ranges
+[    0.298257] On node 0, zone DMA32: 262 pages in unavailable ranges
+[    0.298675] On node 0, zone DMA32: 1 pages in unavailable ranges
+[    0.299093] On node 0, zone DMA32: 35073 pages in unavailable ranges
+[    0.412432] On node 0, zone Normal: 2048 pages in unavailable ranges
+[    0.635926] ACPI: PM-Timer IO Port: 0x508
+[    0.635939] ACPI: X2APIC_NMI (uid[0xffffffff] high edge lint[0x1])
+[    0.635942] ACPI: LAPIC_NMI (acpi_id[0xff] high edge lint[0x1])
+[    0.635960] IOAPIC[0]: apic_id 8, version 32, address 0xfec00000, GSI 0-119
+[    0.635962] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.635964] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.635967] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.635968] ACPI: HPET id: 0x8086a701 base: 0xfed00000
+[    0.635973] TSC deadline timer available
+[    0.635974] smpboot: Allowing 48 CPUs, 0 hotplug CPUs
+[    0.636000] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.636001] PM: hibernation: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+[    0.636002] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+[    0.636003] PM: hibernation: Registered nosave memory: [mem 0x000e0000-0x000fffff]
+[    0.636004] PM: hibernation: Registered nosave memory: [mem 0x4a42b000-0x4b42afff]
+[    0.636006] PM: hibernation: Registered nosave memory: [mem 0x4b86e000-0x4baecfff]
+[    0.636008] PM: hibernation: Registered nosave memory: [mem 0x4c20f000-0x4c314fff]
+[    0.636010] PM: hibernation: Registered nosave memory: [mem 0x51b00000-0x51b00fff]
+[    0.636011] PM: hibernation: Registered nosave memory: [mem 0x5eefe000-0x6e3fefff]
+[    0.636012] PM: hibernation: Registered nosave memory: [mem 0x6e3ff000-0x6f3fefff]
+[    0.636013] PM: hibernation: Registered nosave memory: [mem 0x6f3ff000-0x6f7fefff]
+[    0.636014] PM: hibernation: Registered nosave memory: [mem 0x6f800000-0x8fffffff]
+[    0.636015] PM: hibernation: Registered nosave memory: [mem 0x90000000-0xfcffffff]
+[    0.636016] PM: hibernation: Registered nosave memory: [mem 0xfd000000-0xfe7fffff]
+[    0.636016] PM: hibernation: Registered nosave memory: [mem 0xfe800000-0xfebfffff]
+[    0.636017] PM: hibernation: Registered nosave memory: [mem 0xfec00000-0xfec00fff]
+[    0.636018] PM: hibernation: Registered nosave memory: [mem 0xfec01000-0xfec7ffff]
+[    0.636018] PM: hibernation: Registered nosave memory: [mem 0xfec80000-0xfed00fff]
+[    0.636019] PM: hibernation: Registered nosave memory: [mem 0xfed01000-0xfed3ffff]
+[    0.636019] PM: hibernation: Registered nosave memory: [mem 0xfed40000-0xfed44fff]
+[    0.636020] PM: hibernation: Registered nosave memory: [mem 0xfed45000-0xfeffffff]
+[    0.636020] PM: hibernation: Registered nosave memory: [mem 0xff000000-0xffffffff]
+[    0.636022] PM: hibernation: Registered nosave memory: [mem 0xf00000000-0xfffffffff]
+[    0.636024] [mem 0x90000000-0xfcffffff] available for PCI devices
+[    0.636025] Booting paravirtualized kernel on bare hardware
+[    0.636027] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.636034] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:48 nr_cpu_ids:48 nr_node_ids:4
+[    0.638745] percpu: Embedded 61 pages/cpu s212992 r8192 d28672 u262144
+[    0.638760] pcpu-alloc: s212992 r8192 d28672 u262144 alloc=1*2097152
+[    0.638762] pcpu-alloc: [0] 00 02 04 06 08 10 12 14 [0] 16 18 20 22 24 26 28 30 
+[    0.638770] pcpu-alloc: [0] 32 34 36 38 40 42 44 46 [1] 01 03 05 07 09 11 13 15 
+[    0.638777] pcpu-alloc: [1] 17 19 21 23 25 27 29 31 [1] 33 35 37 39 41 43 45 47 
+[    0.638818] Fallback order for Node 0: 0 1 
+[    0.638821] Fallback order for Node 1: 1 0 
+[    0.638823] Fallback order for Node 2: 2 0 1 
+[    0.638826] Fallback order for Node 3: 3 1 0 
+[    0.638831] Built 2 zonelists, mobility grouping on.  Total pages: 31859467
+[    0.638832] Policy zone: Normal
+[    0.638834] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.18.0 root=UUID=227abe24-d21b-4f64-839d-812ac630a4f4 ro quiet splash memmap=4G!60G vt.handoff=7
+[    0.638921] Unknown kernel command line parameters "splash BOOT_IMAGE=/boot/vmlinuz-5.18.0", will be passed to user space.
+[    0.638923] printk: log_buf_len individual max cpu contribution: 4096 bytes
+[    0.638924] printk: log_buf_len total cpu_extra contributions: 192512 bytes
+[    0.638925] printk: log_buf_len min size: 262144 bytes
+[    0.639508] printk: log_buf_len: 524288 bytes
+[    0.639510] printk: early log buf free: 231176(88%)
+[    0.639989] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.921501] Memory: 126528988K/129461336K available (16392K kernel code, 4634K rwdata, 5772K rodata, 2880K init, 6668K bss, 2932144K reserved, 0K cma-reserved)
+[    0.921507] random: get_random_u64 called from __kmem_cache_create+0x2f/0x4b0 with crng_init=0
+[    0.921730] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=48, Nodes=4
+[    0.921742] ftrace: allocating 50208 entries in 197 pages
+[    0.929248] ftrace: allocated 197 pages with 4 groups
+[    0.930058] Dynamic Preempt: voluntary
+[    0.930157] rcu: Preemptible hierarchical RCU implementation.
+[    0.930158] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=48.
+[    0.930159] 	Trampoline variant of Tasks RCU enabled.
+[    0.930160] 	Rude variant of Tasks RCU enabled.
+[    0.930161] 	Tracing variant of Tasks RCU enabled.
+[    0.930162] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.930163] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=48
+[    0.933399] NR_IRQS: 524544, nr_irqs: 2440, preallocated irqs: 16
+[    0.933665] random: crng init done (trusting CPU's manufacturer)
+[    0.933724] Console: colour dummy device 80x25
+[    0.933749] printk: console [tty0] enabled
+[    0.933801] mempolicy: Enabling automatic NUMA balancing. Configure with numa_balancing= or the kernel.numa_balancing sysctl
+[    0.933805] ACPI: Core revision 20211217
+[    0.936445] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635855245 ns
+[    0.936490] APIC: Switch to symmetric I/O mode setup
+[    0.936492] DMAR: Host address width 46
+[    0.936493] DMAR: DRHD base: 0x000000d0ffc000 flags: 0x0
+[    0.936497] DMAR: dmar0: reg_base_addr d0ffc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936500] DMAR: DRHD base: 0x000000dbbfc000 flags: 0x0
+[    0.936503] DMAR: dmar1: reg_base_addr dbbfc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936505] DMAR: DRHD base: 0x000000e67fc000 flags: 0x0
+[    0.936507] DMAR: dmar2: reg_base_addr e67fc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936509] DMAR: DRHD base: 0x000000f13fc000 flags: 0x0
+[    0.936512] DMAR: dmar3: reg_base_addr f13fc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936514] DMAR: DRHD base: 0x000000fb7fc000 flags: 0x0
+[    0.936519] DMAR: dmar4: reg_base_addr fb7fc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936521] DMAR: DRHD base: 0x000000a63fc000 flags: 0x0
+[    0.936523] DMAR: dmar5: reg_base_addr a63fc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936524] DMAR: DRHD base: 0x000000b0ffc000 flags: 0x0
+[    0.936526] DMAR: dmar6: reg_base_addr b0ffc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936528] DMAR: DRHD base: 0x000000bbbfc000 flags: 0x0
+[    0.936530] DMAR: dmar7: reg_base_addr bbbfc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936531] DMAR: DRHD base: 0x000000c5ffc000 flags: 0x0
+[    0.936533] DMAR: dmar8: reg_base_addr c5ffc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936535] DMAR: DRHD base: 0x0000009b7fc000 flags: 0x1
+[    0.936537] DMAR: dmar9: reg_base_addr 9b7fc000 ver 4:0 cap 8ed008c40780466 ecap 60000f050df
+[    0.936539] DMAR: RMRR base: 0x00000069cef000 end: 0x0000006a3eefff
+[    0.936540] DMAR: RMRR base: 0x0000006944a000 end: 0x0000006944cfff
+[    0.936541] DMAR: ATSR flags: 0x0
+[    0.936543] DMAR-IR: IOAPIC id 8 under DRHD base  0x9b7fc000 IOMMU 9
+[    0.936544] DMAR-IR: HPET id 0 under DRHD base 0x9b7fc000
+[    0.936545] DMAR-IR: x2apic is disabled because BIOS sets x2apic opt out bit.
+[    0.936545] DMAR-IR: Use 'intremap=no_x2apic_optout' to override the BIOS setting.
+[    0.939147] DMAR-IR: Enabled IRQ remapping in xapic mode
+[    0.939149] x2apic: IRQ remapping doesn't support X2APIC mode
+[    0.939155] Switched APIC routing to physical flat.
+[    0.941715] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.960416] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x2b3e459bf4c, max_idle_ns: 440795289890 ns
+[    0.960422] Calibrating delay loop (skipped), value calculated using timer frequency.. 6000.00 BogoMIPS (lpj=12000000)
+[    0.960425] pid_max: default: 49152 minimum: 384
+[    0.960478] LSM: Security Framework initializing
+[    0.960488] landlock: Up and running.
+[    0.960488] Yama: becoming mindful.
+[    0.960514] AppArmor: AppArmor initialized
+[    0.967870] Dentry cache hash table entries: 8388608 (order: 14, 67108864 bytes, vmalloc hugepage)
+[    0.971506] Inode-cache hash table entries: 4194304 (order: 13, 33554432 bytes, vmalloc hugepage)
+[    0.971661] Mount-cache hash table entries: 131072 (order: 8, 1048576 bytes, vmalloc)
+[    0.971790] Mountpoint-cache hash table entries: 131072 (order: 8, 1048576 bytes, vmalloc)
+[    0.972110] x86/cpu: SGX disabled by BIOS.
+[    0.972116] x86/tme: not enabled by BIOS
+[    0.972125] CPU0: Thermal monitoring enabled (TM1)
+[    0.972127] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.972342] process: using mwait in idle threads
+[    0.972344] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.972345] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.972350] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.972352] Spectre V2 : Mitigation: Enhanced IBRS
+[    0.972353] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.972354] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.972355] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.976928] Freeing SMP alternatives memory: 40K
+[    0.980518] smpboot: Estimated ratio of average max frequency by base frequency (times 1024): 1160
+[    0.980529] smpboot: CPU0: Intel(R) Xeon(R) Gold 5317 CPU @ 3.00GHz (family: 0x6, model: 0x6a, stepping: 0x6)
+[    0.980675] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.980680] cblist_init_generic: Setting shift to 6 and lim to 1.
+[    0.980696] cblist_init_generic: Setting shift to 6 and lim to 1.
+[    0.980715] cblist_init_generic: Setting shift to 6 and lim to 1.
+[    0.980724] Performance Events: PEBS fmt4+-baseline,  AnyThread deprecated, Icelake events, 32-deep LBR, full-width counters, Intel PMU driver.
+[    0.980747] ... version:                5
+[    0.980748] ... bit width:              48
+[    0.980748] ... generic registers:      8
+[    0.980749] ... value mask:             0000ffffffffffff
+[    0.980749] ... max period:             00007fffffffffff
+[    0.980750] ... fixed-purpose events:   4
+[    0.980751] ... event mask:             0001000f000000ff
+[    0.980852] rcu: Hierarchical SRCU implementation.
+[    0.983750] NMI watchdog: Enabled. Permanently consumes one hw-PMU counter.
+[    0.984209] smp: Bringing up secondary CPUs ...
+[    0.984312] x86: Booting SMP configuration:
+[    0.984313] .... node  #1, CPUs:        #1
+[    0.006760] smpboot: CPU 1 Converting physical 0 to logical die 1
+
+[    1.131565] .... node  #0, CPUs:    #2
+[    1.148513] .... node  #1, CPUs:    #3
+[    1.188691] .... node  #0, CPUs:    #4
+[    1.204489] .... node  #1, CPUs:    #5
+[    1.244749] .... node  #0, CPUs:    #6
+[    1.260079] .... node  #1, CPUs:    #7
+[    1.300531] .... node  #0, CPUs:    #8
+[    1.315506] .... node  #1, CPUs:    #9
+[    1.354561] .... node  #0, CPUs:   #10
+[    1.371060] .... node  #1, CPUs:   #11
+[    1.410522] .... node  #0, CPUs:   #12
+[    1.426196] .... node  #1, CPUs:   #13
+[    1.466559] .... node  #0, CPUs:   #14
+[    1.481502] .... node  #1, CPUs:   #15
+[    1.498057] .... node  #0, CPUs:   #16
+[    1.514086] .... node  #1, CPUs:   #17
+[    1.528614] .... node  #0, CPUs:   #18
+[    1.543380] .... node  #1, CPUs:   #19
+[    1.559994] .... node  #0, CPUs:   #20
+[    1.575763] .... node  #1, CPUs:   #21
+[    1.590592] .... node  #0, CPUs:   #22
+[    1.605291] .... node  #1, CPUs:   #23
+[    1.621504] .... node  #0, CPUs:   #24
+[    1.622469] .... node  #1, CPUs:   #25
+[    1.629533] .... node  #0, CPUs:   #26
+[    1.635282] .... node  #1, CPUs:   #27
+[    1.641088] .... node  #0, CPUs:   #28
+[    1.646831] .... node  #1, CPUs:   #29
+[    1.652628] .... node  #0, CPUs:   #30
+[    1.658345] .... node  #1, CPUs:   #31
+[    1.663876] .... node  #0, CPUs:   #32
+[    1.669591] .... node  #1, CPUs:   #33
+[    1.675387] .... node  #0, CPUs:   #34
+[    1.681141] .... node  #1, CPUs:   #35
+[    1.686947] .... node  #0, CPUs:   #36
+[    1.692636] .... node  #1, CPUs:   #37
+[    1.698380] .... node  #0, CPUs:   #38
+[    1.704443] .... node  #1, CPUs:   #39
+[    1.709958] .... node  #0, CPUs:   #40
+[    1.715693] .... node  #1, CPUs:   #41
+[    1.721492] .... node  #0, CPUs:   #42
+[    1.727040] .... node  #1, CPUs:   #43
+[    1.732814] .... node  #0, CPUs:   #44
+[    1.738575] .... node  #1, CPUs:   #45
+[    1.744519] .... node  #0, CPUs:   #46
+[    1.750138] .... node  #1, CPUs:   #47
+[    1.755937] smp: Brought up 2 nodes, 48 CPUs
+[    1.755937] smpboot: Max logical packages: 2
+[    1.755937] smpboot: Total of 48 processors activated (288461.47 BogoMIPS)
+[    1.761431] devtmpfs: initialized
+[    1.761431] x86/mm: Memory block size: 2048MB
+[    1.761431] ACPI: PM: Registering ACPI NVS region [mem 0x4a42b000-0x4b42afff] (16777216 bytes)
+[    1.761431] ACPI: PM: Registering ACPI NVS region [mem 0x6e3ff000-0x6f3fefff] (16777216 bytes)
+[    1.761431] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    1.761431] futex hash table entries: 16384 (order: 8, 1048576 bytes, vmalloc)
+[    1.761431] pinctrl core: initialized pinctrl subsystem
+[    1.761431] PM: RTC time: 13:35:09, date: 2023-12-24
+[    1.761973] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    1.762474] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    1.764613] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    1.765034] DMA: preallocated 4096 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    1.765042] audit: initializing netlink subsys (disabled)
+[    1.765049] audit: type=2000 audit(1703424908.828:1): state=initialized audit_enabled=0 res=1
+[    1.765049] thermal_sys: Registered thermal governor 'fair_share'
+[    1.765049] thermal_sys: Registered thermal governor 'bang_bang'
+[    1.765049] thermal_sys: Registered thermal governor 'step_wise'
+[    1.765049] thermal_sys: Registered thermal governor 'user_space'
+[    1.765049] thermal_sys: Registered thermal governor 'power_allocator'
+[    1.765049] EISA bus registered
+[    1.765049] cpuidle: using governor ladder
+[    1.765049] cpuidle: using governor menu
+[    1.765049] ACPI FADT declares the system doesn't support PCIe ASPM, so disable it
+[    1.765049] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.765049] PCI: MMCONFIG for domain 0000 [bus 00-ff] at [mem 0x80000000-0x8fffffff] (base 0x80000000)
+[    1.765049] PCI: MMCONFIG at [mem 0x80000000-0x8fffffff] reserved in E820
+[    1.765049] pmd_set_huge: Cannot satisfy [mem 0x80000000-0x80200000] with a huge-page mapping due to MTRR override.
+[    1.765049] PCI: Using configuration type 1 for base access
+[    1.765049] PCI: Dell System detected, enabling pci=bfsort.
+[    1.768990] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    1.769054] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    1.769054] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    1.769054] fbcon: Taking over console
+[    1.769054] ACPI: Added _OSI(Module Device)
+[    1.769054] ACPI: Added _OSI(Processor Device)
+[    1.769054] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.769054] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.769054] ACPI: Added _OSI(Linux-Dell-Video)
+[    1.769054] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    1.769054] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    1.906059] ACPI: 8 ACPI AML tables successfully acquired and loaded
+[    1.911572] ACPI: [Firmware Bug]: BIOS _OSI(Linux) query ignored
+[    1.916532] ACPI: Dynamic OEM Table Load:
+[    2.213515] ACPI: Interpreter enabled
+[    2.213535] ACPI: PM: (supports S0 S5)
+[    2.213536] ACPI: Using IOAPIC for interrupt routing
+[    2.213626] HEST: Table parsing has been initialized.
+[    2.213779] GHES: APEI firmware first mode is enabled by APEI bit and WHEA _OSC.
+[    2.213782] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    2.233801] ACPI: Enabled 4 GPEs in block 00 to 7F
+[    2.320508] ACPI: PCI Root Bridge [PC00] (domain 0000 [bus 00-15])
+[    2.320515] acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.349803] acpi PNP0A08:00: _OSC: platform does not support [SHPCHotplug AER LTR DPC]
+[    2.349978] acpi PNP0A08:00: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    2.349979] acpi PNP0A08:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.351445] PCI host bridge to bus 0000:00
+[    2.351447] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    2.351449] pci_bus 0000:00: root bus resource [io  0x1000-0x4fff window]
+[    2.351450] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    2.351451] pci_bus 0000:00: root bus resource [mem 0x000c8000-0x000cffff window]
+[    2.351452] pci_bus 0000:00: root bus resource [mem 0xfe010000-0xfe010fff window]
+[    2.351453] pci_bus 0000:00: root bus resource [mem 0x90000000-0x9b7fffff window]
+[    2.351454] pci_bus 0000:00: root bus resource [mem 0x380000000000-0x383fffffffff window]
+[    2.351455] pci_bus 0000:00: root bus resource [bus 00-15]
+[    2.351467] pci 0000:00:00.0: [8086:09a2] type 00 class 0x088000
+[    2.351554] pci 0000:00:00.1: [8086:09a4] type 00 class 0x088000
+[    2.351612] pci 0000:00:00.2: [8086:09a3] type 00 class 0x088000
+[    2.351669] pci 0000:00:00.4: [8086:0998] type 00 class 0x060000
+[    2.351727] pci 0000:00:01.0: [8086:0b00] type 00 class 0x088000
+[    2.351736] pci 0000:00:01.0: reg 0x10: [mem 0x92e10000-0x92e13fff 64bit]
+[    2.351816] pci 0000:00:01.1: [8086:0b00] type 00 class 0x088000
+[    2.351825] pci 0000:00:01.1: reg 0x10: [mem 0x92e0c000-0x92e0ffff 64bit]
+[    2.351906] pci 0000:00:01.2: [8086:0b00] type 00 class 0x088000
+[    2.351915] pci 0000:00:01.2: reg 0x10: [mem 0x92e08000-0x92e0bfff 64bit]
+[    2.351995] pci 0000:00:01.3: [8086:0b00] type 00 class 0x088000
+[    2.352003] pci 0000:00:01.3: reg 0x10: [mem 0x92e04000-0x92e07fff 64bit]
+[    2.352081] pci 0000:00:01.4: [8086:0b00] type 00 class 0x088000
+[    2.352089] pci 0000:00:01.4: reg 0x10: [mem 0x92e00000-0x92e03fff 64bit]
+[    2.352169] pci 0000:00:01.5: [8086:0b00] type 00 class 0x088000
+[    2.352178] pci 0000:00:01.5: reg 0x10: [mem 0x92dfc000-0x92dfffff 64bit]
+[    2.352253] pci 0000:00:01.6: [8086:0b00] type 00 class 0x088000
+[    2.352261] pci 0000:00:01.6: reg 0x10: [mem 0x92df8000-0x92dfbfff 64bit]
+[    2.352336] pci 0000:00:01.7: [8086:0b00] type 00 class 0x088000
+[    2.352344] pci 0000:00:01.7: reg 0x10: [mem 0x92df4000-0x92df7fff 64bit]
+[    2.352418] pci 0000:00:02.0: [8086:09a6] type 00 class 0x088000
+[    2.352427] pci 0000:00:02.0: reg 0x10: [mem 0x92e1c000-0x92e1dfff]
+[    2.352491] pci 0000:00:02.1: [8086:09a7] type 00 class 0x088000
+[    2.352498] pci 0000:00:02.1: reg 0x10: [mem 0x92d00000-0x92d7ffff]
+[    2.352502] pci 0000:00:02.1: reg 0x14: [mem 0x92c80000-0x92cfffff]
+[    2.352571] pci 0000:00:02.4: [8086:3456] type 00 class 0x130000
+[    2.352579] pci 0000:00:02.4: reg 0x10: [mem 0x92a00000-0x92afffff 64bit]
+[    2.352585] pci 0000:00:02.4: reg 0x18: [mem 0x92df0000-0x92df3fff 64bit]
+[    2.352591] pci 0000:00:02.4: reg 0x20: [mem 0x92dc0000-0x92ddffff 64bit]
+[    2.352662] pci 0000:00:11.0: [8086:a1ec] type 00 class 0xff0000
+[    2.352664] pci 0000:00:11.0: device has non-compliant BARs; disabling IO/MEM decoding
+[    2.352748] pci 0000:00:11.5: [8086:a1d6] type 00 class 0x010400
+[    2.352760] pci 0000:00:11.5: reg 0x10: [mem 0x92e1a000-0x92e1bfff]
+[    2.352767] pci 0000:00:11.5: reg 0x14: [mem 0x92e25000-0x92e250ff]
+[    2.352774] pci 0000:00:11.5: reg 0x18: [io  0x2068-0x206f]
+[    2.352780] pci 0000:00:11.5: reg 0x1c: [io  0x2074-0x2077]
+[    2.352787] pci 0000:00:11.5: reg 0x20: [io  0x2040-0x205f]
+[    2.352794] pci 0000:00:11.5: reg 0x24: [mem 0x92b80000-0x92bfffff]
+[    2.352828] pci 0000:00:11.5: PME# supported from D3hot
+[    2.353028] pci 0000:00:14.0: [8086:a1af] type 00 class 0x0c0330
+[    2.353045] pci 0000:00:14.0: reg 0x10: [mem 0x92de0000-0x92deffff 64bit]
+[    2.353104] pci 0000:00:14.0: PME# supported from D3hot D3cold
+[    2.353311] pci 0000:00:14.2: [8086:a1b1] type 00 class 0x118000
+[    2.353327] pci 0000:00:14.2: reg 0x10: [mem 0x92e22000-0x92e22fff 64bit]
+[    2.353442] pci 0000:00:16.0: [8086:a1ba] type 00 class 0x078000
+[    2.353463] pci 0000:00:16.0: reg 0x10: [mem 0x92e21000-0x92e21fff 64bit]
+[    2.353543] pci 0000:00:16.0: PME# supported from D3hot
+[    2.353599] pci 0000:00:16.1: [8086:a1bb] type 00 class 0x078000
+[    2.353621] pci 0000:00:16.1: reg 0x10: [mem 0x92e20000-0x92e20fff 64bit]
+[    2.353700] pci 0000:00:16.1: PME# supported from D3hot
+[    2.353759] pci 0000:00:16.4: [8086:a1be] type 00 class 0x078000
+[    2.353781] pci 0000:00:16.4: reg 0x10: [mem 0x92e1f000-0x92e1ffff 64bit]
+[    2.353860] pci 0000:00:16.4: PME# supported from D3hot
+[    2.353922] pci 0000:00:17.0: [8086:a186] type 00 class 0x010400
+[    2.353933] pci 0000:00:17.0: reg 0x10: [mem 0x92e18000-0x92e19fff]
+[    2.353940] pci 0000:00:17.0: reg 0x14: [mem 0x92e24000-0x92e240ff]
+[    2.353946] pci 0000:00:17.0: reg 0x18: [io  0x2060-0x2067]
+[    2.353953] pci 0000:00:17.0: reg 0x1c: [io  0x2070-0x2073]
+[    2.353960] pci 0000:00:17.0: reg 0x20: [io  0x2020-0x203f]
+[    2.353966] pci 0000:00:17.0: reg 0x24: [mem 0x92b00000-0x92b7ffff]
+[    2.354000] pci 0000:00:17.0: PME# supported from D3hot
+[    2.354189] pci 0000:00:1c.0: [8086:a190] type 01 class 0x060400
+[    2.354258] pci 0000:00:1c.0: PME# supported from D0 D3hot D3cold
+[    2.354881] pci 0000:00:1c.4: [8086:a194] type 01 class 0x060400
+[    2.354945] pci 0000:00:1c.4: PME# supported from D0 D3hot D3cold
+[    2.355534] pci 0000:00:1c.5: [8086:a195] type 01 class 0x060400
+[    2.355599] pci 0000:00:1c.5: PME# supported from D0 D3hot D3cold
+[    2.356194] pci 0000:00:1f.0: [8086:a1cb] type 00 class 0x060100
+[    2.356472] pci 0000:00:1f.2: [8086:a1a1] type 00 class 0x058000
+[    2.356486] pci 0000:00:1f.2: reg 0x10: [mem 0x92e14000-0x92e17fff]
+[    2.356714] pci 0000:00:1f.4: [8086:a1a3] type 00 class 0x0c0500
+[    2.356731] pci 0000:00:1f.4: reg 0x10: [mem 0x92e1e000-0x92e1e0ff 64bit]
+[    2.356753] pci 0000:00:1f.4: reg 0x20: [io  0x2000-0x201f]
+[    2.356811] pci 0000:00:1f.5: [8086:a1a4] type 00 class 0x0c8000
+[    2.356826] pci 0000:00:1f.5: reg 0x10: [mem 0xfe010000-0xfe010fff]
+[    2.356950] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[    2.356996] pci 0000:02:00.0: [1556:be00] type 01 class 0x060400
+[    2.357159] pci 0000:00:1c.4: PCI bridge to [bus 02-03]
+[    2.357163] pci 0000:00:1c.4:   bridge window [mem 0x92000000-0x928fffff]
+[    2.357167] pci 0000:00:1c.4:   bridge window [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.357198] pci_bus 0000:03: extended config space not accessible
+[    2.357213] pci 0000:03:00.0: [102b:0536] type 00 class 0x030000
+[    2.357231] pci 0000:03:00.0: reg 0x10: [mem 0x91000000-0x91ffffff pref]
+[    2.357241] pci 0000:03:00.0: reg 0x14: [mem 0x92808000-0x9280bfff]
+[    2.357251] pci 0000:03:00.0: reg 0x18: [mem 0x92000000-0x927fffff]
+[    2.357301] pci 0000:03:00.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    2.357395] pci 0000:02:00.0: PCI bridge to [bus 03]
+[    2.357403] pci 0000:02:00.0:   bridge window [mem 0x92000000-0x928fffff]
+[    2.357408] pci 0000:02:00.0:   bridge window [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.357471] pci 0000:04:00.0: [14e4:165f] type 00 class 0x020000
+[    2.357494] pci 0000:04:00.0: reg 0x10: [mem 0x92930000-0x9293ffff 64bit pref]
+[    2.357509] pci 0000:04:00.0: reg 0x18: [mem 0x92940000-0x9294ffff 64bit pref]
+[    2.357524] pci 0000:04:00.0: reg 0x20: [mem 0x92950000-0x9295ffff 64bit pref]
+[    2.357533] pci 0000:04:00.0: reg 0x30: [mem 0xfffc0000-0xffffffff pref]
+[    2.357624] pci 0000:04:00.0: PME# supported from D0 D3hot D3cold
+[    2.357676] pci 0000:04:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5.0 GT/s PCIe x1 link at 0000:00:1c.5 (capable of 8.000 Gb/s with 5.0 GT/s PCIe x2 link)
+[    2.358200] pci 0000:04:00.1: [14e4:165f] type 00 class 0x020000
+[    2.358222] pci 0000:04:00.1: reg 0x10: [mem 0x92900000-0x9290ffff 64bit pref]
+[    2.358237] pci 0000:04:00.1: reg 0x18: [mem 0x92910000-0x9291ffff 64bit pref]
+[    2.358252] pci 0000:04:00.1: reg 0x20: [mem 0x92920000-0x9292ffff 64bit pref]
+[    2.358262] pci 0000:04:00.1: reg 0x30: [mem 0xfffc0000-0xffffffff pref]
+[    2.358354] pci 0000:04:00.1: PME# supported from D0 D3hot D3cold
+[    2.358897] pci 0000:00:1c.5: PCI bridge to [bus 04]
+[    2.358903] pci 0000:00:1c.5:   bridge window [mem 0x92900000-0x929fffff 64bit pref]
+[    2.358916] pci_bus 0000:00: on NUMA node 0
+[    2.358922] pci 0000:00:1c.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    2.358928] pci 0000:00:1c.4: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    2.358942] pci 0000:02:00.0: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    2.358947] pci 0000:00:1c.5: Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    2.358962] pci 0000:04:00.0: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    2.358976] pci 0000:04:00.1: Max Payload Size set to  128/ 256 (was  128), Max Read Rq  128
+[    2.359457] ACPI: PCI Root Bridge [PC01] (domain 0000 [bus 16-2f])
+[    2.359460] acpi PNP0A08:01: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.370815] acpi PNP0A08:01: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.370985] acpi PNP0A08:01: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.370986] acpi PNP0A08:01: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.371089] PCI host bridge to bus 0000:16
+[    2.371090] pci_bus 0000:16: root bus resource [io  0x5000-0x6fff window]
+[    2.371091] pci_bus 0000:16: root bus resource [mem 0x9b800000-0xa63fffff window]
+[    2.371092] pci_bus 0000:16: root bus resource [mem 0x384000000000-0x387fffffffff window]
+[    2.371094] pci_bus 0000:16: root bus resource [bus 16-2f]
+[    2.371102] pci 0000:16:00.0: [8086:09a2] type 00 class 0x088000
+[    2.371161] pci 0000:16:00.1: [8086:09a4] type 00 class 0x088000
+[    2.371215] pci 0000:16:00.2: [8086:09a3] type 00 class 0x088000
+[    2.371268] pci 0000:16:00.4: [8086:0998] type 00 class 0x060000
+[    2.371330] pci 0000:16:02.0: [8086:347a] type 01 class 0x060400
+[    2.371338] pci 0000:16:02.0: reg 0x10: [mem 0x387ffff00000-0x387ffff1ffff 64bit]
+[    2.371372] pci 0000:16:02.0: PME# supported from D0 D3hot D3cold
+[    2.372756] pci 0000:17:00.0: [1000:10e2] type 00 class 0x010400
+[    2.372768] pci 0000:17:00.0: reg 0x10: [mem 0x9b800000-0x9b8fffff 64bit pref]
+[    2.372776] pci 0000:17:00.0: reg 0x18: [mem 0x9b900000-0x9b9fffff 64bit pref]
+[    2.372781] pci 0000:17:00.0: reg 0x20: [mem 0x9ba00000-0x9bafffff]
+[    2.372786] pci 0000:17:00.0: reg 0x24: [io  0x5000-0x50ff]
+[    2.372791] pci 0000:17:00.0: reg 0x30: [mem 0xfff00000-0xffffffff pref]
+[    2.373678] pci 0000:17:00.0: supports D1 D2
+[    2.373740] pci 0000:16:02.0: PCI bridge to [bus 17]
+[    2.373742] pci 0000:16:02.0:   bridge window [io  0x5000-0x5fff]
+[    2.373744] pci 0000:16:02.0:   bridge window [mem 0x9ba00000-0x9bafffff]
+[    2.373746] pci 0000:16:02.0:   bridge window [mem 0x9b800000-0x9b9fffff 64bit pref]
+[    2.373752] pci_bus 0000:16: on NUMA node 0
+[    2.373757] pci 0000:16:02.0: Max Payload Size set to  512/ 512 (was  512), Max Read Rq  512
+[    2.373764] pci 0000:17:00.0: Max Payload Size set to  512/1024 (was  512), Max Read Rq  512
+[    2.373826] ACPI: PCI Root Bridge [PC02] (domain 0000 [bus 30-49])
+[    2.373829] acpi PNP0A08:02: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.385150] acpi PNP0A08:02: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.385319] acpi PNP0A08:02: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.385320] acpi PNP0A08:02: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.385420] PCI host bridge to bus 0000:30
+[    2.385421] pci_bus 0000:30: root bus resource [io  0x7000-0x8fff window]
+[    2.385423] pci_bus 0000:30: root bus resource [mem 0xa6400000-0xb0ffffff window]
+[    2.385424] pci_bus 0000:30: root bus resource [mem 0x388000000000-0x38bfffffffff window]
+[    2.385425] pci_bus 0000:30: root bus resource [bus 30-49]
+[    2.385434] pci 0000:30:00.0: [8086:09a2] type 00 class 0x088000
+[    2.385491] pci 0000:30:00.1: [8086:09a4] type 00 class 0x088000
+[    2.385544] pci 0000:30:00.2: [8086:09a3] type 00 class 0x088000
+[    2.385600] pci 0000:30:00.4: [8086:0998] type 00 class 0x060000
+[    2.385658] pci_bus 0000:30: on NUMA node 0
+[    2.385739] ACPI: PCI Root Bridge [PC04] (domain 0000 [bus 4a-63])
+[    2.385741] acpi PNP0A08:04: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.397072] acpi PNP0A08:04: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.397240] acpi PNP0A08:04: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.397241] acpi PNP0A08:04: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.397341] PCI host bridge to bus 0000:4a
+[    2.397342] pci_bus 0000:4a: root bus resource [io  0x9000-0x9fff window]
+[    2.397343] pci_bus 0000:4a: root bus resource [mem 0xb1000000-0xbbbfffff window]
+[    2.397344] pci_bus 0000:4a: root bus resource [mem 0x38c000000000-0x38ffffffffff window]
+[    2.397345] pci_bus 0000:4a: root bus resource [bus 4a-63]
+[    2.397353] pci 0000:4a:00.0: [8086:09a2] type 00 class 0x088000
+[    2.397407] pci 0000:4a:00.1: [8086:09a4] type 00 class 0x088000
+[    2.397466] pci 0000:4a:00.2: [8086:09a3] type 00 class 0x088000
+[    2.397520] pci 0000:4a:00.4: [8086:0998] type 00 class 0x060000
+[    2.397578] pci_bus 0000:4a: on NUMA node 0
+[    2.397639] ACPI: PCI Root Bridge [PC05] (domain 0000 [bus 64-7d])
+[    2.397641] acpi PNP0A08:05: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.408972] acpi PNP0A08:05: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.409139] acpi PNP0A08:05: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.409140] acpi PNP0A08:05: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.409234] PCI host bridge to bus 0000:64
+[    2.409235] pci_bus 0000:64: root bus resource [io  0xa000-0xafff window]
+[    2.409236] pci_bus 0000:64: root bus resource [mem 0xbbc00000-0xc5ffffff window]
+[    2.409237] pci_bus 0000:64: root bus resource [mem 0x390000000000-0x393fffffffff window]
+[    2.409238] pci_bus 0000:64: root bus resource [bus 64-7d]
+[    2.409247] pci 0000:64:00.0: [8086:09a2] type 00 class 0x088000
+[    2.409301] pci 0000:64:00.1: [8086:09a4] type 00 class 0x088000
+[    2.409355] pci 0000:64:00.2: [8086:09a3] type 00 class 0x088000
+[    2.409410] pci 0000:64:00.4: [8086:0998] type 00 class 0x060000
+[    2.409468] pci_bus 0000:64: on NUMA node 0
+[    2.409521] ACPI: PCI Root Bridge [UC06] (domain 0000 [bus 7e])
+[    2.409523] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.409600] acpi PNP0A03:00: _OSC: platform does not support [SHPCHotplug AER LTR DPC]
+[    2.409742] acpi PNP0A03:00: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    2.409742] acpi PNP0A03:00: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.409851] PCI host bridge to bus 0000:7e
+[    2.409852] pci_bus 0000:7e: root bus resource [bus 7e]
+[    2.409859] pci 0000:7e:00.0: [8086:3450] type 00 class 0x088000
+[    2.409920] pci 0000:7e:00.1: [8086:3451] type 00 class 0x088000
+[    2.409969] pci 0000:7e:00.2: [8086:3452] type 00 class 0x088000
+[    2.410028] pci 0000:7e:00.3: [8086:0998] type 00 class 0x060000
+[    2.410074] pci 0000:7e:00.5: [8086:3455] type 00 class 0x088000
+[    2.410126] pci 0000:7e:02.0: [8086:3440] type 00 class 0x088000
+[    2.410242] pci 0000:7e:02.1: [8086:3441] type 00 class 0x088000
+[    2.410341] pci 0000:7e:02.2: [8086:3442] type 00 class 0x088000
+[    2.410438] pci 0000:7e:03.0: [8086:3440] type 00 class 0x088000
+[    2.410520] pci 0000:7e:03.1: [8086:3441] type 00 class 0x088000
+[    2.410590] pci 0000:7e:03.2: [8086:3442] type 00 class 0x088000
+[    2.410663] pci 0000:7e:04.0: [8086:3440] type 00 class 0x088000
+[    2.410773] pci 0000:7e:04.1: [8086:3441] type 00 class 0x088000
+[    2.410878] pci 0000:7e:04.2: [8086:3442] type 00 class 0x088000
+[    2.410985] pci 0000:7e:04.3: [8086:3443] type 00 class 0x088000
+[    2.411092] pci 0000:7e:05.0: [8086:3445] type 00 class 0x088000
+[    2.411207] pci 0000:7e:05.1: [8086:3446] type 00 class 0x088000
+[    2.411308] pci 0000:7e:05.2: [8086:3447] type 00 class 0x088000
+[    2.411413] pci 0000:7e:06.0: [8086:3445] type 00 class 0x088000
+[    2.411495] pci 0000:7e:06.1: [8086:3446] type 00 class 0x088000
+[    2.411562] pci 0000:7e:06.2: [8086:3447] type 00 class 0x088000
+[    2.411637] pci 0000:7e:07.0: [8086:3445] type 00 class 0x088000
+[    2.411759] pci 0000:7e:07.1: [8086:3446] type 00 class 0x088000
+[    2.411869] pci 0000:7e:07.2: [8086:3447] type 00 class 0x088000
+[    2.411974] pci 0000:7e:0b.0: [8086:3448] type 00 class 0x088000
+[    2.412044] pci 0000:7e:0b.1: [8086:3448] type 00 class 0x088000
+[    2.412104] pci 0000:7e:0b.2: [8086:344b] type 00 class 0x088000
+[    2.412166] pci 0000:7e:0c.0: [8086:344a] type 00 class 0x110100
+[    2.412262] pci 0000:7e:0d.0: [8086:344a] type 00 class 0x110100
+[    2.412348] pci 0000:7e:0e.0: [8086:344a] type 00 class 0x110100
+[    2.412471] pci 0000:7e:0f.0: [8086:344a] type 00 class 0x110100
+[    2.412605] pci 0000:7e:1a.0: [8086:2880] type 00 class 0x110100
+[    2.412696] pci 0000:7e:1b.0: [8086:2880] type 00 class 0x110100
+[    2.412781] pci 0000:7e:1c.0: [8086:2880] type 00 class 0x110100
+[    2.412915] pci 0000:7e:1d.0: [8086:2880] type 00 class 0x110100
+[    2.413041] pci_bus 0000:7e: on NUMA node 0
+[    2.413110] ACPI: PCI Root Bridge [UC07] (domain 0000 [bus 7f])
+[    2.413112] acpi PNP0A03:01: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.413190] acpi PNP0A03:01: _OSC: platform does not support [SHPCHotplug AER LTR DPC]
+[    2.413334] acpi PNP0A03:01: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    2.413335] acpi PNP0A03:01: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.413452] PCI host bridge to bus 0000:7f
+[    2.413453] pci_bus 0000:7f: root bus resource [bus 7f]
+[    2.413467] pci 0000:7f:00.0: [8086:344c] type 00 class 0x088000
+[    2.413580] pci 0000:7f:00.1: [8086:344c] type 00 class 0x088000
+[    2.413661] pci 0000:7f:00.2: [8086:344c] type 00 class 0x088000
+[    2.413736] pci 0000:7f:00.3: [8086:344c] type 00 class 0x088000
+[    2.413804] pci 0000:7f:00.4: [8086:344c] type 00 class 0x088000
+[    2.413879] pci 0000:7f:00.5: [8086:344c] type 00 class 0x088000
+[    2.413995] pci 0000:7f:00.6: [8086:344c] type 00 class 0x088000
+[    2.414107] pci 0000:7f:00.7: [8086:344c] type 00 class 0x088000
+[    2.414224] pci 0000:7f:01.0: [8086:344c] type 00 class 0x088000
+[    2.414355] pci 0000:7f:01.1: [8086:344c] type 00 class 0x088000
+[    2.414480] pci 0000:7f:01.2: [8086:344c] type 00 class 0x088000
+[    2.414612] pci 0000:7f:01.3: [8086:344c] type 00 class 0x088000
+[    2.414745] pci 0000:7f:01.4: [8086:344c] type 00 class 0x088000
+[    2.414832] pci 0000:7f:01.5: [8086:344c] type 00 class 0x088000
+[    2.414918] pci 0000:7f:01.6: [8086:344c] type 00 class 0x088000
+[    2.415006] pci 0000:7f:01.7: [8086:344c] type 00 class 0x088000
+[    2.415112] pci 0000:7f:02.0: [8086:344c] type 00 class 0x088000
+[    2.415230] pci 0000:7f:02.1: [8086:344c] type 00 class 0x088000
+[    2.415300] pci 0000:7f:02.2: [8086:344c] type 00 class 0x088000
+[    2.415418] pci 0000:7f:02.3: [8086:344c] type 00 class 0x088000
+[    2.415519] pci 0000:7f:02.4: [8086:344c] type 00 class 0x088000
+[    2.415624] pci 0000:7f:02.5: [8086:344c] type 00 class 0x088000
+[    2.415730] pci 0000:7f:02.6: [8086:344c] type 00 class 0x088000
+[    2.415845] pci 0000:7f:02.7: [8086:344c] type 00 class 0x088000
+[    2.415957] pci 0000:7f:03.0: [8086:344c] type 00 class 0x088000
+[    2.416086] pci 0000:7f:03.1: [8086:344c] type 00 class 0x088000
+[    2.416210] pci 0000:7f:03.2: [8086:344c] type 00 class 0x088000
+[    2.416333] pci 0000:7f:03.3: [8086:344c] type 00 class 0x088000
+[    2.416463] pci 0000:7f:0a.0: [8086:344d] type 00 class 0x088000
+[    2.416578] pci 0000:7f:0a.1: [8086:344d] type 00 class 0x088000
+[    2.416659] pci 0000:7f:0a.2: [8086:344d] type 00 class 0x088000
+[    2.416735] pci 0000:7f:0a.3: [8086:344d] type 00 class 0x088000
+[    2.416803] pci 0000:7f:0a.4: [8086:344d] type 00 class 0x088000
+[    2.416881] pci 0000:7f:0a.5: [8086:344d] type 00 class 0x088000
+[    2.416996] pci 0000:7f:0a.6: [8086:344d] type 00 class 0x088000
+[    2.417104] pci 0000:7f:0a.7: [8086:344d] type 00 class 0x088000
+[    2.417221] pci 0000:7f:0b.0: [8086:344d] type 00 class 0x088000
+[    2.417354] pci 0000:7f:0b.1: [8086:344d] type 00 class 0x088000
+[    2.417480] pci 0000:7f:0b.2: [8086:344d] type 00 class 0x088000
+[    2.417617] pci 0000:7f:0b.3: [8086:344d] type 00 class 0x088000
+[    2.417750] pci 0000:7f:0b.4: [8086:344d] type 00 class 0x088000
+[    2.417836] pci 0000:7f:0b.5: [8086:344d] type 00 class 0x088000
+[    2.417923] pci 0000:7f:0b.6: [8086:344d] type 00 class 0x088000
+[    2.418007] pci 0000:7f:0b.7: [8086:344d] type 00 class 0x088000
+[    2.418113] pci 0000:7f:0c.0: [8086:344d] type 00 class 0x088000
+[    2.418232] pci 0000:7f:0c.1: [8086:344d] type 00 class 0x088000
+[    2.418303] pci 0000:7f:0c.2: [8086:344d] type 00 class 0x088000
+[    2.418427] pci 0000:7f:0c.3: [8086:344d] type 00 class 0x088000
+[    2.418527] pci 0000:7f:0c.4: [8086:344d] type 00 class 0x088000
+[    2.418634] pci 0000:7f:0c.5: [8086:344d] type 00 class 0x088000
+[    2.418741] pci 0000:7f:0c.6: [8086:344d] type 00 class 0x088000
+[    2.418853] pci 0000:7f:0c.7: [8086:344d] type 00 class 0x088000
+[    2.418965] pci 0000:7f:0d.0: [8086:344d] type 00 class 0x088000
+[    2.419095] pci 0000:7f:0d.1: [8086:344d] type 00 class 0x088000
+[    2.419220] pci 0000:7f:0d.2: [8086:344d] type 00 class 0x088000
+[    2.419348] pci 0000:7f:0d.3: [8086:344d] type 00 class 0x088000
+[    2.419487] pci 0000:7f:1d.0: [8086:344f] type 00 class 0x088000
+[    2.419607] pci 0000:7f:1d.1: [8086:3457] type 00 class 0x088000
+[    2.419710] pci 0000:7f:1e.0: [8086:3458] type 00 class 0x088000
+[    2.419780] pci 0000:7f:1e.1: [8086:3459] type 00 class 0x088000
+[    2.419835] pci 0000:7f:1e.2: [8086:345a] type 00 class 0x088000
+[    2.419889] pci 0000:7f:1e.3: [8086:345b] type 00 class 0x088000
+[    2.419945] pci 0000:7f:1e.4: [8086:345c] type 00 class 0x088000
+[    2.420004] pci 0000:7f:1e.5: [8086:345d] type 00 class 0x088000
+[    2.420058] pci 0000:7f:1e.6: [8086:345e] type 00 class 0x088000
+[    2.420111] pci 0000:7f:1e.7: [8086:345f] type 00 class 0x088000
+[    2.420163] pci_bus 0000:7f: on NUMA node 0
+[    2.420246] ACPI: PCI Root Bridge [PC06] (domain 0000 [bus 80-96])
+[    2.420248] acpi PNP0A08:06: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.431574] acpi PNP0A08:06: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.431742] acpi PNP0A08:06: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.431742] acpi PNP0A08:06: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.431862] PCI host bridge to bus 0000:80
+[    2.431863] pci_bus 0000:80: root bus resource [io  0xb000-0xbfff window]
+[    2.431864] pci_bus 0000:80: root bus resource [mem 0xc6800000-0xd0ffffff window]
+[    2.431865] pci_bus 0000:80: root bus resource [mem 0x394000000000-0x397fffffffff window]
+[    2.431866] pci_bus 0000:80: root bus resource [bus 80-96]
+[    2.431875] pci 0000:80:00.0: [8086:09a2] type 00 class 0x088000
+[    2.431951] pci 0000:80:00.1: [8086:09a4] type 00 class 0x088000
+[    2.432011] pci 0000:80:00.2: [8086:09a3] type 00 class 0x088000
+[    2.432073] pci 0000:80:00.4: [8086:0998] type 00 class 0x060000
+[    2.432134] pci 0000:80:01.0: [8086:0b00] type 00 class 0x088000
+[    2.432144] pci 0000:80:01.0: reg 0x10: [mem 0xc6ac0000-0xc6ac3fff 64bit]
+[    2.432240] pci 0000:80:01.1: [8086:0b00] type 00 class 0x088000
+[    2.432250] pci 0000:80:01.1: reg 0x10: [mem 0xc6abc000-0xc6abffff 64bit]
+[    2.432332] pci 0000:80:01.2: [8086:0b00] type 00 class 0x088000
+[    2.432342] pci 0000:80:01.2: reg 0x10: [mem 0xc6ab8000-0xc6abbfff 64bit]
+[    2.432423] pci 0000:80:01.3: [8086:0b00] type 00 class 0x088000
+[    2.432433] pci 0000:80:01.3: reg 0x10: [mem 0xc6ab4000-0xc6ab7fff 64bit]
+[    2.432517] pci 0000:80:01.4: [8086:0b00] type 00 class 0x088000
+[    2.432526] pci 0000:80:01.4: reg 0x10: [mem 0xc6ab0000-0xc6ab3fff 64bit]
+[    2.432609] pci 0000:80:01.5: [8086:0b00] type 00 class 0x088000
+[    2.432619] pci 0000:80:01.5: reg 0x10: [mem 0xc6aac000-0xc6aaffff 64bit]
+[    2.432701] pci 0000:80:01.6: [8086:0b00] type 00 class 0x088000
+[    2.432711] pci 0000:80:01.6: reg 0x10: [mem 0xc6aa8000-0xc6aabfff 64bit]
+[    2.432797] pci 0000:80:01.7: [8086:0b00] type 00 class 0x088000
+[    2.432806] pci 0000:80:01.7: reg 0x10: [mem 0xc6aa4000-0xc6aa7fff 64bit]
+[    2.432886] pci 0000:80:02.0: [8086:09a6] type 00 class 0x088000
+[    2.432894] pci 0000:80:02.0: reg 0x10: [mem 0xc6ac4000-0xc6ac5fff]
+[    2.432948] pci 0000:80:02.1: [8086:09a7] type 00 class 0x088000
+[    2.432956] pci 0000:80:02.1: reg 0x10: [mem 0xc6a00000-0xc6a7ffff]
+[    2.432961] pci 0000:80:02.1: reg 0x14: [mem 0xc6980000-0xc69fffff]
+[    2.433009] pci 0000:80:02.4: [8086:3456] type 00 class 0x130000
+[    2.433019] pci 0000:80:02.4: reg 0x10: [mem 0xc6800000-0xc68fffff 64bit]
+[    2.433025] pci 0000:80:02.4: reg 0x18: [mem 0xc6aa0000-0xc6aa3fff 64bit]
+[    2.433032] pci 0000:80:02.4: reg 0x20: [mem 0xc6a80000-0xc6a9ffff 64bit]
+[    2.433090] pci_bus 0000:80: on NUMA node 1
+[    2.433154] ACPI: PCI Root Bridge [PC07] (domain 0000 [bus 97-af])
+[    2.433157] acpi PNP0A08:07: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.444451] acpi PNP0A08:07: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.444621] acpi PNP0A08:07: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.444622] acpi PNP0A08:07: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.444721] PCI host bridge to bus 0000:97
+[    2.444722] pci_bus 0000:97: root bus resource [io  0xc000-0xcfff window]
+[    2.444723] pci_bus 0000:97: root bus resource [mem 0xd1000000-0xdbbfffff window]
+[    2.444724] pci_bus 0000:97: root bus resource [mem 0x398000000000-0x39bfffffffff window]
+[    2.444725] pci_bus 0000:97: root bus resource [bus 97-af]
+[    2.444734] pci 0000:97:00.0: [8086:09a2] type 00 class 0x088000
+[    2.444794] pci 0000:97:00.1: [8086:09a4] type 00 class 0x088000
+[    2.444853] pci 0000:97:00.2: [8086:09a3] type 00 class 0x088000
+[    2.444912] pci 0000:97:00.4: [8086:0998] type 00 class 0x060000
+[    2.444977] pci_bus 0000:97: on NUMA node 1
+[    2.445037] ACPI: PCI Root Bridge [PC08] (domain 0000 [bus b0-c8])
+[    2.445039] acpi PNP0A08:08: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.456306] acpi PNP0A08:08: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.456473] acpi PNP0A08:08: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.456474] acpi PNP0A08:08: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.456576] PCI host bridge to bus 0000:b0
+[    2.456577] pci_bus 0000:b0: root bus resource [io  0xd000-0xdfff window]
+[    2.456578] pci_bus 0000:b0: root bus resource [mem 0xdbc00000-0xe67fffff window]
+[    2.456579] pci_bus 0000:b0: root bus resource [mem 0x39c000000000-0x39ffffffffff window]
+[    2.456580] pci_bus 0000:b0: root bus resource [bus b0-c8]
+[    2.456588] pci 0000:b0:00.0: [8086:09a2] type 00 class 0x088000
+[    2.456648] pci 0000:b0:00.1: [8086:09a4] type 00 class 0x088000
+[    2.456712] pci 0000:b0:00.2: [8086:09a3] type 00 class 0x088000
+[    2.456771] pci 0000:b0:00.4: [8086:0998] type 00 class 0x060000
+[    2.456836] pci_bus 0000:b0: on NUMA node 1
+[    2.456917] ACPI: PCI Root Bridge [PC10] (domain 0000 [bus c9-e1])
+[    2.456919] acpi PNP0A08:0a: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.468228] acpi PNP0A08:0a: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.468395] acpi PNP0A08:0a: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.468396] acpi PNP0A08:0a: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.468496] PCI host bridge to bus 0000:c9
+[    2.468497] pci_bus 0000:c9: root bus resource [io  0xe000-0xefff window]
+[    2.468498] pci_bus 0000:c9: root bus resource [mem 0xe6800000-0xf13fffff window]
+[    2.468498] pci_bus 0000:c9: root bus resource [mem 0x3a0000000000-0x3a3fffffffff window]
+[    2.468500] pci_bus 0000:c9: root bus resource [bus c9-e1]
+[    2.468508] pci 0000:c9:00.0: [8086:09a2] type 00 class 0x088000
+[    2.468569] pci 0000:c9:00.1: [8086:09a4] type 00 class 0x088000
+[    2.468631] pci 0000:c9:00.2: [8086:09a3] type 00 class 0x088000
+[    2.468693] pci 0000:c9:00.4: [8086:0998] type 00 class 0x060000
+[    2.468759] pci_bus 0000:c9: on NUMA node 1
+[    2.468819] ACPI: PCI Root Bridge [PC11] (domain 0000 [bus e2-fa])
+[    2.468821] acpi PNP0A08:0b: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.480116] acpi PNP0A08:0b: _OSC: platform does not support [SHPCHotplug AER DPC]
+[    2.480282] acpi PNP0A08:0b: _OSC: OS now controls [PCIeHotplug PME PCIeCapability LTR]
+[    2.480283] acpi PNP0A08:0b: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.480375] PCI host bridge to bus 0000:e2
+[    2.480376] pci_bus 0000:e2: root bus resource [io  0xf000-0xffff window]
+[    2.480377] pci_bus 0000:e2: root bus resource [mem 0xf1400000-0xfb7fffff window]
+[    2.480378] pci_bus 0000:e2: root bus resource [mem 0x3a4000000000-0x3a7fffffffff window]
+[    2.480379] pci_bus 0000:e2: root bus resource [bus e2-fa]
+[    2.480388] pci 0000:e2:00.0: [8086:09a2] type 00 class 0x088000
+[    2.480448] pci 0000:e2:00.1: [8086:09a4] type 00 class 0x088000
+[    2.480512] pci 0000:e2:00.2: [8086:09a3] type 00 class 0x088000
+[    2.480572] pci 0000:e2:00.4: [8086:0998] type 00 class 0x060000
+[    2.480641] pci_bus 0000:e2: on NUMA node 1
+[    2.480694] ACPI: PCI Root Bridge [UC16] (domain 0000 [bus fe])
+[    2.480696] acpi PNP0A03:02: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.480773] acpi PNP0A03:02: _OSC: platform does not support [SHPCHotplug AER LTR DPC]
+[    2.480915] acpi PNP0A03:02: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    2.480915] acpi PNP0A03:02: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.481020] PCI host bridge to bus 0000:fe
+[    2.481021] pci_bus 0000:fe: root bus resource [bus fe]
+[    2.481028] pci 0000:fe:00.0: [8086:3450] type 00 class 0x088000
+[    2.481093] pci 0000:fe:00.1: [8086:3451] type 00 class 0x088000
+[    2.481142] pci 0000:fe:00.2: [8086:3452] type 00 class 0x088000
+[    2.481196] pci 0000:fe:00.3: [8086:0998] type 00 class 0x060000
+[    2.481247] pci 0000:fe:00.5: [8086:3455] type 00 class 0x088000
+[    2.481304] pci 0000:fe:02.0: [8086:3440] type 00 class 0x088000
+[    2.481430] pci 0000:fe:02.1: [8086:3441] type 00 class 0x088000
+[    2.481534] pci 0000:fe:02.2: [8086:3442] type 00 class 0x088000
+[    2.481637] pci 0000:fe:03.0: [8086:3440] type 00 class 0x088000
+[    2.481725] pci 0000:fe:03.1: [8086:3441] type 00 class 0x088000
+[    2.481796] pci 0000:fe:03.2: [8086:3442] type 00 class 0x088000
+[    2.481873] pci 0000:fe:04.0: [8086:3440] type 00 class 0x088000
+[    2.481989] pci 0000:fe:04.1: [8086:3441] type 00 class 0x088000
+[    2.482100] pci 0000:fe:04.2: [8086:3442] type 00 class 0x088000
+[    2.482214] pci 0000:fe:04.3: [8086:3443] type 00 class 0x088000
+[    2.482329] pci 0000:fe:05.0: [8086:3445] type 00 class 0x088000
+[    2.482450] pci 0000:fe:05.1: [8086:3446] type 00 class 0x088000
+[    2.482558] pci 0000:fe:05.2: [8086:3447] type 00 class 0x088000
+[    2.482663] pci 0000:fe:06.0: [8086:3445] type 00 class 0x088000
+[    2.482750] pci 0000:fe:06.1: [8086:3446] type 00 class 0x088000
+[    2.482824] pci 0000:fe:06.2: [8086:3447] type 00 class 0x088000
+[    2.482905] pci 0000:fe:07.0: [8086:3445] type 00 class 0x088000
+[    2.483038] pci 0000:fe:07.1: [8086:3446] type 00 class 0x088000
+[    2.483153] pci 0000:fe:07.2: [8086:3447] type 00 class 0x088000
+[    2.483266] pci 0000:fe:0b.0: [8086:3448] type 00 class 0x088000
+[    2.483338] pci 0000:fe:0b.1: [8086:3448] type 00 class 0x088000
+[    2.483396] pci 0000:fe:0b.2: [8086:344b] type 00 class 0x088000
+[    2.483459] pci 0000:fe:0c.0: [8086:344a] type 00 class 0x110100
+[    2.483555] pci 0000:fe:0d.0: [8086:344a] type 00 class 0x110100
+[    2.483649] pci 0000:fe:0e.0: [8086:344a] type 00 class 0x110100
+[    2.483781] pci 0000:fe:0f.0: [8086:344a] type 00 class 0x110100
+[    2.483920] pci 0000:fe:1a.0: [8086:2880] type 00 class 0x110100
+[    2.484014] pci 0000:fe:1b.0: [8086:2880] type 00 class 0x110100
+[    2.484104] pci 0000:fe:1c.0: [8086:2880] type 00 class 0x110100
+[    2.484238] pci 0000:fe:1d.0: [8086:2880] type 00 class 0x110100
+[    2.484370] pci_bus 0000:fe: on NUMA node 1
+[    2.484434] ACPI: PCI Root Bridge [UC17] (domain 0000 [bus ff])
+[    2.484437] acpi PNP0A03:03: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI EDR HPX-Type3]
+[    2.484514] acpi PNP0A03:03: _OSC: platform does not support [SHPCHotplug AER LTR DPC]
+[    2.484660] acpi PNP0A03:03: _OSC: OS now controls [PCIeHotplug PME PCIeCapability]
+[    2.484661] acpi PNP0A03:03: FADT indicates ASPM is unsupported, using BIOS configuration
+[    2.484780] PCI host bridge to bus 0000:ff
+[    2.484781] pci_bus 0000:ff: root bus resource [bus ff]
+[    2.484795] pci 0000:ff:00.0: [8086:344c] type 00 class 0x088000
+[    2.484914] pci 0000:ff:00.1: [8086:344c] type 00 class 0x088000
+[    2.485000] pci 0000:ff:00.2: [8086:344c] type 00 class 0x088000
+[    2.485087] pci 0000:ff:00.3: [8086:344c] type 00 class 0x088000
+[    2.485165] pci 0000:ff:00.4: [8086:344c] type 00 class 0x088000
+[    2.485245] pci 0000:ff:00.5: [8086:344c] type 00 class 0x088000
+[    2.485365] pci 0000:ff:00.6: [8086:344c] type 00 class 0x088000
+[    2.485479] pci 0000:ff:00.7: [8086:344c] type 00 class 0x088000
+[    2.485602] pci 0000:ff:01.0: [8086:344c] type 00 class 0x088000
+[    2.485739] pci 0000:ff:01.1: [8086:344c] type 00 class 0x088000
+[    2.485870] pci 0000:ff:01.2: [8086:344c] type 00 class 0x088000
+[    2.486014] pci 0000:ff:01.3: [8086:344c] type 00 class 0x088000
+[    2.486151] pci 0000:ff:01.4: [8086:344c] type 00 class 0x088000
+[    2.486243] pci 0000:ff:01.5: [8086:344c] type 00 class 0x088000
+[    2.486335] pci 0000:ff:01.6: [8086:344c] type 00 class 0x088000
+[    2.486424] pci 0000:ff:01.7: [8086:344c] type 00 class 0x088000
+[    2.486536] pci 0000:ff:02.0: [8086:344c] type 00 class 0x088000
+[    2.486663] pci 0000:ff:02.1: [8086:344c] type 00 class 0x088000
+[    2.486739] pci 0000:ff:02.2: [8086:344c] type 00 class 0x088000
+[    2.486868] pci 0000:ff:02.3: [8086:344c] type 00 class 0x088000
+[    2.486975] pci 0000:ff:02.4: [8086:344c] type 00 class 0x088000
+[    2.487087] pci 0000:ff:02.5: [8086:344c] type 00 class 0x088000
+[    2.487198] pci 0000:ff:02.6: [8086:344c] type 00 class 0x088000
+[    2.487316] pci 0000:ff:02.7: [8086:344c] type 00 class 0x088000
+[    2.487434] pci 0000:ff:03.0: [8086:344c] type 00 class 0x088000
+[    2.487568] pci 0000:ff:03.1: [8086:344c] type 00 class 0x088000
+[    2.487699] pci 0000:ff:03.2: [8086:344c] type 00 class 0x088000
+[    2.487832] pci 0000:ff:03.3: [8086:344c] type 00 class 0x088000
+[    2.487969] pci 0000:ff:0a.0: [8086:344d] type 00 class 0x088000
+[    2.488086] pci 0000:ff:0a.1: [8086:344d] type 00 class 0x088000
+[    2.488173] pci 0000:ff:0a.2: [8086:344d] type 00 class 0x088000
+[    2.488254] pci 0000:ff:0a.3: [8086:344d] type 00 class 0x088000
+[    2.488328] pci 0000:ff:0a.4: [8086:344d] type 00 class 0x088000
+[    2.488407] pci 0000:ff:0a.5: [8086:344d] type 00 class 0x088000
+[    2.488528] pci 0000:ff:0a.6: [8086:344d] type 00 class 0x088000
+[    2.488649] pci 0000:ff:0a.7: [8086:344d] type 00 class 0x088000
+[    2.488772] pci 0000:ff:0b.0: [8086:344d] type 00 class 0x088000
+[    2.488917] pci 0000:ff:0b.1: [8086:344d] type 00 class 0x088000
+[    2.489048] pci 0000:ff:0b.2: [8086:344d] type 00 class 0x088000
+[    2.489186] pci 0000:ff:0b.3: [8086:344d] type 00 class 0x088000
+[    2.489324] pci 0000:ff:0b.4: [8086:344d] type 00 class 0x088000
+[    2.489416] pci 0000:ff:0b.5: [8086:344d] type 00 class 0x088000
+[    2.489509] pci 0000:ff:0b.6: [8086:344d] type 00 class 0x088000
+[    2.489602] pci 0000:ff:0b.7: [8086:344d] type 00 class 0x088000
+[    2.489717] pci 0000:ff:0c.0: [8086:344d] type 00 class 0x088000
+[    2.489842] pci 0000:ff:0c.1: [8086:344d] type 00 class 0x088000
+[    2.489919] pci 0000:ff:0c.2: [8086:344d] type 00 class 0x088000
+[    2.490043] pci 0000:ff:0c.3: [8086:344d] type 00 class 0x088000
+[    2.490150] pci 0000:ff:0c.4: [8086:344d] type 00 class 0x088000
+[    2.490264] pci 0000:ff:0c.5: [8086:344d] type 00 class 0x088000
+[    2.490375] pci 0000:ff:0c.6: [8086:344d] type 00 class 0x088000
+[    2.490497] pci 0000:ff:0c.7: [8086:344d] type 00 class 0x088000
+[    2.490617] pci 0000:ff:0d.0: [8086:344d] type 00 class 0x088000
+[    2.490752] pci 0000:ff:0d.1: [8086:344d] type 00 class 0x088000
+[    2.490882] pci 0000:ff:0d.2: [8086:344d] type 00 class 0x088000
+[    2.491011] pci 0000:ff:0d.3: [8086:344d] type 00 class 0x088000
+[    2.491156] pci 0000:ff:1d.0: [8086:344f] type 00 class 0x088000
+[    2.491283] pci 0000:ff:1d.1: [8086:3457] type 00 class 0x088000
+[    2.491391] pci 0000:ff:1e.0: [8086:3458] type 00 class 0x088000
+[    2.491469] pci 0000:ff:1e.1: [8086:3459] type 00 class 0x088000
+[    2.491527] pci 0000:ff:1e.2: [8086:345a] type 00 class 0x088000
+[    2.491584] pci 0000:ff:1e.3: [8086:345b] type 00 class 0x088000
+[    2.491641] pci 0000:ff:1e.4: [8086:345c] type 00 class 0x088000
+[    2.491698] pci 0000:ff:1e.5: [8086:345d] type 00 class 0x088000
+[    2.491755] pci 0000:ff:1e.6: [8086:345e] type 00 class 0x088000
+[    2.491812] pci 0000:ff:1e.7: [8086:345f] type 00 class 0x088000
+[    2.491867] pci_bus 0000:ff: on NUMA node 1
+[    2.496447] iommu: Default domain type: Translated 
+[    2.496447] iommu: DMA domain TLB invalidation policy: lazy mode 
+[    2.496589] SCSI subsystem initialized
+[    2.496602] libata version 3.00 loaded.
+[    2.496602] ACPI: bus type USB registered
+[    2.496602] usbcore: registered new interface driver usbfs
+[    2.496602] usbcore: registered new interface driver hub
+[    2.496633] usbcore: registered new device driver usb
+[    2.496655] pps_core: LinuxPPS API ver. 1 registered
+[    2.496656] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    2.496658] PTP clock support registered
+[    2.496719] EDAC MC: Ver: 3.0.0
+[    2.497004] NetLabel: Initializing
+[    2.497004] NetLabel:  domain hash size = 128
+[    2.497004] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    2.497004] NetLabel:  unlabeled traffic allowed by default
+[    2.497004] PCI: Using ACPI for IRQ routing
+[    2.497155] PCI: pci_cache_line_size set to 64 bytes
+[    2.497679] Expanded resource Reserved due to conflict with PNP0003:00
+[    2.497681] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    2.497683] e820: reserve RAM buffer [mem 0x4a42b000-0x4bffffff]
+[    2.497684] e820: reserve RAM buffer [mem 0x4b86e000-0x4bffffff]
+[    2.497684] e820: reserve RAM buffer [mem 0x4c20f000-0x4fffffff]
+[    2.497685] e820: reserve RAM buffer [mem 0x51b00000-0x53ffffff]
+[    2.497686] e820: reserve RAM buffer [mem 0x5eefe000-0x5fffffff]
+[    2.497686] e820: reserve RAM buffer [mem 0x6f800000-0x6fffffff]
+[    2.500430] pci 0000:03:00.0: vgaarb: setting as boot VGA device
+[    2.500431] pci 0000:03:00.0: vgaarb: bridge control possible
+[    2.500432] pci 0000:03:00.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    2.500458] vgaarb: loaded
+[    2.501636] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0, 0, 0, 0, 0, 0
+[    2.501642] hpet0: 8 comparators, 64-bit 24.000000 MHz counter
+[    2.504594] clocksource: Switched to clocksource tsc-early
+[    2.513557] VFS: Disk quotas dquot_6.6.0
+[    2.513580] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.513736] AppArmor: AppArmor Filesystem Enabled
+[    2.513751] pnp: PnP ACPI init
+[    2.526972] system 00:01: [io  0x0500-0x05fe] has been reserved
+[    2.526975] system 00:01: [io  0x0400-0x041f] has been reserved
+[    2.526976] system 00:01: [io  0x0600-0x061f] has been reserved
+[    2.526977] system 00:01: [io  0x0ca0-0x0ca1] has been reserved
+[    2.526978] system 00:01: [io  0x0ca4-0x0ca6] has been reserved
+[    2.526980] system 00:01: [mem 0xff000000-0xffffffff] has been reserved
+[    2.527511] system 00:04: [mem 0xfd000000-0xfdabffff] has been reserved
+[    2.527513] system 00:04: [mem 0xfdad0000-0xfdadffff] has been reserved
+[    2.527514] system 00:04: [mem 0xfdb00000-0xfdffffff] has been reserved
+[    2.527515] system 00:04: [mem 0xfe000000-0xfe00ffff] has been reserved
+[    2.527517] system 00:04: [mem 0xfe011000-0xfe01ffff] has been reserved
+[    2.527518] system 00:04: [mem 0xfe036000-0xfe03bfff] has been reserved
+[    2.527519] system 00:04: [mem 0xfe03d000-0xfe3fffff] has been reserved
+[    2.527521] system 00:04: [mem 0xfe410000-0xfe7fffff] has been reserved
+[    2.527784] system 00:05: [io  0x1000-0x10fe] has been reserved
+[    2.528642] pnp: PnP ACPI: found 6 devices
+[    2.534713] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    2.534769] NET: Registered PF_INET protocol family
+[    2.535075] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, vmalloc)
+[    2.536803] tcp_listen_portaddr_hash hash table entries: 65536 (order: 8, 1048576 bytes, vmalloc)
+[    2.537446] TCP established hash table entries: 524288 (order: 10, 4194304 bytes, vmalloc hugepage)
+[    2.538021] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, vmalloc)
+[    2.538075] TCP: Hash tables configured (established 524288 bind 65536)
+[    2.538401] MPTCP token hash table entries: 65536 (order: 8, 1572864 bytes, vmalloc)
+[    2.538837] UDP hash table entries: 65536 (order: 9, 2097152 bytes, vmalloc)
+[    2.539290] UDP-Lite hash table entries: 65536 (order: 9, 2097152 bytes, vmalloc)
+[    2.539534] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    2.539539] NET: Registered PF_XDP protocol family
+[    2.539544] pci 0000:04:00.0: can't claim BAR 6 [mem 0xfffc0000-0xffffffff pref]: no compatible bridge window
+[    2.539546] pci 0000:04:00.1: can't claim BAR 6 [mem 0xfffc0000-0xffffffff pref]: no compatible bridge window
+[    2.539548] pci 0000:17:00.0: can't claim BAR 6 [mem 0xfff00000-0xffffffff pref]: no compatible bridge window
+[    2.539563] pci 0000:00:1c.5: BAR 14: assigned [mem 0x90000000-0x900fffff]
+[    2.539565] pci 0000:00:1c.0: PCI bridge to [bus 01]
+[    2.539574] pci 0000:02:00.0: PCI bridge to [bus 03]
+[    2.539579] pci 0000:02:00.0:   bridge window [mem 0x92000000-0x928fffff]
+[    2.539582] pci 0000:02:00.0:   bridge window [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.539588] pci 0000:00:1c.4: PCI bridge to [bus 02-03]
+[    2.539591] pci 0000:00:1c.4:   bridge window [mem 0x92000000-0x928fffff]
+[    2.539594] pci 0000:00:1c.4:   bridge window [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.539598] pci 0000:04:00.0: BAR 6: assigned [mem 0x90000000-0x9003ffff pref]
+[    2.539600] pci 0000:04:00.1: BAR 6: assigned [mem 0x90040000-0x9007ffff pref]
+[    2.539601] pci 0000:00:1c.5: PCI bridge to [bus 04]
+[    2.539604] pci 0000:00:1c.5:   bridge window [mem 0x90000000-0x900fffff]
+[    2.539606] pci 0000:00:1c.5:   bridge window [mem 0x92900000-0x929fffff 64bit pref]
+[    2.539610] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    2.539611] pci_bus 0000:00: resource 5 [io  0x1000-0x4fff window]
+[    2.539612] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    2.539613] pci_bus 0000:00: resource 7 [mem 0x000c8000-0x000cffff window]
+[    2.539614] pci_bus 0000:00: resource 8 [mem 0xfe010000-0xfe010fff window]
+[    2.539615] pci_bus 0000:00: resource 9 [mem 0x90000000-0x9b7fffff window]
+[    2.539616] pci_bus 0000:00: resource 10 [mem 0x380000000000-0x383fffffffff window]
+[    2.539618] pci_bus 0000:02: resource 1 [mem 0x92000000-0x928fffff]
+[    2.539619] pci_bus 0000:02: resource 2 [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.539620] pci_bus 0000:03: resource 1 [mem 0x92000000-0x928fffff]
+[    2.539621] pci_bus 0000:03: resource 2 [mem 0x91000000-0x91ffffff 64bit pref]
+[    2.539622] pci_bus 0000:04: resource 1 [mem 0x90000000-0x900fffff]
+[    2.539623] pci_bus 0000:04: resource 2 [mem 0x92900000-0x929fffff 64bit pref]
+[    2.539688] pci 0000:17:00.0: BAR 6: no space for [mem size 0x00100000 pref]
+[    2.539689] pci 0000:17:00.0: BAR 6: failed to assign [mem size 0x00100000 pref]
+[    2.539691] pci 0000:16:02.0: PCI bridge to [bus 17]
+[    2.539692] pci 0000:16:02.0:   bridge window [io  0x5000-0x5fff]
+[    2.539694] pci 0000:16:02.0:   bridge window [mem 0x9ba00000-0x9bafffff]
+[    2.539696] pci 0000:16:02.0:   bridge window [mem 0x9b800000-0x9b9fffff 64bit pref]
+[    2.539699] pci_bus 0000:16: resource 4 [io  0x5000-0x6fff window]
+[    2.539700] pci_bus 0000:16: resource 5 [mem 0x9b800000-0xa63fffff window]
+[    2.539701] pci_bus 0000:16: resource 6 [mem 0x384000000000-0x387fffffffff window]
+[    2.539702] pci_bus 0000:17: resource 0 [io  0x5000-0x5fff]
+[    2.539703] pci_bus 0000:17: resource 1 [mem 0x9ba00000-0x9bafffff]
+[    2.539704] pci_bus 0000:17: resource 2 [mem 0x9b800000-0x9b9fffff 64bit pref]
+[    2.539710] pci_bus 0000:30: resource 4 [io  0x7000-0x8fff window]
+[    2.539711] pci_bus 0000:30: resource 5 [mem 0xa6400000-0xb0ffffff window]
+[    2.539712] pci_bus 0000:30: resource 6 [mem 0x388000000000-0x38bfffffffff window]
+[    2.539717] pci_bus 0000:4a: resource 4 [io  0x9000-0x9fff window]
+[    2.539718] pci_bus 0000:4a: resource 5 [mem 0xb1000000-0xbbbfffff window]
+[    2.539719] pci_bus 0000:4a: resource 6 [mem 0x38c000000000-0x38ffffffffff window]
+[    2.539724] pci_bus 0000:64: resource 4 [io  0xa000-0xafff window]
+[    2.539725] pci_bus 0000:64: resource 5 [mem 0xbbc00000-0xc5ffffff window]
+[    2.539726] pci_bus 0000:64: resource 6 [mem 0x390000000000-0x393fffffffff window]
+[    2.539756] pci_bus 0000:80: resource 4 [io  0xb000-0xbfff window]
+[    2.539757] pci_bus 0000:80: resource 5 [mem 0xc6800000-0xd0ffffff window]
+[    2.539758] pci_bus 0000:80: resource 6 [mem 0x394000000000-0x397fffffffff window]
+[    2.539764] pci_bus 0000:97: resource 4 [io  0xc000-0xcfff window]
+[    2.539765] pci_bus 0000:97: resource 5 [mem 0xd1000000-0xdbbfffff window]
+[    2.539766] pci_bus 0000:97: resource 6 [mem 0x398000000000-0x39bfffffffff window]
+[    2.539771] pci_bus 0000:b0: resource 4 [io  0xd000-0xdfff window]
+[    2.539772] pci_bus 0000:b0: resource 5 [mem 0xdbc00000-0xe67fffff window]
+[    2.539773] pci_bus 0000:b0: resource 6 [mem 0x39c000000000-0x39ffffffffff window]
+[    2.539779] pci_bus 0000:c9: resource 4 [io  0xe000-0xefff window]
+[    2.539780] pci_bus 0000:c9: resource 5 [mem 0xe6800000-0xf13fffff window]
+[    2.539780] pci_bus 0000:c9: resource 6 [mem 0x3a0000000000-0x3a3fffffffff window]
+[    2.539786] pci_bus 0000:e2: resource 4 [io  0xf000-0xffff window]
+[    2.539787] pci_bus 0000:e2: resource 5 [mem 0xf1400000-0xfb7fffff window]
+[    2.539788] pci_bus 0000:e2: resource 6 [mem 0x3a4000000000-0x3a7fffffffff window]
+[    2.541334] PCI: CLS 0 bytes, default 64
+[    2.541392] Trying to unpack rootfs image as initramfs...
+[    2.541457] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    2.541458] software IO TLB: mapped [mem 0x000000005aefe000-0x000000005eefe000] (64MB)
+[    2.564027] Initialise system trusted keyrings
+[    2.564046] Key type blacklist registered
+[    2.564169] workingset: timestamp_bits=36 max_order=25 bucket_order=0
+[    2.568251] zbud: loaded
+[    2.569581] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.569817] fuse: init (API version 7.36)
+[    2.570065] integrity: Platform Keyring initialized
+[    2.581125] Key type asymmetric registered
+[    2.581127] Asymmetric key parser 'x509' registered
+[    3.560447] tsc: Refined TSC clocksource calibration: 2992.969 MHz
+[    3.560505] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2b245385dde, max_idle_ns: 440795318340 ns
+[    3.563102] clocksource: Switched to clocksource tsc
+[    3.847945] Freeing initrd memory: 784904K
+[    3.855351] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    3.855402] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 243)
+[    3.855506] io scheduler mq-deadline registered
+[    3.856965] pcieport 0000:00:1c.0: PME: Signaling with IRQ 130
+[    3.857123] pcieport 0000:00:1c.4: PME: Signaling with IRQ 131
+[    3.857278] pcieport 0000:00:1c.5: PME: Signaling with IRQ 132
+[    3.857415] pcieport 0000:16:02.0: PME: Signaling with IRQ 133
+[    3.857808] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    3.858018] Monitor-Mwait will be used to enter C-1 state
+[    3.858025] Monitor-Mwait will be used to enter C-2 state
+[    3.858030] ACPI: \_SB_.SCK0.C000: Found 2 idle states
+[    3.862766] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.862815] ACPI: button: Power Button [PWRF]
+[    3.864440] acpi/hmat: HMAT: Memory (0x0 length 0x80000000) Flags:0003 Processor Domain:0 Memory Domain:0
+[    3.864444] acpi/hmat: HMAT: Memory (0x100000000 length 0xf80000000) Flags:0003 Processor Domain:0 Memory Domain:0
+[    3.864446] acpi/hmat: HMAT: Memory (0x2080000000 length 0x7e00000000) Flags:0003 Processor Domain:0 Memory Domain:2
+[    3.864448] acpi/hmat: HMAT: Memory (0x1080000000 length 0x1000000000) Flags:0003 Processor Domain:1 Memory Domain:1
+[    3.864449] acpi/hmat: HMAT: Memory (0x9e80000000 length 0x7e00000000) Flags:0003 Processor Domain:1 Memory Domain:3
+[    3.864451] acpi/hmat: HMAT: Locality: Flags:00 Type:Read Latency Initiator Domains:2 Target Domains:4 Base:100
+[    3.864453] acpi/hmat:   Initiator-Target[0-0]:7600 nsec
+[    3.864455] acpi/hmat:   Initiator-Target[0-1]:13560 nsec
+[    3.864456] acpi/hmat:   Initiator-Target[0-2]:25350 nsec
+[    3.864456] acpi/hmat:   Initiator-Target[0-3]:31600 nsec
+[    3.864457] acpi/hmat:   Initiator-Target[1-0]:13560 nsec
+[    3.864458] acpi/hmat:   Initiator-Target[1-1]:7600 nsec
+[    3.864459] acpi/hmat:   Initiator-Target[1-2]:31600 nsec
+[    3.864460] acpi/hmat:   Initiator-Target[1-3]:25350 nsec
+[    3.864461] acpi/hmat: HMAT: Locality: Flags:00 Type:Write Latency Initiator Domains:2 Target Domains:4 Base:100
+[    3.864462] acpi/hmat:   Initiator-Target[0-0]:7600 nsec
+[    3.864463] acpi/hmat:   Initiator-Target[0-1]:13560 nsec
+[    3.864464] acpi/hmat:   Initiator-Target[0-2]:25350 nsec
+[    3.864465] acpi/hmat:   Initiator-Target[0-3]:31600 nsec
+[    3.864466] acpi/hmat:   Initiator-Target[1-0]:13560 nsec
+[    3.864466] acpi/hmat:   Initiator-Target[1-1]:7600 nsec
+[    3.864467] acpi/hmat:   Initiator-Target[1-2]:31600 nsec
+[    3.864468] acpi/hmat:   Initiator-Target[1-3]:25350 nsec
+[    3.864469] acpi/hmat: HMAT: Locality: Flags:00 Type:Read Bandwidth Initiator Domains:2 Target Domains:4 Base:1
+[    3.864470] acpi/hmat:   Initiator-Target[0-0]:1790 MB/s
+[    3.864471] acpi/hmat:   Initiator-Target[0-1]:1790 MB/s
+[    3.864472] acpi/hmat:   Initiator-Target[0-2]:463 MB/s
+[    3.864473] acpi/hmat:   Initiator-Target[0-3]:463 MB/s
+[    3.864474] acpi/hmat:   Initiator-Target[1-0]:1790 MB/s
+[    3.864475] acpi/hmat:   Initiator-Target[1-1]:1790 MB/s
+[    3.864476] acpi/hmat:   Initiator-Target[1-2]:463 MB/s
+[    3.864477] acpi/hmat:   Initiator-Target[1-3]:463 MB/s
+[    3.864478] acpi/hmat: HMAT: Locality: Flags:00 Type:Write Bandwidth Initiator Domains:2 Target Domains:4 Base:1
+[    3.864479] acpi/hmat:   Initiator-Target[0-0]:1910 MB/s
+[    3.864479] acpi/hmat:   Initiator-Target[0-1]:1910 MB/s
+[    3.864480] acpi/hmat:   Initiator-Target[0-2]:138 MB/s
+[    3.864481] acpi/hmat:   Initiator-Target[0-3]:138 MB/s
+[    3.864482] acpi/hmat:   Initiator-Target[1-0]:1910 MB/s
+[    3.864482] acpi/hmat:   Initiator-Target[1-1]:1910 MB/s
+[    3.864483] acpi/hmat:   Initiator-Target[1-2]:138 MB/s
+[    3.864484] acpi/hmat:   Initiator-Target[1-3]:138 MB/s
+[    3.864828] ERST: Error Record Serialization Table (ERST) support is initialized.
+[    3.864836] pstore: Registered erst as persistent store backend
+[    3.865025] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    3.885811] 00:02: ttyS1 at I/O 0x2f8 (irq = 3, base_baud = 115200) is a 16550A
+[    3.922376] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    3.939088] Linux agpgart interface v0.103
+[    3.949210] loop: module loaded
+[    3.949610] tun: Universal TUN/TAP device driver, 1.6
+[    3.949642] PPP generic driver version 2.4.2
+[    3.949700] VFIO - User Level meta-driver version: 0.3
+[    3.949799] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.949801] ehci-pci: EHCI PCI platform driver
+[    3.949825] ehci-platform: EHCI generic platform driver
+[    3.949831] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    3.949832] ohci-pci: OHCI PCI platform driver
+[    3.949857] ohci-platform: OHCI generic platform driver
+[    3.949863] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.949914] i8042: PNP: No PS/2 controller found.
+[    3.949964] mousedev: PS/2 mouse device common for all mice
+[    3.950039] rtc_cmos 00:00: RTC can wake from S4
+[    3.950460] rtc_cmos 00:00: registered as rtc0
+[    3.950538] rtc_cmos 00:00: setting system clock to 2023-12-24T13:35:11 UTC (1703424911)
+[    3.950553] rtc_cmos 00:00: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+[    3.950560] i2c_dev: i2c /dev entries driver
+[    3.953253] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    3.953279] device-mapper: uevent: version 1.0.3
+[    3.953328] device-mapper: ioctl: 4.46.0-ioctl (2022-02-22) initialised: dm-devel@redhat.com
+[    3.953342] platform eisa.0: Probing EISA bus 0
+[    3.953344] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    3.953345] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    3.953346] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    3.953348] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    3.953349] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    3.953350] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    3.953351] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    3.953352] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    3.953353] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    3.953354] platform eisa.0: EISA: Detected 0 cards
+[    3.953366] intel_pstate: P-states controlled by the platform
+[    3.955450] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.955465] vesafb: mode is 640x480x32, linelength=2560, pages=0
+[    3.955466] vesafb: scrolling: redraw
+[    3.955467] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+[    3.955477] vesafb: framebuffer at 0x91000000, mapped to 0x00000000c3196ae9, using 1216k, total 1216k
+[    3.955540] Console: switching to colour frame buffer device 80x30
+[    3.994737] fb0: VESA VGA frame buffer device
+[    3.994973] drop_monitor: Initializing network drop monitor service
+[    3.995092] NET: Registered PF_INET6 protocol family
+[    4.003686] Segment Routing with IPv6
+[    4.003695] In-situ OAM (IOAM) with IPv6
+[    4.003714] NET: Registered PF_PACKET protocol family
+[    4.003957] Key type dns_resolver registered
+[    4.019907] microcode: sig=0x606a6, pf=0x1, revision=0xd0003b9
+[    4.021681] microcode: Microcode Update Driver: v2.2.
+[    4.024298] resctrl: L3 allocation detected
+[    4.024303] resctrl: MB allocation detected
+[    4.024305] resctrl: L3 monitoring detected
+[    4.024312] IPI shorthand broadcast: enabled
+[    4.024333] sched_clock: Marking stable (4021511463, 2760948)->(4137332345, -113059934)
+[    4.027777] registered taskstats version 1
+[    4.035478] Loading compiled-in X.509 certificates
+[    4.037463] Loaded X.509 cert 'Build time autogenerated kernel key: 97954822ab2220913454dae39d5adc6abb8c6365'
+[    4.041022] zswap: loaded using pool lzo/zbud
+[    4.042274] Key type ._fscrypt registered
+[    4.042277] Key type .fscrypt registered
+[    4.042279] Key type fscrypt-provisioning registered
+[    4.042584] pstore: Using crash dump compression: deflate
+[    4.052981] Key type encrypted registered
+[    4.052989] AppArmor: AppArmor sha1 policy hashing enabled
+[    4.052999] ima: No TPM chip found, activating TPM-bypass!
+[    4.053004] Loading compiled-in module X.509 certificates
+[    4.054038] Loaded X.509 cert 'Build time autogenerated kernel key: 97954822ab2220913454dae39d5adc6abb8c6365'
+[    4.054042] ima: Allocated hash algorithm: sha1
+[    4.054051] ima: No architecture policies found
+[    4.054064] evm: Initialising EVM extended attributes:
+[    4.054066] evm: security.selinux
+[    4.054067] evm: security.SMACK64
+[    4.054069] evm: security.SMACK64EXEC
+[    4.054070] evm: security.SMACK64TRANSMUTE
+[    4.054071] evm: security.SMACK64MMAP
+[    4.054073] evm: security.apparmor
+[    4.054074] evm: security.ima
+[    4.054075] evm: security.capability
+[    4.054077] evm: HMAC attrs: 0x1
+[    4.057329] PM:   Magic number: 3:250:585
+[    4.063443] RAS: Correctable Errors collector initialized.
+[    4.071007] Freeing unused decrypted memory: 2036K
+[    4.071625] Freeing unused kernel image (initmem) memory: 2880K
+[    4.156528] Write protecting the kernel read-only data: 24576k
+[    4.158301] Freeing unused kernel image (text/rodata gap) memory: 2036K
+[    4.158757] Freeing unused kernel image (rodata/data gap) memory: 372K
+[    4.175602] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    4.175608] Run /init as init process
+[    4.175609]   with arguments:
+[    4.175610]     /init
+[    4.175611]     splash
+[    4.175612]   with environment:
+[    4.175612]     HOME=/
+[    4.175613]     TERM=linux
+[    4.175614]     BOOT_IMAGE=/boot/vmlinuz-5.18.0
+[    4.357915] wmi_bus wmi_bus-PNP0C14:00: WQBC data block query control method not found
+[    4.365429] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    4.365461] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 1
+[    4.366594] xhci_hcd 0000:00:14.0: hcc params 0x200077c1 hci version 0x100 quirks 0x0000000000009810
+[    4.366887] ahci 0000:00:11.5: version 3.0
+[    4.367184] ahci 0000:00:11.5: AHCI 0001.0301 32 slots 2 ports 6 Gbps 0x3 impl RAID mode
+[    4.367188] ahci 0000:00:11.5: flags: 64bit ncq sntf pm led clo only pio slum part ems deso sadm sds apst 
+[    4.367302] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.18
+[    4.367305] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.367307] usb usb1: Product: xHCI Host Controller
+[    4.367309] usb usb1: Manufacturer: Linux 5.18.0 xhci-hcd
+[    4.367311] usb usb1: SerialNumber: 0000:00:14.0
+[    4.368033] hub 1-0:1.0: USB hub found
+[    4.368059] hub 1-0:1.0: 16 ports detected
+[    4.368626] i801_smbus 0000:00:1f.4: SPD Write Disable is set
+[    4.368661] i801_smbus 0000:00:1f.4: SMBus using PCI interrupt
+[    4.391323] megasas: 07.719.03.00-rc1
+[    4.396900] xhci_hcd 0000:00:14.0: xHCI Host Controller
+[    4.396907] xhci_hcd 0000:00:14.0: new USB bus registered, assigned bus number 2
+[    4.396911] xhci_hcd 0000:00:14.0: Host supports USB 3.0 SuperSpeed
+[    4.397225] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.18
+[    4.397229] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.397231] usb usb2: Product: xHCI Host Controller
+[    4.397232] usb usb2: Manufacturer: Linux 5.18.0 xhci-hcd
+[    4.397234] usb usb2: SerialNumber: 0000:00:14.0
+[    4.398169] scsi host0: ahci
+[    4.399924] scsi host1: ahci
+[    4.400030] ata1: SATA max UDMA/133 abar m524288@0x92b80000 port 0x92b80100 irq 135
+[    4.400032] ata2: SATA max UDMA/133 abar m524288@0x92b80000 port 0x92b80180 irq 135
+[    4.404175] hub 2-0:1.0: USB hub found
+[    4.404196] hub 2-0:1.0: 10 ports detected
+[    4.404550] usb: port power management may be unreliable
+[    4.422445] i2c i2c-0: 16/32 memory slots populated (from DMI)
+[    4.422448] i2c i2c-0: Systems with more than 4 memory slots not supported yet, not instantiating SPD
+[    4.423304] ahci 0000:00:17.0: AHCI 0001.0301 32 slots 8 ports 6 Gbps 0xff impl RAID mode
+[    4.423307] ahci 0000:00:17.0: flags: 64bit ncq sntf pm led clo only pio slum part ems deso sadm sds apst 
+[    4.423551] megaraid_sas 0000:17:00.0: BAR:0x0  BAR's base_addr(phys):0x000000009b800000  mapped virt_addr:0x000000004e61b0be
+[    4.423556] megaraid_sas 0000:17:00.0: FW now in Ready state
+[    4.423558] megaraid_sas 0000:17:00.0: 63 bit DMA mask and 63 bit consistent mask
+[    4.423873] megaraid_sas 0000:17:00.0: firmware supports msix	: (128)
+[    4.424413] megaraid_sas 0000:17:00.0: requested/available msix 56/56 poll_queue 0
+[    4.424419] megaraid_sas 0000:17:00.0: current msix/online cpus	: (56/48)
+[    4.424431] megaraid_sas 0000:17:00.0: RDPQ mode	: (enabled)
+[    4.424432] megaraid_sas 0000:17:00.0: Current firmware supports maximum commands: 5101	 LDIO threshold: 0
+[    4.453089] tg3 0000:04:00.0 eth0: Tigon3 [partno(BCM95720) rev 5720000] (PCI Express) MAC address ec:2a:72:19:e1:8e
+[    4.453093] tg3 0000:04:00.0 eth0: attached PHY is 5720C (10/100/1000Base-T Ethernet) (WireSpeed[1], EEE[1])
+[    4.453095] tg3 0000:04:00.0 eth0: RXcsums[1] LinkChgREG[0] MIirq[0] ASF[1] TSOcap[1]
+[    4.453097] tg3 0000:04:00.0 eth0: dma_rwctrl[00000001] dma_mask[64-bit]
+[    4.505184] scsi host3: ahci
+[    4.505646] scsi host4: ahci
+[    4.506096] scsi host5: ahci
+[    4.506573] scsi host6: ahci
+[    4.506848] scsi host7: ahci
+[    4.507127] scsi host8: ahci
+[    4.507289] scsi host9: ahci
+[    4.507711] scsi host10: ahci
+[    4.507768] ata3: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00100 irq 136
+[    4.507770] ata4: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00180 irq 136
+[    4.507771] ata5: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00200 irq 136
+[    4.507773] ata6: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00280 irq 136
+[    4.507774] ata7: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00300 irq 136
+[    4.507776] ata8: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00380 irq 136
+[    4.507777] ata9: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00400 irq 136
+[    4.507778] ata10: SATA max UDMA/133 abar m524288@0x92b00000 port 0x92b00480 irq 136
+[    4.509161] megaraid_sas 0000:17:00.0: Performance mode :Balanced (latency index = 8)
+[    4.509162] megaraid_sas 0000:17:00.0: FW supports sync cache	: Yes
+[    4.509165] megaraid_sas 0000:17:00.0: megasas_disable_intr_fusion is called outbound_intr_mask:0x40000009
+[    4.532344] tg3 0000:04:00.1 eth1: Tigon3 [partno(BCM95720) rev 5720000] (PCI Express) MAC address ec:2a:72:19:e1:8f
+[    4.532348] tg3 0000:04:00.1 eth1: attached PHY is 5720C (10/100/1000Base-T Ethernet) (WireSpeed[1], EEE[1])
+[    4.532350] tg3 0000:04:00.1 eth1: RXcsums[1] LinkChgREG[0] MIirq[0] ASF[1] TSOcap[1]
+[    4.532352] tg3 0000:04:00.1 eth1: dma_rwctrl[00000001] dma_mask[64-bit]
+[    4.579987] tg3 0000:04:00.0 eno8303: renamed from eth0
+[    4.592470] megaraid_sas 0000:17:00.0: FW supports atomic descriptor	: Yes
+[    4.648466] megaraid_sas 0000:17:00.0: FW provided supportMaxExtLDs: 1	max_lds: 240
+[    4.648477] megaraid_sas 0000:17:00.0: controller type	: MR(8192MB)
+[    4.648481] megaraid_sas 0000:17:00.0: Online Controller Reset(OCR)	: Enabled
+[    4.648485] megaraid_sas 0000:17:00.0: Secure JBOD support	: No
+[    4.648488] megaraid_sas 0000:17:00.0: NVMe passthru support	: Yes
+[    4.648491] megaraid_sas 0000:17:00.0: FW provided TM TaskAbort/Reset timeout	: 6 secs/60 secs
+[    4.648496] megaraid_sas 0000:17:00.0: JBOD sequence map support	: Yes
+[    4.648499] megaraid_sas 0000:17:00.0: PCI Lane Margining support	: Yes
+[    4.660454] usb 1-12: new low-speed USB device number 2 using xhci_hcd
+[    4.676710] ================================================================================
+[    4.678658] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    4.680673] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    4.682115] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    4.682122] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    4.682126] Workqueue: events work_for_cpu_fn
+[    4.682141] Call Trace:
+[    4.682144]  <TASK>
+[    4.682149]  dump_stack_lvl+0x49/0x5f
+[    4.682160]  dump_stack+0x10/0x12
+[    4.682165]  ubsan_epilogue+0x9/0x3b
+[    4.682170]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    4.682175]  ? _raw_spin_unlock_irqrestore+0x27/0x3b
+[    4.682186]  ? try_to_del_timer_sync+0x53/0x80
+[    4.682194]  mr_update_load_balance_params+0xc2/0xd0 [megaraid_sas]
+[    4.682232]  MR_ValidateMapInfo+0x1cf/0xe50 [megaraid_sas]
+[    4.682253]  ? timer_update_keys+0x40/0x40
+[    4.682261]  ? megasas_readl+0x1e/0x20 [megaraid_sas]
+[    4.682283]  ? megasas_read_fw_status_reg_fusion+0x1c/0x20 [megaraid_sas]
+[    4.682306]  ? wait_and_poll+0x76/0xd0 [megaraid_sas]
+[    4.682325]  megasas_get_map_info+0x135/0x170 [megaraid_sas]
+[    4.682342]  megasas_init_adapter_fusion+0xa7c/0xc20 [megaraid_sas]
+[    4.682360]  megasas_probe_one.cold.89+0xc06/0x1934 [megaraid_sas]
+[    4.682390]  ? raw_spin_rq_unlock+0x10/0x30
+[    4.682401]  local_pci_probe+0x47/0x90
+[    4.682412]  work_for_cpu_fn+0x17/0x30
+[    4.682420]  process_one_work+0x229/0x400
+[    4.682426]  worker_thread+0x21c/0x3d0
+[    4.682432]  ? process_one_work+0x400/0x400
+[    4.682436]  kthread+0xfc/0x130
+[    4.682445]  ? kthread_complete_and_exit+0x20/0x20
+[    4.682454]  ret_from_fork+0x1f/0x30
+[    4.682466]  </TASK>
+[    4.682469] ================================================================================
+[    4.684426] ================================================================================
+[    4.686060] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    4.687730] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    4.688913] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    4.688915] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    4.688917] Workqueue: events work_for_cpu_fn
+[    4.688920] Call Trace:
+[    4.688921]  <TASK>
+[    4.688922]  dump_stack_lvl+0x49/0x5f
+[    4.688925]  dump_stack+0x10/0x12
+[    4.688927]  ubsan_epilogue+0x9/0x3b
+[    4.688929]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    4.688931]  ? mr_update_load_balance_params+0xc2/0xd0 [megaraid_sas]
+[    4.688940]  MR_ValidateMapInfo+0xdab/0xe50 [megaraid_sas]
+[    4.688947]  ? timer_update_keys+0x40/0x40
+[    4.688951]  ? megasas_readl+0x1e/0x20 [megaraid_sas]
+[    4.688959]  ? megasas_read_fw_status_reg_fusion+0x1c/0x20 [megaraid_sas]
+[    4.688967]  ? wait_and_poll+0x76/0xd0 [megaraid_sas]
+[    4.688974]  megasas_get_map_info+0x135/0x170 [megaraid_sas]
+[    4.688982]  megasas_init_adapter_fusion+0xa7c/0xc20 [megaraid_sas]
+[    4.688990]  megasas_probe_one.cold.89+0xc06/0x1934 [megaraid_sas]
+[    4.688999]  ? raw_spin_rq_unlock+0x10/0x30
+[    4.689003]  local_pci_probe+0x47/0x90
+[    4.689007]  work_for_cpu_fn+0x17/0x30
+[    4.689011]  process_one_work+0x229/0x400
+[    4.689013]  worker_thread+0x21c/0x3d0
+[    4.689015]  ? process_one_work+0x400/0x400
+[    4.689017]  kthread+0xfc/0x130
+[    4.689021]  ? kthread_complete_and_exit+0x20/0x20
+[    4.689024]  ret_from_fork+0x1f/0x30
+[    4.689029]  </TASK>
+[    4.689030] ================================================================================
+[    4.690673] ================================================================================
+[    4.692251] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    4.693869] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    4.695009] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    4.695009] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    4.695010] Workqueue: events work_for_cpu_fn
+[    4.695012] Call Trace:
+[    4.695012]  <TASK>
+[    4.695013]  dump_stack_lvl+0x49/0x5f
+[    4.695014]  dump_stack+0x10/0x12
+[    4.695015]  ubsan_epilogue+0x9/0x3b
+[    4.695016]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    4.695017]  ? preempt_count_add+0x74/0xc0
+[    4.695018]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    4.695020]  MR_LdRaidGet+0x39/0x40 [megaraid_sas]
+[    4.695024]  megasas_sync_map_info+0xdc/0x190 [megaraid_sas]
+[    4.695028]  megasas_init_adapter_fusion+0xb2a/0xc20 [megaraid_sas]
+[    4.695032]  megasas_probe_one.cold.89+0xc06/0x1934 [megaraid_sas]
+[    4.695036]  ? raw_spin_rq_unlock+0x10/0x30
+[    4.695038]  local_pci_probe+0x47/0x90
+[    4.695040]  work_for_cpu_fn+0x17/0x30
+[    4.695041]  process_one_work+0x229/0x400
+[    4.695043]  worker_thread+0x21c/0x3d0
+[    4.695044]  ? process_one_work+0x400/0x400
+[    4.695045]  kthread+0xfc/0x130
+[    4.695046]  ? kthread_complete_and_exit+0x20/0x20
+[    4.695048]  ret_from_fork+0x1f/0x30
+[    4.695050]  </TASK>
+[    4.695051] ================================================================================
+[    4.696630] ================================================================================
+[    4.698211] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:140:9
+[    4.699811] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    4.700955] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    4.700956] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    4.700956] Workqueue: events work_for_cpu_fn
+[    4.700958] Call Trace:
+[    4.700958]  <TASK>
+[    4.700959]  dump_stack_lvl+0x49/0x5f
+[    4.700960]  dump_stack+0x10/0x12
+[    4.700961]  ubsan_epilogue+0x9/0x3b
+[    4.700962]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    4.700963]  ? preempt_count_add+0x74/0xc0
+[    4.700964]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    4.700966]  MR_GetLDTgtId+0x3a/0x40 [megaraid_sas]
+[    4.700970]  megasas_sync_map_info+0xea/0x190 [megaraid_sas]
+[    4.700974]  megasas_init_adapter_fusion+0xb2a/0xc20 [megaraid_sas]
+[    4.700977]  megasas_probe_one.cold.89+0xc06/0x1934 [megaraid_sas]
+[    4.700981]  ? raw_spin_rq_unlock+0x10/0x30
+[    4.700983]  local_pci_probe+0x47/0x90
+[    4.700985]  work_for_cpu_fn+0x17/0x30
+[    4.700987]  process_one_work+0x229/0x400
+[    4.700988]  worker_thread+0x21c/0x3d0
+[    4.700989]  ? process_one_work+0x400/0x400
+[    4.700990]  kthread+0xfc/0x130
+[    4.700991]  ? kthread_complete_and_exit+0x20/0x20
+[    4.700993]  ret_from_fork+0x1f/0x30
+[    4.700995]  </TASK>
+[    4.700996] ================================================================================
+[    4.702574] megaraid_sas 0000:17:00.0: NVME page size	: (4096)
+[    4.702944] megaraid_sas 0000:17:00.0: megasas_enable_intr_fusion is called outbound_intr_mask:0x40000000
+[    4.702945] megaraid_sas 0000:17:00.0: INIT adapter done
+[    4.714024] ================================================================================
+[    4.715003] ata2: SATA link down (SStatus 4 SControl 300)
+[    4.787602] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    4.787604] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    4.787605] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    4.787607] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    4.787608] Workqueue: events work_for_cpu_fn
+[    4.787611] Call Trace:
+[    4.787611]  <TASK>
+[    4.787613]  dump_stack_lvl+0x49/0x5f
+[    4.787615]  dump_stack+0x10/0x12
+[    4.787616]  ubsan_epilogue+0x9/0x3b
+[    4.787617]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    4.787618]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    4.787621]  MR_ValidateMapInfo+0xd31/0xe50 [megaraid_sas]
+[    4.822875] ata5: SATA link down (SStatus 0 SControl 300)
+[    4.822993] ata3: SATA link down (SStatus 0 SControl 300)
+[    4.823358] ata9: SATA link down (SStatus 0 SControl 300)
+[    4.823484] ata7: SATA link down (SStatus 0 SControl 300)
+[    4.823608] ata4: SATA link down (SStatus 0 SControl 300)
+[    4.823734] ata10: SATA link down (SStatus 0 SControl 300)
+[    4.823860] ata8: SATA link down (SStatus 0 SControl 300)
+[    4.823986] ata6: SATA link down (SStatus 0 SControl 300)
+[    4.861406] ata1: SATA link down (SStatus 4 SControl 300)
+[    4.886634] usb 1-12: New USB device found, idVendor=046d, idProduct=c31c, bcdDevice=49.20
+[    4.886638] usb 1-12: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    4.886641] usb 1-12: Product: USB Keyboard
+[    4.886643] usb 1-12: Manufacturer: Logitech
+[    4.898007]  ? slab_post_alloc_hook+0x55/0x2c0
+[    4.898011]  ? megasas_probe_one.cold.89+0xff4/0x1934 [megaraid_sas]
+[    4.898019]  ? kmem_cache_alloc_trace+0x189/0x2f0
+[    4.898022]  megasas_probe_one.cold.89+0x10e5/0x1934 [megaraid_sas]
+[    4.898027]  ? raw_spin_rq_unlock+0x10/0x30
+[    4.898029]  local_pci_probe+0x47/0x90
+[    4.898031]  work_for_cpu_fn+0x17/0x30
+[    4.898033]  process_one_work+0x229/0x400
+[    4.898035]  worker_thread+0x21c/0x3d0
+[    4.898036]  ? process_one_work+0x400/0x400
+[    4.898037]  kthread+0xfc/0x130
+[    4.898039]  ? kthread_complete_and_exit+0x20/0x20
+[    4.898041]  ret_from_fork+0x1f/0x30
+[    4.898043]  </TASK>
+[    4.898048] ================================================================================
+[    4.971563] ================================================================================
+[    4.974159] tg3 0000:04:00.1 eno8403: renamed from eth1
+[    5.016469] usb 1-13: new low-speed USB device number 3 using xhci_hcd
+[    5.045263] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:1240:9
+[    5.118912] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    5.155752] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    5.155754] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    5.155755] Workqueue: events work_for_cpu_fn
+[    5.155757] Call Trace:
+[    5.155758]  <TASK>
+[    5.155759]  dump_stack_lvl+0x49/0x5f
+[    5.155761]  dump_stack+0x10/0x12
+[    5.155762]  ubsan_epilogue+0x9/0x3b
+[    5.155763]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    5.155764]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    5.155767]  MR_ValidateMapInfo+0xc3b/0xe50 [megaraid_sas]
+[    5.155773]  ? slab_post_alloc_hook+0x55/0x2c0
+[    5.155776]  megasas_probe_one.cold.89+0x10e5/0x1934 [megaraid_sas]
+[    5.155781]  ? raw_spin_rq_unlock+0x10/0x30
+[    5.155783]  local_pci_probe+0x47/0x90
+[    5.155785]  work_for_cpu_fn+0x17/0x30
+[    5.155787]  process_one_work+0x229/0x400
+[    5.155789]  worker_thread+0x21c/0x3d0
+[    5.155790]  ? process_one_work+0x400/0x400
+[    5.155791]  kthread+0xfc/0x130
+[    5.155793]  ? kthread_complete_and_exit+0x20/0x20
+[    5.155795]  ret_from_fork+0x1f/0x30
+[    5.155797]  </TASK>
+[    5.155798] ================================================================================
+[    5.168118] usb 1-13: New USB device found, idVendor=413c, idProduct=301a, bcdDevice= 1.00
+[    5.229378] ================================================================================
+[    5.229378] usb 1-13: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    5.303170] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:1245:35
+[    5.303171] usb 1-13: Product: Dell MS116 USB Optical Mouse
+[    5.303172] usb 1-13: Manufacturer: PixArt
+[    5.376917] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    5.413806] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    5.413807] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    5.413807] Workqueue: events work_for_cpu_fn
+[    5.413809] Call Trace:
+[    5.413810]  <TASK>
+[    5.413810]  dump_stack_lvl+0x49/0x5f
+[    5.413812]  dump_stack+0x10/0x12
+[    5.413813]  ubsan_epilogue+0x9/0x3b
+[    5.413814]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    5.413815]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    5.413817]  MR_ValidateMapInfo+0xc6e/0xe50 [megaraid_sas]
+[    5.413823]  ? slab_post_alloc_hook+0x55/0x2c0
+[    5.413825]  megasas_probe_one.cold.89+0x10e5/0x1934 [megaraid_sas]
+[    5.413830]  ? raw_spin_rq_unlock+0x10/0x30
+[    5.413832]  local_pci_probe+0x47/0x90
+[    5.413834]  work_for_cpu_fn+0x17/0x30
+[    5.413836]  process_one_work+0x229/0x400
+[    5.413838]  worker_thread+0x21c/0x3d0
+[    5.413839]  ? process_one_work+0x400/0x400
+[    5.413840]  kthread+0xfc/0x130
+[    5.413842]  ? kthread_complete_and_exit+0x20/0x20
+[    5.413844]  ret_from_fork+0x1f/0x30
+[    5.413847]  </TASK>
+[    5.413847] ================================================================================
+[    5.487460] ================================================================================
+[    5.504442] usb 1-14: new high-speed USB device number 4 using xhci_hcd
+[    5.561267] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:1253:10
+[    5.635010] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    5.671915] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    5.671916] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    5.671917] Workqueue: events work_for_cpu_fn
+[    5.671919] Call Trace:
+[    5.671920]  <TASK>
+[    5.671920]  dump_stack_lvl+0x49/0x5f
+[    5.671922]  dump_stack+0x10/0x12
+[    5.671923]  ubsan_epilogue+0x9/0x3b
+[    5.671924]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    5.671925]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    5.671928]  MR_ValidateMapInfo+0xa6f/0xe50 [megaraid_sas]
+[    5.671932]  megasas_probe_one.cold.89+0x10e5/0x1934 [megaraid_sas]
+[    5.671936]  ? raw_spin_rq_unlock+0x10/0x30
+[    5.671938]  local_pci_probe+0x47/0x90
+[    5.671940]  work_for_cpu_fn+0x17/0x30
+[    5.671942]  process_one_work+0x229/0x400
+[    5.671943]  worker_thread+0x21c/0x3d0
+[    5.671944]  ? process_one_work+0x400/0x400
+[    5.671945]  kthread+0xfc/0x130
+[    5.671947]  ? kthread_complete_and_exit+0x20/0x20
+[    5.671949]  ret_from_fork+0x1f/0x30
+[    5.671952]  </TASK>
+[    5.671952] ================================================================================
+[    5.712616] usb 1-14: New USB device found, idVendor=1604, idProduct=10c0, bcdDevice= 0.00
+[    5.745597] ================================================================================
+[    5.745598] usb 1-14: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    5.819405] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:151:32
+[    5.820452] hub 1-14:1.0: USB hub found
+[    5.893115] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    5.893143] hub 1-14:1.0: 4 ports detected
+[    5.929970] CPU: 0 PID: 307 Comm: kworker/0:2 Not tainted 5.18.0 #1
+[    5.929972] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    5.929972] Workqueue: events work_for_cpu_fn
+[    5.929974] Call Trace:
+[    5.929975]  <TASK>
+[    5.929975]  dump_stack_lvl+0x49/0x5f
+[    5.929977]  dump_stack+0x10/0x12
+[    5.929978]  ubsan_epilogue+0x9/0x3b
+[    5.929979]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    5.929980]  ? _raw_spin_lock_irqsave+0x28/0x50
+[    5.929982]  MR_ValidateMapInfo+0xb4c/0xe50 [megaraid_sas]
+[    5.929987]  megasas_probe_one.cold.89+0x10e5/0x1934 [megaraid_sas]
+[    5.929991]  ? raw_spin_rq_unlock+0x10/0x30
+[    5.929993]  local_pci_probe+0x47/0x90
+[    5.929995]  work_for_cpu_fn+0x17/0x30
+[    5.929996]  process_one_work+0x229/0x400
+[    5.929998]  worker_thread+0x21c/0x3d0
+[    5.929999]  ? process_one_work+0x400/0x400
+[    5.930000]  kthread+0xfc/0x130
+[    5.930002]  ? kthread_complete_and_exit+0x20/0x20
+[    5.930004]  ret_from_fork+0x1f/0x30
+[    5.930006]  </TASK>
+[    5.930006] ================================================================================
+[    6.003808] hid: raw HID events driver (C) Jiri Kosina
+[    6.004391] megaraid_sas 0000:17:00.0: Snap dump wait time	: 15
+[    6.004393] megaraid_sas 0000:17:00.0: pci id		: (0x1000)/(0x10e2)/(0x1028)/(0x1ae0)
+[    6.004394] megaraid_sas 0000:17:00.0: unevenspan support	: yes
+[    6.004395] megaraid_sas 0000:17:00.0: firmware crash dump	: no
+[    6.004396] megaraid_sas 0000:17:00.0: JBOD sequence map	: enabled
+[    6.004462] megaraid_sas 0000:17:00.0: Max firmware commands: 5100 shared with default hw_queues = 48 poll_queues 0
+[    6.004463] scsi host2: Avago SAS based MegaRAID driver
+[    6.020848] usbcore: registered new interface driver usbhid
+[    6.020850] usbhid: USB HID core driver
+[    6.656479] usb 1-14.1: new high-speed USB device number 5 using xhci_hcd
+[    6.756970] usb 1-14.1: New USB device found, idVendor=1604, idProduct=10c0, bcdDevice= 0.00
+[    6.756982] usb 1-14.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    6.758295] hub 1-14.1:1.0: USB hub found
+[    6.758402] hub 1-14.1:1.0: 4 ports detected
+[    6.836469] usb 1-14.2: new high-speed USB device number 6 using xhci_hcd
+[    6.887612] scsi 2:3:110:0: Direct-Access     DELL     PERC H755 Adp    5.16 PQ: 0 ANSI: 5
+[    6.888755] scsi 2:3:111:0: Direct-Access     DELL     PERC H755 Adp    5.16 PQ: 0 ANSI: 5
+[    6.918839] sd 2:3:110:0: Attached scsi generic sg0 type 0
+[    6.919066] sd 2:3:111:0: Attached scsi generic sg1 type 0
+[    6.920008] sd 2:3:110:0: [sda] 4687134720 512-byte logical blocks: (2.40 TB/2.18 TiB)
+[    6.920177] sd 2:3:111:0: [sdb] 1874329600 512-byte logical blocks: (960 GB/894 GiB)
+[    6.920183] sd 2:3:110:0: [sda] Write Protect is off
+[    6.920193] sd 2:3:110:0: [sda] Mode Sense: 1f 00 00 08
+[    6.920306] sd 2:3:111:0: [sdb] Write Protect is off
+[    6.920311] sd 2:3:111:0: [sdb] Mode Sense: 1f 00 00 08
+[    6.920454] sd 2:3:110:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    6.921930] sd 2:3:111:0: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    6.921975] sd 2:3:110:0: [sda] Optimal transfer size 262144 bytes
+[    6.933309] sd 2:3:111:0: [sdb] Optimal transfer size 262144 bytes
+[    6.949669] usb 1-14.2: New USB device found, idVendor=413c, idProduct=0006, bcdDevice= 0.00
+[    6.949681] usb 1-14.2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    6.949686] usb 1-14.2: Product: DRAC 5 Virtual Keyboard and Mouse
+[    6.949691] usb 1-14.2: Manufacturer: DELLEMC
+[    6.949694] usb 1-14.2: SerialNumber: DELL413C-1
+[    6.952886] ================================================================================
+[    6.953730]  sdb: sdb1 sdb2 < sdb5 >
+[    7.048466] usb 1-14.4: new high-speed USB device number 7 using xhci_hcd
+[    7.087231] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    7.148761] usb 1-14.4: New USB device found, idVendor=1604, idProduct=10c0, bcdDevice= 0.00
+[    7.220095] usb 1-14.4: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    7.220100] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    7.221476] hub 1-14.4:1.0: USB hub found
+[    7.286588] CPU: 22 PID: 634 Comm: kworker/22:1H Not tainted 5.18.0 #1
+[    7.286591] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    7.286593] Workqueue: kblockd blk_mq_run_work_fn
+[    7.286600] Call Trace:
+[    7.286602]  <TASK>
+[    7.286605]  dump_stack_lvl+0x49/0x5f
+[    7.286609]  dump_stack+0x10/0x12
+[    7.286611]  ubsan_epilogue+0x9/0x3b
+[    7.286612]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    7.286615]  ? unthrottle_cfs_rq+0x2a1/0x400
+[    7.286620]  MR_BuildRaidContext+0xa9f/0xbc0 [megaraid_sas]
+[    7.286631]  ? update_sd_lb_stats.constprop.142+0x101/0xbe0
+[    7.286634]  megasas_build_and_issue_cmd_fusion+0x1031/0x1770 [megaraid_sas]
+[    7.286641]  ? scsi_alloc_sgtables+0xbb/0x390
+[    7.286647]  megasas_queue_command+0x18b/0x1e0 [megaraid_sas]
+[    7.286654]  scsi_queue_rq+0x3ad/0xb30
+[    7.286657]  blk_mq_dispatch_rq_list+0x222/0x810
+[    7.286660]  ? sbitmap_get+0xc6/0x220
+[    7.286665]  blk_mq_do_dispatch_sched+0x34d/0x3b0
+[    7.286667]  ? _raw_spin_unlock+0x19/0x30
+[    7.286671]  __blk_mq_sched_dispatch_requests+0xcb/0x140
+[    7.286674]  blk_mq_sched_dispatch_requests+0x34/0x60
+[    7.286675]  __blk_mq_run_hw_queue+0x39/0xa0
+[    7.286678]  blk_mq_run_work_fn+0x1b/0x20
+[    7.286680]  process_one_work+0x229/0x400
+[    7.286683]  worker_thread+0x34/0x3d0
+[    7.286684]  ? process_one_work+0x400/0x400
+[    7.286686]  kthread+0xfc/0x130
+[    7.286689]  ? kthread_complete_and_exit+0x20/0x20
+[    7.286691]  ret_from_fork+0x1f/0x30
+[    7.286695]  </TASK>
+[    7.286698] ================================================================================
+[    7.286774] hub 1-14.4:1.0: 4 ports detected
+[    7.419445] ================================================================================
+[    7.552487] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:103:32
+[    7.685410] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    7.751891] CPU: 22 PID: 634 Comm: kworker/22:1H Not tainted 5.18.0 #1
+[    7.751892] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    7.751893] Workqueue: kblockd blk_mq_run_work_fn
+[    7.751896] Call Trace:
+[    7.751897]  <TASK>
+[    7.751898]  dump_stack_lvl+0x49/0x5f
+[    7.751900]  dump_stack+0x10/0x12
+[    7.751901]  ubsan_epilogue+0x9/0x3b
+[    7.751902]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    7.751904]  ? _printk+0x58/0x6f
+[    7.751910]  MR_GetPhyParams+0x3d7/0x6b0 [megaraid_sas]
+[    7.751916]  ? ubsan_epilogue+0x15/0x3b
+[    7.751918]  MR_BuildRaidContext+0x3d8/0xbc0 [megaraid_sas]
+[    7.751923]  ? update_sd_lb_stats.constprop.142+0x101/0xbe0
+[    7.751927]  megasas_build_and_issue_cmd_fusion+0x1031/0x1770 [megaraid_sas]
+[    7.751932]  ? scsi_alloc_sgtables+0xbb/0x390
+[    7.751935]  megasas_queue_command+0x18b/0x1e0 [megaraid_sas]
+[    7.751940]  scsi_queue_rq+0x3ad/0xb30
+[    7.751943]  blk_mq_dispatch_rq_list+0x222/0x810
+[    7.751945]  ? sbitmap_get+0xc6/0x220
+[    7.751948]  blk_mq_do_dispatch_sched+0x34d/0x3b0
+[    7.751950]  ? _raw_spin_unlock+0x19/0x30
+[    7.751953]  __blk_mq_sched_dispatch_requests+0xcb/0x140
+[    7.751955]  blk_mq_sched_dispatch_requests+0x34/0x60
+[    7.751957]  __blk_mq_run_hw_queue+0x39/0xa0
+[    7.751959]  blk_mq_run_work_fn+0x1b/0x20
+[    7.751962]  process_one_work+0x229/0x400
+[    7.751964]  worker_thread+0x34/0x3d0
+[    7.751965]  ? process_one_work+0x400/0x400
+[    7.751966]  kthread+0xfc/0x130
+[    7.751968]  ? kthread_complete_and_exit+0x20/0x20
+[    7.751970]  ret_from_fork+0x1f/0x30
+[    7.751973]  </TASK>
+[    7.751974] ================================================================================
+[    7.752128] input: Logitech USB Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.0/0003:046D:C31C.0001/input/input1
+[    7.884713] ================================================================================
+[    7.884714] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:115:31
+[    8.137003] hid-generic 0003:046D:C31C.0001: input,hidraw0: USB HID v1.10 Keyboard [Logitech USB Keyboard] on usb-0000:00:14.0-12/input0
+[    8.210488] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    8.210491] CPU: 22 PID: 634 Comm: kworker/22:1H Not tainted 5.18.0 #1
+[    8.210493] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    8.210494] Workqueue: kblockd blk_mq_run_work_fn
+[    8.306918] Call Trace:
+[    8.306920]  <TASK>
+[    8.306920]  dump_stack_lvl+0x49/0x5f
+[    8.306922]  dump_stack+0x10/0x12
+[    8.306924]  ubsan_epilogue+0x9/0x3b
+[    8.306925]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    8.306926]  ? _printk+0x58/0x6f
+[    8.306929]  MR_GetPhyParams+0x4e0/0x6b0 [megaraid_sas]
+[    8.306936]  MR_BuildRaidContext+0x3d8/0xbc0 [megaraid_sas]
+[    8.306942]  ? update_sd_lb_stats.constprop.142+0x101/0xbe0
+[    8.306946]  megasas_build_and_issue_cmd_fusion+0x1031/0x1770 [megaraid_sas]
+[    8.306957]  ? scsi_alloc_sgtables+0xbb/0x390
+[    8.306962]  megasas_queue_command+0x18b/0x1e0 [megaraid_sas]
+[    8.306971]  scsi_queue_rq+0x3ad/0xb30
+[    8.306975]  blk_mq_dispatch_rq_list+0x222/0x810
+[    8.306978]  ? sbitmap_get+0xc6/0x220
+[    8.306981]  blk_mq_do_dispatch_sched+0x34d/0x3b0
+[    8.306985]  ? _raw_spin_unlock+0x19/0x30
+[    8.306988]  __blk_mq_sched_dispatch_requests+0xcb/0x140
+[    8.306991]  blk_mq_sched_dispatch_requests+0x34/0x60
+[    8.306994]  __blk_mq_run_hw_queue+0x39/0xa0
+[    8.306996]  blk_mq_run_work_fn+0x1b/0x20
+[    8.306999]  process_one_work+0x229/0x400
+[    8.307001]  worker_thread+0x34/0x3d0
+[    8.307003]  ? process_one_work+0x400/0x400
+[    8.307005]  kthread+0xfc/0x130
+[    8.307007]  ? kthread_complete_and_exit+0x20/0x20
+[    8.307010]  ret_from_fork+0x1f/0x30
+[    8.307013]  </TASK>
+[    8.307019] ================================================================================
+[    8.307049] input: Logitech USB Keyboard Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.1/0003:046D:C31C.0002/input/input2
+[    8.439821] ================================================================================
+[    8.439824] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:125:9
+[    8.692809] input: Logitech USB Keyboard System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-12/1-12:1.1/0003:046D:C31C.0002/input/input3
+[    8.733975] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    8.733977] CPU: 22 PID: 634 Comm: kworker/22:1H Not tainted 5.18.0 #1
+[    8.733978] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    8.733978] Workqueue: kblockd blk_mq_run_work_fn
+[    8.733981] Call Trace:
+[    8.788161]  <TASK>
+[    8.788162]  dump_stack_lvl+0x49/0x5f
+[    8.788163]  dump_stack+0x10/0x12
+[    8.788164]  ubsan_epilogue+0x9/0x3b
+[    8.788165]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    8.788166]  ? _printk+0x58/0x6f
+[    8.788169]  MR_GetPhyParams+0x403/0x6b0 [megaraid_sas]
+[    8.788173]  MR_BuildRaidContext+0x3d8/0xbc0 [megaraid_sas]
+[    8.788177]  ? update_sd_lb_stats.constprop.142+0x101/0xbe0
+[    8.788180]  megasas_build_and_issue_cmd_fusion+0x1031/0x1770 [megaraid_sas]
+[    8.788184]  ? scsi_alloc_sgtables+0xbb/0x390
+[    8.788186]  megasas_queue_command+0x18b/0x1e0 [megaraid_sas]
+[    8.788190]  scsi_queue_rq+0x3ad/0xb30
+[    8.788193]  blk_mq_dispatch_rq_list+0x222/0x810
+[    8.788194]  ? sbitmap_get+0xc6/0x220
+[    8.788196]  blk_mq_do_dispatch_sched+0x34d/0x3b0
+[    8.788198]  ? _raw_spin_unlock+0x19/0x30
+[    8.788200]  __blk_mq_sched_dispatch_requests+0xcb/0x140
+[    8.788202]  blk_mq_sched_dispatch_requests+0x34/0x60
+[    8.788203]  __blk_mq_run_hw_queue+0x39/0xa0
+[    8.788205]  blk_mq_run_work_fn+0x1b/0x20
+[    8.788207]  process_one_work+0x229/0x400
+[    8.788208]  worker_thread+0x34/0x3d0
+[    8.788209]  ? process_one_work+0x400/0x400
+[    8.788210]  kthread+0xfc/0x130
+[    8.788212]  ? kthread_complete_and_exit+0x20/0x20
+[    8.788214]  ret_from_fork+0x1f/0x30
+[    8.788216]  </TASK>
+[    8.788219] ================================================================================
+[    8.788316] hid-generic 0003:046D:C31C.0002: input,hidraw1: USB HID v1.10 Device [Logitech USB Keyboard] on usb-0000:00:14.0-12/input1
+[    8.861897] ================================================================================
+[    8.861898] UBSAN: array-index-out-of-bounds in drivers/scsi/megaraid/megaraid_sas_fp.c:151:32
+[    8.959505] input: PixArt Dell MS116 USB Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-13/1-13:1.0/0003:413C:301A.0003/input/input4
+[    9.033196] index 1 is out of range for type 'MR_LD_SPAN_MAP [1]'
+[    9.033528] hid-generic 0003:413C:301A.0003: input,hidraw2: USB HID v1.11 Mouse [PixArt Dell MS116 USB Optical Mouse] on usb-0000:00:14.0-13/input0
+[    9.070117] CPU: 22 PID: 634 Comm: kworker/22:1H Not tainted 5.18.0 #1
+[    9.070118] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[    9.070119] Workqueue: kblockd blk_mq_run_work_fn
+[    9.070121] Call Trace:
+[    9.070121]  <TASK>
+[    9.070122]  dump_stack_lvl+0x49/0x5f
+[    9.070123]  dump_stack+0x10/0x12
+[    9.070126]  ubsan_epilogue+0x9/0x3b
+[    9.070127]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[    9.070128]  ? _printk+0x58/0x6f
+[    9.070130]  MR_GetPhyParams+0x466/0x6b0 [megaraid_sas]
+[    9.070135]  MR_BuildRaidContext+0x3d8/0xbc0 [megaraid_sas]
+[    9.070140]  ? update_sd_lb_stats.constprop.142+0x101/0xbe0
+[    9.070145]  megasas_build_and_issue_cmd_fusion+0x1031/0x1770 [megaraid_sas]
+[    9.070153]  ? scsi_alloc_sgtables+0xbb/0x390
+[    9.070156]  megasas_queue_command+0x18b/0x1e0 [megaraid_sas]
+[    9.070164]  scsi_queue_rq+0x3ad/0xb30
+[    9.070167]  blk_mq_dispatch_rq_list+0x222/0x810
+[    9.070169]  ? sbitmap_get+0xc6/0x220
+[    9.070173]  blk_mq_do_dispatch_sched+0x34d/0x3b0
+[    9.070176]  ? _raw_spin_unlock+0x19/0x30
+[    9.070178]  __blk_mq_sched_dispatch_requests+0xcb/0x140
+[    9.070181]  blk_mq_sched_dispatch_requests+0x34/0x60
+[    9.070183]  __blk_mq_run_hw_queue+0x39/0xa0
+[    9.070185]  blk_mq_run_work_fn+0x1b/0x20
+[    9.070188]  process_one_work+0x229/0x400
+[    9.070189]  worker_thread+0x34/0x3d0
+[    9.070190]  ? process_one_work+0x400/0x400
+[    9.070191]  kthread+0xfc/0x130
+[    9.070193]  ? kthread_complete_and_exit+0x20/0x20
+[    9.070195]  ret_from_fork+0x1f/0x30
+[    9.070197]  </TASK>
+[    9.070198] ================================================================================
+[    9.070199] input: DELLEMC DRAC 5 Virtual Keyboard and Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-14/1-14.2/1-14.2:1.0/0003:413C:0006.0004/input/input5
+[    9.143993] hid-generic 0003:413C:0006.0004: input,hidraw3: USB HID v1.01 Mouse [DELLEMC DRAC 5 Virtual Keyboard and Mouse] on usb-0000:00:14.0-14.2/input0
+[    9.144071] input: DELLEMC DRAC 5 Virtual Keyboard and Mouse as /devices/pci0000:00/0000:00:14.0/usb1/1-14/1-14.2/1-14.2:1.1/0003:413C:0006.0005/input/input6
+[    9.157312]  sda: sda1 sda2 sda3 sda5 sda6 sda7 sda8 sda9
+[    9.164654] sd 2:3:111:0: [sdb] Attached SCSI disk
+[    9.172961] sd 2:3:110:0: [sda] Attached SCSI disk
+[    9.200992] hid-generic 0003:413C:0006.0005: input,hidraw4: USB HID v1.01 Keyboard [DELLEMC DRAC 5 Virtual Keyboard and Mouse] on usb-0000:00:14.0-14.2/input1
+[    9.644163] EXT4-fs (sdb5): mounted filesystem with ordered data mode. Quota mode: none.
+[    9.922030] systemd[1]: Inserted module 'autofs4'
+[    9.950863] systemd[1]: systemd 245.4-4ubuntu3.20 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    9.968645] systemd[1]: Detected architecture x86-64.
+[    9.986213] systemd[1]: Set hostname to <xmu-PowerEdge-R750>.
+[   10.083640] systemd[1]: Configuration file /etc/systemd/system/runsunloginclient.service is marked executable. Please remove executable permission bits. Proceeding anyway.
+[   10.109040] systemd[1]: Created slice system-modprobe.slice.
+[   10.109308] systemd[1]: Created slice system-systemd\x2dfsck.slice.
+[   10.109718] systemd[1]: Created slice User and Session Slice.
+[   10.109774] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[   10.109915] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[   10.109942] systemd[1]: Reached target Network (Pre).
+[   10.109953] systemd[1]: Reached target User and Group Name Lookups.
+[   10.109959] systemd[1]: Reached target Remote File Systems.
+[   10.109966] systemd[1]: Reached target Slices.
+[   10.109975] systemd[1]: Reached target Mounting snaps.
+[   10.110060] systemd[1]: Listening on Syslog Socket.
+[   10.110109] systemd[1]: Listening on fsck to fsckd communication Socket.
+[   10.110145] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[   10.110247] systemd[1]: Listening on Journal Audit Socket.
+[   10.110290] systemd[1]: Listening on Journal Socket (/dev/log).
+[   10.110357] systemd[1]: Listening on Journal Socket.
+[   10.110420] systemd[1]: Listening on udev Control Socket.
+[   10.110454] systemd[1]: Listening on udev Kernel Socket.
+[   10.111254] systemd[1]: Mounting Huge Pages File System...
+[   10.112347] systemd[1]: Mounting POSIX Message Queue File System...
+[   10.113286] systemd[1]: Mounting Kernel Debug File System...
+[   10.114441] systemd[1]: Mounting Kernel Trace File System...
+[   10.115992] systemd[1]: Starting Journal Service...
+[   10.117306] systemd[1]: Starting Set the console keyboard layout...
+[   10.118306] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[   10.119419] systemd[1]: Starting Load Kernel Module chromeos_pstore...
+[   10.120324] systemd[1]: Starting Load Kernel Module drm...
+[   10.121462] systemd[1]: Starting Load Kernel Module efi_pstore...
+[   10.122460] systemd[1]: Starting Load Kernel Module pstore_blk...
+[   10.123679] systemd[1]: Starting Load Kernel Module pstore_zone...
+[   10.124633] systemd[1]: Starting Load Kernel Module ramoops...
+[   10.124993] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[   10.125025] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[   10.127247] systemd[1]: Starting Load Kernel Modules...
+[   10.129300] systemd[1]: Starting Remount Root and Kernel File Systems...
+[   10.131196] systemd[1]: Starting udev Coldplug all Devices...
+[   10.132696] systemd[1]: Starting Uncomplicated firewall...
+[   10.134036] systemd[1]: Mounted Huge Pages File System.
+[   10.134179] systemd[1]: Mounted POSIX Message Queue File System.
+[   10.134271] systemd[1]: Mounted Kernel Debug File System.
+[   10.134366] systemd[1]: Mounted Kernel Trace File System.
+[   10.134785] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[   10.135530] systemd[1]: modprobe@pstore_zone.service: Succeeded.
+[   10.135798] systemd[1]: Finished Load Kernel Module pstore_zone.
+[   10.137685] systemd[1]: modprobe@efi_pstore.service: Succeeded.
+[   10.137958] systemd[1]: Finished Load Kernel Module efi_pstore.
+[   10.138217] systemd[1]: modprobe@pstore_blk.service: Succeeded.
+[   10.138449] systemd[1]: Finished Load Kernel Module pstore_blk.
+[   10.139970] systemd[1]: Finished Uncomplicated firewall.
+[   10.144667] EXT4-fs (sdb5): re-mounted. Quota mode: none.
+[   10.146717] systemd[1]: Finished Remount Root and Kernel File Systems.
+[   10.148143] systemd[1]: Activating swap /swapfile...
+[   10.149571] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[   10.151009] systemd[1]: Starting Load/Save Random Seed...
+[   10.152279] systemd[1]: Starting Create System Users...
+[   10.152593] systemd[1]: modprobe@ramoops.service: Succeeded.
+[   10.152895] systemd[1]: Finished Load Kernel Module ramoops.
+[   10.155067] Adding 2097148k swap on /swapfile.  Priority:-2 extents:16 across:652345344k SSFS
+[   10.155136] systemd[1]: Activated swap /swapfile.
+[   10.155187] systemd[1]: Reached target Swap.
+[   10.160127] lp: driver loaded but no devices found
+[   10.167523] systemd[1]: Finished Load/Save Random Seed.
+[   10.170451] systemd[1]: Finished Create System Users.
+[   10.172958] systemd[1]: Starting Create Static Device Nodes in /dev...
+[   10.177981] systemd[1]: Finished Set the console keyboard layout.
+[   10.185377] systemd[1]: Finished Create Static Device Nodes in /dev.
+[   10.185553] systemd[1]: Reached target Local File Systems (Pre).
+[   10.188170] systemd[1]: Mounting Mount unit for bare, revision 5...
+[   10.190293] systemd[1]: Mounting Mount unit for core20, revision 2015...
+[   10.192558] systemd[1]: Mounting Mount unit for core20, revision 2105...
+[   10.194717] systemd[1]: Mounting Mount unit for core22, revision 1033...
+[   10.194816] loop0: detected capacity change from 0 to 8
+[   10.196253] systemd[1]: Mounting Mount unit for core22, revision 864...
+[   10.198780] ppdev: user-space parallel port driver
+[   10.199139] systemd[1]: Mounting Mount unit for gnome-3-38-2004, revision 119...
+[   10.201870] systemd[1]: Mounting Mount unit for gnome-3-38-2004, revision 143...
+[   10.203710] systemd[1]: Mounting Mount unit for gnome-42-2204, revision 141...
+[   10.206139] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1535...
+[   10.208161] systemd[1]: Mounting Mount unit for snap-store, revision 638...
+[   10.209684] systemd[1]: Mounting Mount unit for snap-store, revision 959...
+[   10.211544] systemd[1]: Mounting Mount unit for snapd, revision 18357...
+[   10.213218] systemd[1]: Mounting Mount unit for snapd, revision 20290...
+[   10.214609] systemd[1]: Starting udev Kernel Device Manager...
+[   10.215097] systemd[1]: modprobe@chromeos_pstore.service: Succeeded.
+[   10.215441] systemd[1]: Finished Load Kernel Module chromeos_pstore.
+[   10.215630] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[   10.221598] loop1: detected capacity change from 0 to 129976
+[   10.222753] loop2: detected capacity change from 0 to 151352
+[   10.222996] loop3: detected capacity change from 0 to 102072
+[   10.224899] systemd[1]: Mounted Mount unit for bare, revision 5.
+[   10.229100] systemd[1]: Started Journal Service.
+[   10.237377] systemd-journald[727]: Received client request to flush runtime journal.
+[   10.248575] ACPI: bus type drm_connector registered
+[   10.256677] loop4: detected capacity change from 0 to 709280
+[   10.258044] loop5: detected capacity change from 0 to 83672
+[   10.292767] loop6: detected capacity change from 0 to 151784
+[   10.295440] loop7: detected capacity change from 0 to 25240
+[   10.348682] loop8: detected capacity change from 0 to 94064
+[   10.348894] loop10: detected capacity change from 0 to 187776
+[   10.349648] loop11: detected capacity change from 0 to 1017816
+[   10.351944] loop9: detected capacity change from 0 to 130888
+[   10.364305] loop12: detected capacity change from 0 to 716176
+[   10.377131] ACPI Error: No handler for Region [SYSI] (00000000f413f90d) [IPMI] (20211217/evregion-135)
+[   10.450474] ACPI Error: Region IPMI (ID=7) has no handler (20211217/exfldio-265)
+
+[   10.522939] No Local Variables are initialized for Method [_GHL]
+
+[   10.522941] No Arguments are initialized for method [_GHL]
+
+[   10.522950] ACPI Error: Aborting method \_SB.PMI0._GHL due to previous error (AE_NOT_EXIST) (20211217/psparse-531)
+[   10.523631] ACPI Error: Aborting method \_SB.PMI0._PMC due to previous error (AE_NOT_EXIST) (20211217/psparse-531)
+[   10.670250] ACPI: \_SB_.PMI0: _PMC evaluation failed: AE_NOT_EXIST
+[   10.672031] ================================================================================
+[   10.672046] UBSAN: array-index-out-of-bounds in drivers/acpi/acpica/dswexec.c:401:12
+[   10.672055] index -1 is out of range for type 'acpi_operand_object *[9]'
+[   10.672060] CPU: 40 PID: 789 Comm: systemd-udevd Not tainted 5.18.0 #1
+[   10.672069] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[   10.672072] Call Trace:
+[   10.672076]  <TASK>
+[   10.672081]  dump_stack_lvl+0x49/0x5f
+[   10.672093]  dump_stack+0x10/0x12
+[   10.672099]  ubsan_epilogue+0x9/0x3b
+[   10.672105]  __ubsan_handle_out_of_bounds.cold.13+0x2b/0x36
+[   10.672114]  acpi_ds_exec_end_op+0x1a0/0x787
+[   10.672124]  acpi_ps_parse_loop+0x7f9/0x8d3
+[   10.672136]  acpi_ps_parse_aml+0x1bb/0x55d
+[   10.672146]  acpi_ps_execute_method+0x20f/0x2d1
+[   10.672156]  acpi_ns_evaluate+0x34d/0x4ef
+[   10.672164]  acpi_evaluate_object+0x180/0x3aa
+[   10.672174]  acpi_evaluate_dsm+0xb2/0x120
+[   10.672188]  ? acpi_ns_lookup+0x800/0x855
+[   10.672196]  ? kfree+0xe7/0x320
+[   10.672207]  acpi_check_dsm+0x21/0xa0
+[   10.672216]  acpi_nfit_init+0xac1/0x1910 [nfit]
+[   10.672241]  ? _raw_spin_lock_irqsave+0x28/0x50
+[   10.672253]  ? _raw_spin_unlock_irqrestore+0x27/0x3b
+[   10.672262]  ? up+0x32/0x50
+[   10.672271]  ? acpi_os_signal_semaphore+0x8a/0xb0
+[   10.672283]  ? acpi_evaluate_object+0x2be/0x3aa
+[   10.672291]  ? kfree+0xe7/0x320
+[   10.672303]  acpi_nfit_add+0x192/0x1f0 [nfit]
+[   10.672320]  ? acpi_nfit_add+0x192/0x1f0 [nfit]
+[   10.672337]  acpi_device_probe+0x49/0x170
+[   10.672346]  really_probe+0x176/0x360
+[   10.672355]  __driver_probe_device+0x117/0x190
+[   10.672362]  driver_probe_device+0x24/0xa0
+[   10.672369]  __driver_attach+0xa1/0x170
+[   10.672375]  ? __device_attach_driver+0x120/0x120
+[   10.672381]  ? __device_attach_driver+0x120/0x120
+[   10.672387]  bus_for_each_dev+0x77/0xc0
+[   10.672399]  driver_attach+0x1e/0x20
+[   10.672405]  bus_add_driver+0x163/0x200
+[   10.672412]  driver_register+0x70/0xc0
+[   10.672419]  acpi_bus_register_driver+0x39/0x50
+[   10.672428]  nfit_init+0x166/0x1000 [nfit]
+[   10.672449]  ? 0xffffffffc05c6000
+[   10.672455]  do_one_initcall+0x47/0x210
+[   10.672464]  ? do_init_module+0x27/0x210
+[   10.672472]  ? kmem_cache_alloc_trace+0x189/0x2f0
+[   10.672484]  do_init_module+0x50/0x210
+[   10.672491]  load_module+0x2a0b/0x2cf0
+[   10.672509]  __do_sys_finit_module+0xc0/0x130
+[   10.672516]  ? __do_sys_finit_module+0xc0/0x130
+[   10.672528]  __x64_sys_finit_module+0x1a/0x20
+[   10.672534]  do_syscall_64+0x58/0x80
+[   10.672541]  ? exc_page_fault+0x8e/0x180
+[   10.672549]  ? asm_exc_page_fault+0x8/0x30
+[   10.672555]  entry_SYSCALL_64_after_hwframe+0x44/0xae
+[   10.672562] RIP: 0033:0x7fa62630495d
+[   10.672570] Code: 00 c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 03 35 0d 00 f7 d8 64 89 01 48
+[   10.672576] RSP: 002b:00007ffdcdb398c8 EFLAGS: 00000246 ORIG_RAX: 0000000000000139
+[   10.672585] RAX: ffffffffffffffda RBX: 000055fd4a7a4800 RCX: 00007fa62630495d
+[   10.672590] RDX: 0000000000000000 RSI: 00007fa6261e4ded RDI: 0000000000000006
+[   10.672594] RBP: 0000000000020000 R08: 0000000000000000 R09: 0000000000000000
+[   10.672597] R10: 0000000000000006 R11: 0000000000000246 R12: 00007fa6261e4ded
+[   10.672601] R13: 0000000000000000 R14: 000055fd4a5525a0 R15: 000055fd4a7a4800
+[   10.672610]  </TASK>
+[   10.672637] ================================================================================
+[   10.674093] dca service started, version 1.12.1
+[   10.683332] IPMI message handler: version 39.2
+[   10.683802] dcdbas dcdbas: Dell Systems Management Base Driver (version 5.6.0-3.4)
+[   10.692029] ipmi device interface
+[   10.693010] nd_pmem namespace0.0: unable to guarantee persistence of writes
+[   10.696033] ioatdma: Intel(R) QuickData Technology Driver 5.00
+[   10.705093] mei_me 0000:00:16.0: Device doesn't have valid ME Interface
+[   11.079231] ipmi_si: IPMI System Interface driver
+[   11.079274] ipmi_si dmi-ipmi-si.0: ipmi_platform: probing via SMBIOS
+[   11.079277] ipmi_platform: ipmi_si: SMBIOS: io 0xca8 regsize 1 spacing 4 irq 10
+[   11.079281] ipmi_si: Adding SMBIOS-specified kcs state machine
+[   11.079374] ipmi_si IPI0001:00: ipmi_platform: probing via ACPI
+[   11.079413] ipmi_si IPI0001:00: ipmi_platform: [io  0x0ca8] regsize 1 spacing 4 irq 10
+[   11.113053] memmap_init_zone_device initialised 1048576 pages in 12ms
+[   11.190234] checking generic (91000000 130000) vs hw (91000000 1000000)
+[   11.190244] fb0: switching to mgag200 from VESA VGA
+[   11.219023] ipmi_si dmi-ipmi-si.0: Removing SMBIOS-specified kcs state machine in favor of ACPI
+[   11.219032] ipmi_si: Adding ACPI-specified kcs state machine
+[   11.219266] ipmi_si: Trying ACPI-specified kcs state machine at i/o address 0xca8, slave address 0x20, irq 10
+[   11.248089] Console: switching to colour dummy device 80x25
+[   11.248267] mgag200 0000:03:00.0: vgaarb: deactivate vga console
+[   11.249548] RAPL PMU: API unit is 2^-32 Joules, 2 fixed counters, 655360 ms ovfl timer
+[   11.249557] RAPL PMU: hw unit of domain package 2^-14 Joules
+[   11.249561] RAPL PMU: hw unit of domain dram 2^-16 Joules
+[   11.253824] [drm] Initialized mgag200 1.0.0 20110418 for 0000:03:00.0 on minor 0
+[   11.290993] cryptd: max_cpu_qlen set to 1000
+[   11.302793] AVX2 version of gcm_enc/dec engaged.
+[   11.302896] AES CTR mode by8 optimization enabled
+[   11.348991] fbcon: mgag200drmfb (fb0) is primary device
+[   11.350603] mgag200 0000:03:00.0: [drm] drm_plane_enable_fb_damage_clips() not called
+[   11.800844] Console: switching to colour frame buffer device 128x48
+[   11.817171] mgag200 0000:03:00.0: [drm] fb0: mgag200drmfb frame buffer device
+[   11.840656] ipmi_si IPI0001:00: The BMC does not support setting the recv irq bit, compensating, but the BMC needs to be fixed.
+[   11.848922] ipmi_si IPI0001:00: Using irq 10
+[   11.890398] ipmi_si IPI0001:00: IPMI message handler: Found new BMC (man_id: 0x0002a2, prod_id: 0x0100, dev_id: 0x20)
+[   11.983000] audit: type=1400 audit(1703424919.528:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=1236 comm="apparmor_parser"
+[   11.983140] audit: type=1400 audit(1703424919.528:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ippusbxd" pid=1228 comm="apparmor_parser"
+[   11.984001] audit: type=1400 audit(1703424919.528:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=1230 comm="apparmor_parser"
+[   11.984005] audit: type=1400 audit(1703424919.528:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=1230 comm="apparmor_parser"
+[   11.984010] audit: type=1400 audit(1703424919.528:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=1230 comm="apparmor_parser"
+[   11.984228] audit: type=1400 audit(1703424919.528:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=1234 comm="apparmor_parser"
+[   11.984231] audit: type=1400 audit(1703424919.528:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=1234 comm="apparmor_parser"
+[   11.986340] audit: type=1400 audit(1703424919.532:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/cups-browsed" pid=1235 comm="apparmor_parser"
+[   11.987711] ipmi_si IPI0001:00: IPMI kcs interface initialized
+[   11.987862] audit: type=1400 audit(1703424919.532:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=1233 comm="apparmor_parser"
+[   11.988699] audit: type=1400 audit(1703424919.536:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=1231 comm="apparmor_parser"
+[   11.996154] ipmi_ssif: IPMI SSIF Interface driver
+[   12.738259] bpfilter: Loaded bpfilter_umh pid 1493
+[   12.738539] Started bpfilter
+[   13.147045] loop13: detected capacity change from 0 to 8
+[   15.787923] rfkill: input handler disabled
+[   16.051708] tg3 0000:04:00.0 eno8303: Link is up at 1000 Mbps, full duplex
+[   16.051717] tg3 0000:04:00.0 eno8303: Flow control is on for TX and on for RX
+[   16.051718] tg3 0000:04:00.0 eno8303: EEE is disabled
+[   16.051740] IPv6: ADDRCONF(NETDEV_CHANGE): eno8303: link becomes ready
+[   19.749582] kauditd_printk_skb: 24 callbacks suppressed
+[   19.749592] audit: type=1400 audit(1703424927.296:36): apparmor="DENIED" operation="open" profile="snap.snap-store.ubuntu-software" name="/etc/appstream.conf" pid=2255 comm="snap-store" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[   39.707738] EDAC i10nm: No hbm memory
+[   40.672224] EDAC MC0: Giving out device to module i10nm_edac controller Intel_10nm Socket#0 IMC#0: DEV 0000:7e:0c.0 (INTERRUPT)
+[   40.672329] EDAC MC1: Giving out device to module i10nm_edac controller Intel_10nm Socket#0 IMC#1: DEV 0000:7e:0d.0 (INTERRUPT)
+[   40.672415] EDAC MC2: Giving out device to module i10nm_edac controller Intel_10nm Socket#0 IMC#2: DEV 0000:7e:0e.0 (INTERRUPT)
+[   40.672537] EDAC MC3: Giving out device to module i10nm_edac controller Intel_10nm Socket#0 IMC#3: DEV 0000:7e:0f.0 (INTERRUPT)
+[   40.672624] EDAC MC4: Giving out device to module i10nm_edac controller Intel_10nm Socket#1 IMC#0: DEV 0000:fe:0c.0 (INTERRUPT)
+[   40.672712] EDAC MC5: Giving out device to module i10nm_edac controller Intel_10nm Socket#1 IMC#1: DEV 0000:fe:0d.0 (INTERRUPT)
+[   40.672793] EDAC MC6: Giving out device to module i10nm_edac controller Intel_10nm Socket#1 IMC#2: DEV 0000:fe:0e.0 (INTERRUPT)
+[   40.672877] EDAC MC7: Giving out device to module i10nm_edac controller Intel_10nm Socket#1 IMC#3: DEV 0000:fe:0f.0 (INTERRUPT)
+[   40.672889] EDAC i10nm: v0.0.5
+[   40.715258] intel_rapl_common: Found RAPL domain package
+[   40.715270] intel_rapl_common: Found RAPL domain dram
+[   40.715272] intel_rapl_common: DRAM domain energy unit 15300pj
+[   40.715393] intel_rapl_common: Found RAPL domain package
+[   40.715413] intel_rapl_common: Found RAPL domain dram
+[   40.715420] intel_rapl_common: DRAM domain energy unit 15300pj
+[   42.338092] memmap_init_zone_device initialised 132120576 pages in 1048ms
+[   45.037025] memmap_init_zone_device initialised 132120576 pages in 1320ms
+[  107.700577] usb 1-14.2: USB disconnect, device number 6
+[  169.024459] Fallback order for Node 2: 2 0 1 
+[  169.024475] Built 2 zonelists, mobility grouping on.  Total pages: 31744581
+[  169.024480] Policy zone: Normal
+[  170.428302] Fallback order for Node 0: 0 2 1 
+[  170.428312] Fallback order for Node 1: 1 0 2 
+[  170.428315] Fallback order for Node 2: 2 0 1 
+[  170.428318] Fallback order for Node 3: 3 1 2 0 
+[  170.428320] Built 3 zonelists, mobility grouping on.  Total pages: 32268869
+[  170.428322] Policy zone: Normal
+[  191.581568] Fallback order for Node 3: 3 1 2 0 
+[  191.581588] Built 3 zonelists, mobility grouping on.  Total pages: 163071649
+[  191.581595] Policy zone: Normal
+[  193.204823] Fallback order for Node 0: 0 2 1 3 
+[  193.204834] Fallback order for Node 1: 1 3 0 2 
+[  193.204837] Fallback order for Node 2: 2 0 3 1 
+[  193.204840] Fallback order for Node 3: 3 1 2 0 
+[  193.204842] Built 4 zonelists, mobility grouping on.  Total pages: 163595937
+[  193.204844] Policy zone: Normal
+Preparing benchmark start...
+never
+-----------------------
+202312242138
+-----------------------
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     811.253 seconds
+Lookups:     1,020,000,000
+Lookups/s:   1,257,314
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+Command exited with non-zero status 1
+execution time 864.93 (s)
+./run_bench.sh: line 39:  4456 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}

@@ -1,0 +1,129 @@
+[ 9666.584246] memmap_init_zone_device initialised 132120576 pages in 1316ms
+[ 9673.131658] memmap_init_zone_device initialised 132120576 pages in 1012ms
+[ 9692.006205] Fallback order for Node 3: 3 1 0 
+[ 9692.006223] Built 2 zonelists, mobility grouping on.  Total pages: 32785389
+[ 9692.006230] Policy zone: Normal
+[ 9694.023830] Fallback order for Node 0: 0 1 3 
+[ 9694.023838] Fallback order for Node 1: 1 3 0 
+[ 9694.023841] Fallback order for Node 2: 2 0 3 1 
+[ 9694.023843] Fallback order for Node 3: 3 1 0 
+[ 9694.023845] Built 3 zonelists, mobility grouping on.  Total pages: 33309677
+[ 9694.023847] Policy zone: Normal
+[ 9731.485586] Fallback order for Node 2: 2 0 3 1 
+[ 9731.485607] Built 3 zonelists, mobility grouping on.  Total pages: 164104317
+[ 9731.485614] Policy zone: Normal
+[ 9732.567372] Fallback order for Node 0: 0 2 1 3 
+[ 9732.567381] Fallback order for Node 1: 1 3 0 2 
+[ 9732.567384] Fallback order for Node 2: 2 0 3 1 
+[ 9732.567387] Fallback order for Node 3: 3 1 2 0 
+[ 9732.567390] Built 4 zonelists, mobility grouping on.  Total pages: 164628605
+[ 9732.567391] Policy zone: Normal
+Preparing benchmark start...
+never
+-----------------------
+202312232316
+-----------------------
+Read Time:           26.37651
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          106.95397
+Trial Time:          106.88377
+Trial Time:          106.88274
+Trial Time:          106.93430
+Trial Time:          106.87989
+Trial Time:          106.84745
+Trial Time:          106.81848
+Trial Time:          106.91252
+Trial Time:          106.82290
+Trial Time:          106.90557
+Trial Time:          106.88463
+Trial Time:          106.94690
+Trial Time:          106.91765
+Trial Time:          106.84986
+Trial Time:          106.80877
+Trial Time:          106.90068
+Trial Time:          106.88661
+Trial Time:          106.95270
+Trial Time:          107.02104
+Trial Time:          106.85231
+Average Time:        106.89314
+execution time 2164.91 (s)
+./run_bench.sh: line 39:  8973 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
+Preparing benchmark start...
+never
+-----------------------
+202312232352
+-----------------------
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     1290.448 seconds
+Lookups:     1,020,000,000
+Lookups/s:   790,423
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+Command exited with non-zero status 1
+execution time 1389.94 (s)
+./run_bench.sh: line 39: 10883 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
+Preparing benchmark start...
+never
+-----------------------
+202312240015
+-----------------------
+Total threads used: 20
+iter   1  #CD cycles 1
+iter   2  #CD cycles 1
+iter   3  #CD cycles 1
+iter   4  #CD cycles 1
+iter   5  #CD cycles 3
+iter   6  #CD cycles 1
+iter   7  #CD cycles 6
+iter   8  #CD cycles 1
+iter   9  #CD cycles 44
+=========================
+optimization finished, #iter = 9
+Objective value = 23442099.578778
+#nonzeros/#features = 438941/54686452
+execution time 4035.27 (s)
+./run_bench.sh: line 39: 12131 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}

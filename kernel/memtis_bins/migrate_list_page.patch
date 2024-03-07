@@ -1,0 +1,41 @@
+diff --git a/include/trace/events/migrate.h b/include/trace/events/migrate.h
+index 0190ef725b43..4ec9b71bcced 100644
+--- a/include/trace/events/migrate.h
++++ b/include/trace/events/migrate.h
+@@ -109,6 +109,24 @@ TRACE_EVENT(mm_migrate_pages_start,
+ 		  __print_symbolic(__entry->reason, MIGRATE_REASON))
+ );
+ 
++TRACE_EVENT(mm_migrate_page_each,
++
++	TP_PROTO(struct folio *folio),
++
++	TP_ARGS(folio),
++
++	TP_STRUCT__entry(
++		__field(struct folio *, folio)
++	),
++
++	TP_fast_assign(
++		__entry->folio	= folio;
++	),
++
++	TP_printk("folio=0x%lx", (unsigned long)__entry->folio)
++);
++
++
+ DECLARE_EVENT_CLASS(migration_pte,
+ 
+ 		TP_PROTO(unsigned long addr, unsigned long pte, int order),
+diff --git a/mm/migrate.c b/mm/migrate.c
+index cc9f2bcd73b4..44a1092e2d9d 100644
+--- a/mm/migrate.c
++++ b/mm/migrate.c
+@@ -1934,6 +1934,7 @@ int migrate_pages(struct list_head *from, new_folio_t get_new_folio,
+ 		}
+ 
+ 		nr_pages += folio_nr_pages(folio);
++		trace_mm_migrate_page_each(folio);
+ 		if (nr_pages >= NR_MAX_BATCHED_MIGRATION)
+ 			break;
+ 	}

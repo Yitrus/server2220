@@ -1,0 +1,49 @@
+# 如果后面表示概率的话，一定会先走a区域再走b区域的采样图
+#regions
+# name, length
+a, 104857600
+b, 104857600
+
+# phase 1
+# name of phase
+example phase 1
+# time in ms
+5000
+# access patterns
+# name of region, randomness, stride, probability
+a, 0, 64, 99
+b, 0, 64, 1
+
+# phase 2
+example phase 2
+# time in ms
+5000
+# access patterns
+# name of region, randomness, stride, probability
+a, 0, 64, 1
+b, 0, 64, 99
+
+# 这是原来default的
+#regions
+# name, length
+a, 256
+b, 64
+c, 128
+
+# phase 1
+# name of phase
+example phase 1
+# time in ms
+1000
+# access patterns
+# name of region, randomness, stride, probability
+a, 1, 64, 80
+
+# phase 2
+example phase 2
+# time in ms
+1000
+# access patterns
+# name of region, randomness, stride, probability
+c, 1, 64, 50
+b, 0, 4096, 50

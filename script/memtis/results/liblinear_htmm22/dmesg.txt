@@ -1,0 +1,38 @@
+[ 2099.988344] pebs disable
+[ 2109.484560] run_bench.sh (7256): drop_caches: 3
+[ 2111.505760] pebs_init
+[ 2124.733247] perf_duration_warn: 4 callbacks suppressed
+[ 2124.733250] perf: interrupt took too long (2503 > 2500), lowering kernel.perf_event_max_sample_rate to 79750
+[ 2132.557997] total_accesses: 1 max_dram_hits: 0 cur_hits: 1 
+[ 2132.618973] perf: interrupt took too long (4144 > 3128), lowering kernel.perf_event_max_sample_rate to 48250
+[ 2132.847161] perf: interrupt took too long (5406 > 5180), lowering kernel.perf_event_max_sample_rate to 36750
+[ 2133.088710] perf: interrupt took too long (7046 > 6757), lowering kernel.perf_event_max_sample_rate to 28250
+[ 2133.484854] perf: interrupt took too long (9026 > 8807), lowering kernel.perf_event_max_sample_rate to 22000
+[ 2139.274668] perf: interrupt took too long (11625 > 11282), lowering kernel.perf_event_max_sample_rate to 17000
+[ 2139.311690] perf: interrupt took too long (86813 > 14531), lowering kernel.perf_event_max_sample_rate to 2250
+[ 2153.117850] total_accesses: 68287 max_dram_hits: 68284 cur_hits: 68287 
+[ 2223.117373] total_accesses: 346246 max_dram_hits: 306796 cur_hits: 346244 
+[ 2294.172851] total_accesses: 654316 max_dram_hits: 621194 cur_hits: 654267 
+[ 2360.684353] total_accesses: 747621 max_dram_hits: 718230 cur_hits: 747541 
+[ 2387.080165] total_accesses: 942931 max_dram_hits: 730192 cur_hits: 715543 
+[ 2420.647891] total_accesses: 620074 max_dram_hits: 497331 cur_hits: 490654 
+[ 2466.580873] perf: interrupt took too long (108639 > 108516), lowering kernel.perf_event_max_sample_rate to 1750
+[ 2477.179426] total_accesses: 1645451 max_dram_hits: 1097304 cur_hits: 1494371 
+[ 2481.070704] INFO: NMI handler (perf_event_nmi_handler) took too long to run: 1.500 msecs
+[ 2486.483352] total_accesses: 1487534 max_dram_hits: 1069055 cur_hits: 1286753 
+[ 2522.443166] total_accesses: 2743767 max_dram_hits: 2225567 cur_hits: 2308969 
+[ 2547.403027] total_accesses: 3371883 max_dram_hits: 2858689 cur_hits: 3029600 
+[ 2574.646818] total_accesses: 3685941 max_dram_hits: 3327120 cur_hits: 3386024 
+[ 2591.070611] total_accesses: 3842970 max_dram_hits: 3545821 cur_hits: 3609055 
+[ 2706.241941] total_accesses: 3921485 max_dram_hits: 3572506 cur_hits: 3601716 
+[ 2726.205398] total_accesses: 3960742 max_dram_hits: 3647766 cur_hits: 3695874 
+[ 2750.609406] total_accesses: 3980371 max_dram_hits: 3723482 cur_hits: 3777699 
+[ 2811.564778] total_accesses: 3990185 max_dram_hits: 3669711 cur_hits: 3843786 
+[ 2842.588524] total_accesses: 3995092 max_dram_hits: 3705232 cur_hits: 3880407 
+[ 2893.984116] total_accesses: 3997546 max_dram_hits: 3746368 cur_hits: 3888051 
+[ 2921.535846] total_accesses: 3998773 max_dram_hits: 3796625 cur_hits: 3889393 
+[ 2956.639484] total_accesses: 3999386 max_dram_hits: 3840347 cur_hits: 3893431 
+[ 2998.619202] total_accesses: 3999693 max_dram_hits: 3812081 cur_hits: 3888339 
+[ 3016.752149] nr_sampled: 30599597, nr_throttled: 0, nr_lost: 0
+[ 3016.752160] total runtime: 17106899792 ns, total cputime: 905248000 us, cpu usage: 18
+[ 3016.752179] pebs disable

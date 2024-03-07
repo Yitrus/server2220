@@ -1,0 +1,35 @@
+#regions
+# name, length,大概都是100MB的样子
+a, 104857600
+b, 104857600
+
+# 再来一个初始化的阶段，目的就是给damon启动的时间，将两者概率都很小
+init phase 
+10000
+a, 0, 64, 10
+b, 0, 64, 10
+
+# phase 1
+# name of phase
+probability phase 1
+# time in ms
+5000
+# access patterns
+# name of region, randomness, stride, probability
+a, 0, 64, 99
+b, 0, 64, 1
+
+# phase 2
+probability phase 2
+# time in ms
+5000
+# access patterns
+# name of region, randomness, stride, probability
+a, 0, 64, 1
+b, 0, 64, 99
+
+# 这里再写一个两者概率都很大的情况
+probability phase 3
+5000
+a, 0, 64, 99
+b, 0, 64, 99

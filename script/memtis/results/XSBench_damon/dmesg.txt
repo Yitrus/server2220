@@ -1,0 +1,78 @@
+[256944.392130] pebs disable
+[256955.331336] perf: interrupt took too long (6485 > 2500), lowering kernel.perf_event_max_sample_rate to 30750
+[256957.037571] run_bench.sh (27363): drop_caches: 3
+[256959.053374] pebs_init
+[256959.184685] perf: interrupt took too long (8119 > 8106), lowering kernel.perf_event_max_sample_rate to 24500
+[256959.666791] perf: interrupt took too long (10193 > 10148), lowering kernel.perf_event_max_sample_rate to 19500
+[256960.293130] perf: interrupt took too long (13105 > 12741), lowering kernel.perf_event_max_sample_rate to 15250
+[256960.881641] perf: interrupt took too long (16385 > 16381), lowering kernel.perf_event_max_sample_rate to 12000
+[256961.679241] perf: interrupt took too long (20531 > 20481), lowering kernel.perf_event_max_sample_rate to 9500
+[256962.864239] perf: interrupt took too long (25686 > 25663), lowering kernel.perf_event_max_sample_rate to 7750
+[256964.593534] perf: interrupt took too long (32142 > 32107), lowering kernel.perf_event_max_sample_rate to 6000
+[256967.034301] perf: interrupt took too long (40209 > 40177), lowering kernel.perf_event_max_sample_rate to 4750
+[256967.141044] perf: interrupt took too long (50300 > 50261), lowering kernel.perf_event_max_sample_rate to 3750
+[256970.587495] damon: kdamond (27686) starts
+[256978.466836] total_accesses: 168221 max_dram_hits: 45133 cur_hits: 155256 
+[257012.722381] total_accesses: 117392 max_dram_hits: 36239 cur_hits: 91329 
+[257046.857927] total_accesses: 63016 max_dram_hits: 18119 cur_hits: 47353 
+[257047.221265] perf: interrupt took too long (62978 > 62875), lowering kernel.perf_event_max_sample_rate to 3000
+[257047.424484] perf: interrupt took too long (78728 > 78722), lowering kernel.perf_event_max_sample_rate to 2500
+[257067.273877] total_accesses: 1825685 max_dram_hits: 1136976 cur_hits: 1802997 
+[257081.757615] perf: interrupt took too long (98419 > 98410), lowering kernel.perf_event_max_sample_rate to 2000
+[257105.037243] total_accesses: 2912842 max_dram_hits: 2520052 cur_hits: 2887571 
+[257155.900467] total_accesses: 3456421 max_dram_hits: 3245271 cur_hits: 3425037 
+[257207.447974] total_accesses: 3728210 max_dram_hits: 3602396 cur_hits: 3684448 
+[257259.103028] total_accesses: 3864105 max_dram_hits: 3799726 cur_hits: 3818100 
+[257310.550350] total_accesses: 3932052 max_dram_hits: 3898485 cur_hits: 3878061 
+[257341.956500] nr_sampled: 13211224, nr_throttled: 0, nr_lost: 0
+[257341.956514] total runtime: 9387448258 ns, total cputime: 382904000 us, cpu usage: 24
+[257341.956536] pebs disable
+[257345.988075] ------------[ cut here ]------------
+[257345.988081] mem_cgroup_update_lru_size(000000001ae38ac5, 1, -512): lru_size -510
+[257345.988091] WARNING: CPU: 1 PID: 27668 at mm/memcontrol.c:1301 mem_cgroup_update_lru_size+0xe2/0x110
+[257345.988101] Modules linked in: intel_uncore_frequency input_leds joydev hid_generic usbhid hid kmem intel_rapl_msr intel_rapl_common device_dax dax_pmem nd_pmem dax_pmem_core i10nm_edac xt_MASQUERADE xt_tcpudp xt_mark nf_tables nfnetlink ip6table_nat ip6table_filter ip6_tables iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 libcrc32c iptable_filter bpfilter nls_iso8859_1 x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel kvm ipmi_ssif sch_fq_codel crct10dif_pclmul ghash_clmulni_intel aesni_intel crypto_simd cryptd binfmt_misc mgag200 drm_kms_helper rapl cec rc_core acpi_ipmi i2c_algo_bit ipmi_si fb_sys_fops dell_smbios mei_me ioatdma syscopyarea sysfillrect ipmi_devintf isst_if_mbox_pci isst_if_mmio dcdbas mei sysimgblt msr wmi_bmof dell_wmi_descriptor intel_cstate intel_pch_thermal isst_if_common dca ipmi_msghandler nfit acpi_power_meter parport_pc mac_hid drm ppdev lp parport pstore_blk ramoops pstore_zone efi_pstore reed_solomon ip_tables x_tables autofs4 tg3
+[257345.988155]  megaraid_sas i2c_i801 crc32_pclmul ahci xhci_pci libahci xhci_pci_renesas i2c_smbus wmi
+[257345.988164] CPU: 1 PID: 27668 Comm: damo Tainted: G      D           5.15.19-memtis #1
+[257345.988167] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[257345.988169] RIP: 0010:mem_cgroup_update_lru_size+0xe2/0x110
+[257345.988173] Code: 55 d0 e9 6b ff ff ff 45 89 e0 44 89 f1 4c 89 ea 48 c7 c6 60 fd e3 8a 48 c7 c7 a6 12 1f 8b c6 05 21 78 8a 01 01 e8 33 91 91 00 <0f> 0b eb b0 4c 89 fe 48 c7 c7 00 0a 63 8b 48 89 55 d0 e8 77 6f 2f
+[257345.988175] RSP: 0018:ff30e8e5cdf47a40 EFLAGS: 00010086
+[257345.988177] RAX: 0000000000000000 RBX: ff3024624ae53858 RCX: 0000000000000027
+[257345.988178] RDX: 0000000000000027 RSI: ff3024817f820980 RDI: ff3024817f820988
+[257345.988180] RBP: ff30e8e5cdf47a70 R08: 0000000000000000 R09: 0000000000000001
+[257345.988181] R10: 000000005f6d656d R11: 000000005f6d656d R12: fffffffffffffe00
+[257345.988182] R13: ff3024624ae53800 R14: 0000000000000001 R15: 0000000000000000
+[257345.988183] FS:  00007ff5ddbab740(0000) GS:ff3024817f800000(0000) knlGS:0000000000000000
+[257345.988184] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[257345.988186] CR2: 00007ff5c7b60000 CR3: 0000000196b9e001 CR4: 0000000000771ee0
+[257345.988187] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[257345.988188] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[257345.988189] PKRU: 55555554
+[257345.988190] Call Trace:
+[257345.988192]  <TASK>
+[257345.988196]  __page_cache_release+0x17f/0x260
+[257345.988203]  ? percpu_ref_put_many.constprop.91+0x14/0x30
+[257345.988206]  __put_compound_page+0x40/0x60
+[257345.988209]  release_pages+0x1a5/0x4a0
+[257345.988211]  free_pages_and_swap_cache+0x48/0x60
+[257345.988214]  tlb_flush_mmu+0x4c/0x140
+[257345.988219]  unmap_page_range+0xb2e/0xf80
+[257345.988222]  unmap_single_vma+0x7d/0xe0
+[257345.988223]  unmap_vmas+0x90/0xe0
+[257345.988225]  unmap_region+0xb7/0x120
+[257345.988228]  __do_munmap+0x20a/0x530
+[257345.988230]  __vm_munmap+0x7c/0x130
+[257345.988232]  __x64_sys_munmap+0x2c/0x40
+[257345.988235]  do_syscall_64+0x58/0x80
+[257345.988240]  ? asm_exc_page_fault+0x8/0x30
+[257345.988244]  entry_SYSCALL_64_after_hwframe+0x44/0xae
+[257345.988246] RIP: 0033:0x7ff5dde8fb9b
+[257345.988249] Code: 8b 15 f9 32 0d 00 f7 d8 64 89 02 48 c7 c0 ff ff ff ff eb 89 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa b8 0b 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d c5 32 0d 00 f7 d8 64 89 01 48
+[257345.988251] RSP: 002b:00007ffcd8bf39a8 EFLAGS: 00000202 ORIG_RAX: 000000000000000b
+[257345.988253] RAX: ffffffffffffffda RBX: 0000000001035700 RCX: 00007ff5dde8fb9b
+[257345.988254] RDX: 000000000000000f RSI: 000000000cff9000 RDI: 00007ff5c7b62000
+[257345.988255] RBP: 00007ff5dd199712 R08: 00007ff5c7b62000 R09: 0000000000599200
+[257345.988256] R10: 00000000000003b6 R11: 0000000000000202 R12: 00000000010358b0
+[257345.988258] R13: 0000000000f0c1a0 R14: 00000000010358a8 R15: 00007ff5bab69010
+[257345.988259]  </TASK>
+[257345.988260] ---[ end trace 938282e51e400347 ]---

@@ -1,0 +1,31 @@
+[ 1208.083269] pebs disable
+[ 1217.581912] run_bench.sh (6840): drop_caches: 3
+[ 1219.601811] pebs_init
+[ 1219.694350] perf: interrupt took too long (76151 > 2500), lowering kernel.perf_event_max_sample_rate to 2500
+[ 1240.538547] total_accesses: 91789 max_dram_hits: 91783 cur_hits: 91789 
+[ 1261.442298] total_accesses: 105414 max_dram_hits: 105411 cur_hits: 105414 
+[ 1327.353390] total_accesses: 466792 max_dram_hits: 407677 cur_hits: 466792 
+[ 1397.384280] total_accesses: 462003 max_dram_hits: 425936 cur_hits: 462003 
+[ 1468.895027] total_accesses: 543802 max_dram_hits: 516967 cur_hits: 542128 
+[ 1488.730676] total_accesses: 801639 max_dram_hits: 646929 cur_hits: 614285 
+[ 1499.458461] total_accesses: 404295 max_dram_hits: 326580 cur_hits: 310220 
+[ 1537.481730] total_accesses: 464902 max_dram_hits: 396678 cur_hits: 394877 
+[ 1569.049252] total_accesses: 329680 max_dram_hits: 227119 cur_hits: 274466 
+[ 1653.623595] total_accesses: 2164840 max_dram_hits: 1220825 cur_hits: 1752964 
+[ 1678.338920] total_accesses: 3082420 max_dram_hits: 2465291 cur_hits: 2767631 
+[ 1699.382485] total_accesses: 3541210 max_dram_hits: 3188255 cur_hits: 3335743 
+[ 1865.870954] total_accesses: 3770605 max_dram_hits: 3409057 cur_hits: 3390543 
+[ 1879.682619] total_accesses: 3885302 max_dram_hits: 3617848 cur_hits: 3617133 
+[ 1894.433875] perf: interrupt took too long (95205 > 95188), lowering kernel.perf_event_max_sample_rate to 2000
+[ 1911.753818] total_accesses: 3942651 max_dram_hits: 3707259 cur_hits: 3710788 
+[ 1938.777569] total_accesses: 3971325 max_dram_hits: 3777947 cur_hits: 3763180 
+[ 1939.442888] INFO: NMI handler (perf_event_nmi_handler) took too long to run: 1.012 msecs
+[ 1968.652719] total_accesses: 3985662 max_dram_hits: 3803235 cur_hits: 3751169 
+[ 2005.360002] total_accesses: 3992831 max_dram_hits: 3842434 cur_hits: 3811845 
+[ 2043.395373] total_accesses: 3996415 max_dram_hits: 3869591 cur_hits: 3838435 
+[ 2090.114777] total_accesses: 3998207 max_dram_hits: 3894132 cur_hits: 3846997 
+[ 2136.566232] total_accesses: 3999103 max_dram_hits: 3904868 cur_hits: 3854205 
+[ 2203.621524] total_accesses: 3999551 max_dram_hits: 3927454 cur_hits: 3821748 
+[ 2225.214474] nr_sampled: 28065099, nr_throttled: 0, nr_lost: 0
+[ 2225.214487] total runtime: 16971307431 ns, total cputime: 1005628000 us, cpu usage: 16
+[ 2225.214505] pebs disable

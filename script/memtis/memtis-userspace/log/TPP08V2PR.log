@@ -1,0 +1,30 @@
+Preparing benchmark start...
+never
+-----------------------
+202312242351
+-----------------------
+Read Time:           18.89504
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          16.56093
+Trial Time:          16.49673
+Trial Time:          16.50103
+Trial Time:          16.48616
+Trial Time:          16.46886
+Trial Time:          16.55306
+Trial Time:          16.49258
+Trial Time:          16.49638
+Trial Time:          16.47671
+Trial Time:          16.49498
+Trial Time:          16.49435
+Trial Time:          16.49790
+Trial Time:          16.50285
+Trial Time:          16.48221
+Trial Time:          16.52888
+Trial Time:          16.49525
+Trial Time:          16.52754
+Trial Time:          16.50672
+Trial Time:          16.49537
+Trial Time:          16.49771
+Average Time:        16.50281
+execution time 349.73 (s)
+./run_bench.sh: line 39:  5942 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}

@@ -1,0 +1,43 @@
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+2
+100000
+2000000
+2
+500
+500
+4
+30
+1
+0
+disabled
+always
+always
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:32
+202312181941
+-----------------------
++memory
++cpuset
+9198
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 2090MB
+invalid node id: 0
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18684884  1165046604       52880      491764  1162495460
+Swap:       2097148           0     2097148
+Total threads used: 20
+iter   1  #CD cycles 1
+iter   2  #CD cycles 1
+iter   3  #CD cycles 1
+iter   4  #CD cycles 1
+iter   5  #CD cycles 3
++memory
++cpuset
+9198
+disabled

@@ -1,0 +1,27 @@
+--- include/trace/events/migrate.h
++++ include/trace/events/migrate.h
+@@ -109,6 +109,24 @@ TRACE_EVENT(mm_migrate_pages_start,
+ 		  __print_symbolic(__entry->reason, MIGRATE_REASON))
+ );
+ 
++TRACE_EVENT(mm_migrate_page_each,
++
++	TP_PROTO(struct folio *folio),
++
++	TP_ARGS(folio),
++
++	TP_STRUCT__entry(
++		__field(struct folio *, folio)
++	),
++
++	TP_fast_assign(
++		__entry->folio	= folio;
++	),
++
++	TP_printk("folio=0x%lx", (unsigned long)__entry->folio)
++);
++
++
+ DECLARE_EVENT_CLASS(migration_pte,
+ 
+ 		TP_PROTO(unsigned long addr, unsigned long pte, int order),

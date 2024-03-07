@@ -1,0 +1,82 @@
+pgmigrate_success 64339582
+pgmigrate_fail 1
+thp_migration_success 104165
+thp_migration_fail 0
+thp_migration_split 0
+thp_fault_alloc 71622
+thp_fault_fallback 0
+thp_fault_fallback_charge 0
+thp_collapse_alloc 18
+thp_collapse_alloc_failed 0
+thp_file_alloc 0
+thp_file_fallback 0
+thp_file_fallback_charge 0
+thp_file_mapped 0
+thp_split_page 0
+thp_split_page_failed 0
+thp_deferred_split_page 10
+thp_split_pmd 44
+thp_split_pud 0
+thp_zero_page_alloc 0
+thp_zero_page_alloc_failed 0
+thp_swpout 0
+thp_swpout_fallback 0
+htmm_nr_promoted 13546944
+htmm_nr_demoted 50786473
+htmm_nr_sampled 0
+htmm_missed_dramread 0
+htmm_missed_nvmread 0
+htmm_missed_write 0
+htmm_alloc_dram 32725738
+htmm_alloc_nvm 5117834
+MemTotal:       1184218252 kB
+MemFree:        1142727372 kB
+MemAvailable:   1161472064 kB
+Buffers:           73000 kB
+Cached:         22545484 kB
+SwapCached:            0 kB
+Active:           207732 kB
+Inactive:       23375984 kB
+Active(anon):        536 kB
+Inactive(anon):   975760 kB
+Active(file):     207196 kB
+Inactive(file): 22400224 kB
+Unevictable:        3192 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               140 kB
+Writeback:             0 kB
+AnonPages:        963136 kB
+Mapped:           386668 kB
+Shmem:             10952 kB
+KReclaimable:     459884 kB
+Slab:             717264 kB
+SReclaimable:     459884 kB
+SUnreclaim:       257380 kB
+KernelStack:       16656 kB
+PageTables:        22288 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    592109124 kB
+Committed_AS:    4796220 kB
+VmallocTotal:   13743895347199 kB
+VmallocUsed:      162304 kB
+VmallocChunk:          0 kB
+Percpu:            64320 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     16384 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      658916 kB
+DirectMap2M:     6119424 kB
+DirectMap1G:    1181745152 kB

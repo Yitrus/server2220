@@ -1,0 +1,1313 @@
+[ 1423.987606] pebs disable
+[ 1423.987615] BUG: kernel NULL pointer dereference, address: 0000000000000000
+[ 1423.987622] #PF: supervisor read access in kernel mode
+[ 1423.987627] #PF: error_code(0x0000) - not-present page
+[ 1423.987629] PGD 10c589b067 P4D 0 
+[ 1423.987636] Oops: 0000 [#1] SMP NOPTI
+[ 1423.987641] CPU: 29 PID: 4910 Comm: kill_ksampled Not tainted 5.15.19-memtis #1
+[ 1423.987647] Hardware name: Dell Inc. PowerEdge R750/0WT8Y6, BIOS 1.5.4 12/17/2021
+[ 1423.987650] RIP: 0010:ksamplingd_exit.cold.6+0x18/0x46
+[ 1423.987664] Code: 86 22 47 ff 48 89 1d 07 b8 4f 01 31 c0 e9 60 ff ff ff 48 c7 c7 6b 2e df 8d 31 db e8 6f 8f fe ff 45 31 e4 48 8b 05 e0 b7 4f 01 <48> 8b 04 18 4a 8b 3c 20 48 85 ff 74 05 e8 3e 09 5f ff 49 83 c4 08
+[ 1423.987670] RSP: 0018:ff4b0295c739be10 EFLAGS: 00010246
+[ 1423.987674] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[ 1423.987678] RDX: 0000000000000000 RSI: ff157c1c3fba0980 RDI: ff157c1c3fba0980
+[ 1423.987680] RBP: ff4b0295c739be20 R08: 0000000000000000 R09: 0000000000000001
+[ 1423.987683] R10: ff157c1c3f7ad370 R11: 000000000000000e R12: 0000000000000000
+[ 1423.987685] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+[ 1423.987688] FS:  00007f29621f9540(0000) GS:ff157c1c3fb80000(0000) knlGS:0000000000000000
+[ 1423.987692] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 1423.987695] CR2: 0000000000000000 CR3: 000000109d4da001 CR4: 0000000000771ee0
+[ 1423.987698] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[ 1423.987700] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[ 1423.987703] PKRU: 55555554
+[ 1423.987705] Call Trace:
+[ 1423.987709]  <TASK>
+[ 1423.987715]  __x64_sys_htmm_end+0x9/0x10
+[ 1423.987724]  do_syscall_64+0x58/0x80
+[ 1423.987734]  ? handle_mm_fault+0xd8/0x2b0
+[ 1423.987743]  ? do_user_addr_fault+0x1e3/0x640
+[ 1423.987754]  ? exit_to_user_mode_prepare+0x32/0x1c0
+[ 1423.987765]  ? irqentry_exit_to_user_mode+0x9/0x20
+[ 1423.987770]  ? irqentry_exit+0x19/0x30
+[ 1423.987774]  ? exc_page_fault+0x90/0x160
+[ 1423.987777]  ? asm_exc_page_fault+0x8/0x30
+[ 1423.987784]  entry_SYSCALL_64_after_hwframe+0x44/0xae
+[ 1423.987789] RIP: 0033:0x7f296211e95d
+[ 1423.987794] Code: 00 c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 03 35 0d 00 f7 d8 64 89 01 48
+[ 1423.987798] RSP: 002b:00007ffe8c8550b8 EFLAGS: 00000246 ORIG_RAX: 00000000000001c2
+[ 1423.987803] RAX: ffffffffffffffda RBX: 000055dd2e375350 RCX: 00007f296211e95d
+[ 1423.987806] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 00000000ffffffff
+[ 1423.987808] RBP: 0000000000000000 R08: 0000000000000020 R09: 0000000000000000
+[ 1423.987811] R10: 0000000000000000 R11: 0000000000000246 R12: 000055dd2e375220
+[ 1423.987813] R13: 00007ffe8c8551d0 R14: 0000000000000000 R15: 0000000000000000
+[ 1423.987818]  </TASK>
+[ 1423.987820] Modules linked in: intel_uncore_frequency kmem intel_rapl_msr intel_rapl_common device_dax dax_pmem nd_pmem dax_pmem_core i10nm_edac xt_MASQUERADE xt_mark nf_tables nfnetlink ip6table_nat ip6table_filter ip6_tables iptable_nat nf_nat nf_conntrack nf_defrag_ipv6 nf_defrag_ipv4 libcrc32c iptable_filter bpfilter nls_iso8859_1 x86_pkg_temp_thermal intel_powerclamp coretemp kvm_intel ipmi_ssif sch_fq_codel kvm crct10dif_pclmul ghash_clmulni_intel aesni_intel crypto_simd cryptd binfmt_misc mgag200 rapl drm_kms_helper cec acpi_ipmi rc_core ipmi_si ioatdma i2c_algo_bit mei_me fb_sys_fops dell_smbios syscopyarea ipmi_devintf sysfillrect isst_if_mbox_pci isst_if_mmio msr dcdbas wmi_bmof dell_wmi_descriptor mei intel_cstate sysimgblt isst_if_common intel_pch_thermal dca ipmi_msghandler nfit acpi_power_meter mac_hid parport_pc ppdev drm lp parport pstore_blk ramoops pstore_zone reed_solomon efi_pstore ip_tables x_tables autofs4 tg3 megaraid_sas crc32_pclmul i2c_i801 i2c_smbus wmi ahci
+[ 1423.987924]  xhci_pci libahci xhci_pci_renesas
+[ 1423.987934] CR2: 0000000000000000
+[ 1423.987938] ---[ end trace 2096a562cbbd5e93 ]---
+[ 1424.023014] RIP: 0010:ksamplingd_exit.cold.6+0x18/0x46
+[ 1424.023018] Code: 86 22 47 ff 48 89 1d 07 b8 4f 01 31 c0 e9 60 ff ff ff 48 c7 c7 6b 2e df 8d 31 db e8 6f 8f fe ff 45 31 e4 48 8b 05 e0 b7 4f 01 <48> 8b 04 18 4a 8b 3c 20 48 85 ff 74 05 e8 3e 09 5f ff 49 83 c4 08
+[ 1424.023020] RSP: 0018:ff4b0295c739be10 EFLAGS: 00010246
+[ 1424.023022] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
+[ 1424.023023] RDX: 0000000000000000 RSI: ff157c1c3fba0980 RDI: ff157c1c3fba0980
+[ 1424.023024] RBP: ff4b0295c739be20 R08: 0000000000000000 R09: 0000000000000001
+[ 1424.023025] R10: ff157c1c3f7ad370 R11: 000000000000000e R12: 0000000000000000
+[ 1424.023026] R13: 0000000000000000 R14: 0000000000000000 R15: 0000000000000000
+[ 1424.023027] FS:  00007f29621f9540(0000) GS:ff157c1c3fb80000(0000) knlGS:0000000000000000
+[ 1424.023028] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 1424.023029] CR2: 0000000000000000 CR3: 000000109d4da001 CR4: 0000000000771ee0
+[ 1424.023031] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+[ 1424.023031] DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+[ 1424.023032] PKRU: 55555554
+[ 1495.737353] Built 2 zonelists, mobility grouping on.  Total pages: 32775403
+[ 1495.737367] Policy zone: Normal
+[ 1496.759143] Built 3 zonelists, mobility grouping on.  Total pages: 33299691
+[ 1496.759149] Policy zone: Normal
+[ 1507.009205] Built 3 zonelists, mobility grouping on.  Total pages: 164104994
+[ 1507.009220] Policy zone: Normal
+[ 1508.391973] Built 4 zonelists, mobility grouping on.  Total pages: 164629282
+[ 1508.391980] Policy zone: Normal
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+./scripts/run_bench.sh: line 98:  5491 Killed                  ${DIR}/bin/kill_ksampled
+-----------------------
+NVM RATIO: 1:32
+202312211309
+-----------------------
++memory
++cpuset
+5445
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 1986MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+2082471936
+the size be limited
+2082471936
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18531520  1164761932       21860      929800  1162444588
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     1285.182 seconds
+Lookups:     1,020,000,000
+Lookups/s:   793,661
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 5586
+execution time 1350.28 (s)
+./scripts/run_bench.sh: line 98:  5580 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+5445
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:16
+202312211332
+-----------------------
+rmdir: failed to remove '/sys/fs/cgroup/htmm': Device or resource busy
++memory
++cpuset
+7852
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 3850MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+4037017600
+the size be limited
+4037017600
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18310040  1165034112       21972      879100  1162691596
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     351.334 seconds
+Lookups:     1,020,000,000
+Lookups/s:   2,903,217
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 7958
+execution time 454.13 (s)
+./scripts/run_bench.sh: line 98:  7952 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+7852
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:8
+202312211341
+-----------------------
++memory
++cpuset
+9031
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 7200MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+7549747200
+the size be limited
+7549747200
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18305064  1165317680       21980      600508  1162835652
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     1146.294 seconds
+Lookups:     1,020,000,000
+Lookups/s:   889,824
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 9132
+execution time 1248.44 (s)
+./scripts/run_bench.sh: line 98:  9126 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+9031
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:4
+202312211402
+-----------------------
+rmdir: failed to remove '/sys/fs/cgroup/htmm': Device or resource busy
++memory
++cpuset
+11209
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 13107MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+13743685632
+the size be limited
+13743685632
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18229508  1165431720       21972      562024  1162930456
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     350.866 seconds
+Lookups:     1,020,000,000
+Lookups/s:   2,907,088
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 11300
+execution time 443.39 (s)
+./scripts/run_bench.sh: line 98: 11294 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+11209
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:2
+202312211410
+-----------------------
++memory
++cpuset
+12064
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 21800MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+22858956800
+the size be limited
+22858956800
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18235100  1165437696       21972      550456  1162930888
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     370.542 seconds
+Lookups:     1,020,000,000
+Lookups/s:   2,752,721
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 12168
+execution time 434.64 (s)
+./scripts/run_bench.sh: line 98: 12162 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+12064
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:1
+202312211418
+-----------------------
++memory
++cpuset
+12923
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 32768MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+34359738368
+the size be limited
+34359738368
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18248620  1165424136       21972      550496  1162917104
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     1259.167 seconds
+Lookups:     1,020,000,000
+Lookups/s:   810,059
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 13017
+execution time 1324.99 (s)
+./scripts/run_bench.sh: line 98: 13011 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+12923
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 2:1
+202312211441
+-----------------------
++memory
++cpuset
+15546
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 43691MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+45813334016
+the size be limited
+45813334016
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18270296  1165396064       21972      556892  1162892464
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     431.229 seconds
+Lookups:     1,020,000,000
+Lookups/s:   2,365,330
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 15651
+execution time 502.83 (s)
+./scripts/run_bench.sh: line 98: 15645 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+15546
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 4:1
+202312211450
+-----------------------
++memory
++cpuset
+16526
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 52429MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+54975791104
+the size be limited
+54975791104
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18252156  1165422704       21968      548392  1162914596
+Swap:       2097148           0     2097148
+================================================================================
+                   __   __ ___________                 _                        
+                   \ \ / //  ___| ___ \               | |                       
+                    \ V / \ `--.| |_/ / ___ _ __   ___| |__                     
+                    /   \  `--. \ ___ \/ _ \ '_ \ / __| '_ \                    
+                   / /^\ \/\__/ / |_/ /  __/ | | | (__| | | |                   
+                   \/   \/\____/\____/ \___|_| |_|\___|_| |_|                   
+
+================================================================================
+                    Developed at Argonne National Laboratory
+                                   Version: 20
+================================================================================
+                                  INPUT SUMMARY
+================================================================================
+Simulation Method:            History Based
+Grid Type:                    Unionized Grid
+Materials:                    12
+H-M Benchmark Size:           large
+Total Nuclides:               355
+Gridpoints (per Nuclide):     130,000
+Unionized Energy Gridpoints:  46,150,000
+Particle Histories:           30,000,000
+XS Lookups per Particle:      34
+Total XS Lookups:             34
+Threads:                      20
+Est. Memory Usage (MB):       64,962
+Binary File Mode:             Off
+================================================================================
+                         INITIALIZATION - DO NOT PROFILE
+================================================================================
+Intializing nuclide grids...
+Intializing unionized grid...
+Intializing material data...
+Intialization complete. Allocated 64962 MB of data.
+
+================================================================================
+                                   SIMULATION
+================================================================================
+Beginning history based simulation...
+
+Simulation complete.
+================================================================================
+                                     RESULTS
+================================================================================
+Threads:     20
+Runtime:     351.710 seconds
+Lookups:     1,020,000,000
+Lookups/s:   2,900,117
+Verification checksum: 888408 (WARNING - INVALID CHECKSUM!)
+================================================================================
+pid: 16628
+execution time 417.67 (s)
+./scripts/run_bench.sh: line 98: 16622 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+16526
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:32
+202312211457
+-----------------------
++memory
++cpuset
+17346
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 734MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+769654784
+the size be limited
+769654784
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18225824  1165593824       21968      403604  1163013592
+Swap:       2097148           0     2097148
+Read Time:           23.06118
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          84.58943
+Trial Time:          84.49643
+Trial Time:          84.38918
+Trial Time:          84.53849
+Trial Time:          84.46780
+Trial Time:          84.81007
+Trial Time:          84.55497
+Trial Time:          84.55694
+Trial Time:          84.57653
+Trial Time:          84.60046
+Trial Time:          84.63853
+Trial Time:          84.55406
+Trial Time:          84.55396
+Trial Time:          84.63583
+Trial Time:          84.51452
+Trial Time:          84.57929
+Trial Time:          84.60731
+Trial Time:          84.51842
+Trial Time:          84.57189
+Trial Time:          84.52105
+Average Time:        84.56376
+pid: 17452
+execution time 1715.07 (s)
+./scripts/run_bench.sh: line 98: 17446 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+17346
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:16
+202312211526
+-----------------------
++memory
++cpuset
+20555
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 1424MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+1493172224
+the size be limited
+1493172224
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18242272  1165569416       21968      411564  1162992908
+Swap:       2097148           0     2097148
+Read Time:           22.12553
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          87.69392
+Trial Time:          42.60205
+Trial Time:          16.83199
+Trial Time:          16.37714
+Trial Time:          16.38335
+Trial Time:          16.24756
+Trial Time:          16.12819
+Trial Time:          16.21704
+Trial Time:          16.14008
+Trial Time:          16.17348
+Trial Time:          16.13277
+Trial Time:          16.23386
+Trial Time:          16.22003
+Trial Time:          16.10482
+Trial Time:          16.13918
+Trial Time:          16.10778
+Trial Time:          16.17031
+Trial Time:          16.10216
+Trial Time:          16.36328
+Trial Time:          16.41536
+Average Time:        21.13922
+pid: 20658
+execution time 445.64 (s)
+./scripts/run_bench.sh: line 98: 20652 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+20555
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:8
+202312211534
+-----------------------
++memory
++cpuset
+21418
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 2690MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+2820669440
+the size be limited
+2820669440
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18264096  1165548596       21968      410560  1162971600
+Swap:       2097148           0     2097148
+Read Time:           22.57348
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          81.27928
+Trial Time:          28.35706
+Trial Time:          16.43749
+Trial Time:          16.69538
+Trial Time:          16.13747
+Trial Time:          16.06280
+Trial Time:          15.96726
+Trial Time:          15.94561
+Trial Time:          16.06588
+Trial Time:          15.94332
+Trial Time:          15.77071
+Trial Time:          15.78261
+Trial Time:          15.74008
+Trial Time:          15.84858
+Trial Time:          15.66527
+Trial Time:          15.62413
+Trial Time:          15.62158
+Trial Time:          15.64043
+Trial Time:          15.64462
+Trial Time:          15.53636
+Average Time:        19.78830
+pid: 21517
+execution time 419.05 (s)
+./scripts/run_bench.sh: line 98: 21511 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+21418
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:4
+202312211542
+-----------------------
++memory
++cpuset
+22240
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 4842MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+5077204992
+the size be limited
+5077204992
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18258524  1165556536       21968      408192  1162978316
+Swap:       2097148           0     2097148
+Read Time:           22.52683
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          95.08644
+Trial Time:          23.44145
+Trial Time:          17.47495
+Trial Time:          16.40271
+Trial Time:          16.38352
+Trial Time:          16.25319
+Trial Time:          16.13874
+Trial Time:          16.58693
+Trial Time:          15.78839
+Trial Time:          15.75141
+Trial Time:          15.64475
+Trial Time:          15.67206
+Trial Time:          15.88542
+Trial Time:          15.80501
+Trial Time:          15.72194
+Trial Time:          15.65554
+Trial Time:          15.59152
+Trial Time:          15.92822
+Trial Time:          31.28901
+Trial Time:          15.58203
+Average Time:        21.10416
+pid: 22335
+execution time 445.30 (s)
+./scripts/run_bench.sh: line 98: 22329 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+22240
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:2
+202312211550
+-----------------------
++memory
++cpuset
+23091
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 8070MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+8462008320
+the size be limited
+8462008320
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18272492  1165541236       21968      409524  1162964172
+Swap:       2097148           0     2097148
+Read Time:           22.28056
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          19.18437
+Trial Time:          16.25913
+Trial Time:          26.87147
+Trial Time:          17.08689
+Trial Time:          15.45059
+Trial Time:          15.66150
+Trial Time:          15.53436
+Trial Time:          15.51863
+Trial Time:          15.66229
+Trial Time:          15.57154
+Trial Time:          15.56173
+Trial Time:          15.51954
+Trial Time:          15.55056
+Trial Time:          15.50062
+Trial Time:          15.76022
+Trial Time:          15.74211
+Trial Time:          15.59709
+Trial Time:          15.57526
+Trial Time:          15.63839
+Trial Time:          15.60540
+Average Time:        16.44259
+pid: 23198
+execution time 351.92 (s)
+./scripts/run_bench.sh: line 98: 23192 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+23091
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 1:1
+202312211556
+-----------------------
+rmdir: failed to remove '/sys/fs/cgroup/htmm': Device or resource busy
++memory
++cpuset
+24646
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 12105MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+12693012480
+the size be limited
+12693012480
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18616528  1164812800       21976      793924  1162427712
+Swap:       2097148           0     2097148
+Read Time:           22.56597
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          85.96264
+Trial Time:          18.79817
+Trial Time:          18.87854
+Trial Time:          18.81510
+Trial Time:          18.92143
+Trial Time:          18.93330
+Trial Time:          18.72927
+Trial Time:          18.89082
+Trial Time:          18.33336
+Trial Time:          18.28732
+Trial Time:          18.31557
+Trial Time:          18.34001
+Trial Time:          18.39170
+Trial Time:          18.15980
+Trial Time:          18.39969
+Trial Time:          18.43884
+Trial Time:          18.26762
+Trial Time:          18.34216
+Trial Time:          18.45093
+Trial Time:          18.25926
+Average Time:        21.89578
+pid: 24841
+execution time 461.31 (s)
+./scripts/run_bench.sh: line 98: 24835 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+24646
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 2:1
+202312211605
+-----------------------
++memory
++cpuset
+26089
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 16133MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+16916676608
+the size be limited
+16916676608
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18307372  1165239200       21968      676680  1162795496
+Swap:       2097148           0     2097148
+Read Time:           21.73537
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          26.24297
+Trial Time:          15.56655
+Trial Time:          15.45976
+Trial Time:          15.52565
+Trial Time:          15.45756
+Trial Time:          15.49139
+Trial Time:          15.50093
+Trial Time:          15.47632
+Trial Time:          15.43608
+Trial Time:          15.43180
+Trial Time:          15.49363
+Trial Time:          15.42637
+Trial Time:          15.45499
+Trial Time:          15.44788
+Trial Time:          15.44407
+Trial Time:          15.48822
+Trial Time:          15.47730
+Trial Time:          15.39470
+Trial Time:          15.42356
+Trial Time:          15.42376
+Average Time:        16.00317
+pid: 26193
+execution time 342.47 (s)
+./scripts/run_bench.sh: line 98: 26187 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+26089
+disabled
+Preparing benchmark start...
+kernel.perf_event_max_sample_rate = 100000
+199
+100007
+1
+100000
+2000000
+2
+500
+500
+4
+30
+0
+disabled
+never
+Usage ./launch_bench [BENCHMARK]-----------------------
+NVM RATIO: 4:1
+202312211611
+-----------------------
++memory
++cpuset
+26789
+enabled
+要限制的NUMA node 0
+使用的cgroup目录 htmm
+设置的限制大小 19360MB
+____________________________________________fine now set cgroup mem for node 0________________________________
+20300431360
+the size be limited
+20300431360
+set cgroup sleep 30 sec
+              total        used        free      shared  buff/cache   available
+Mem:     1184223252    18314524  1165496212       21968      412516  1162920668
+Swap:       2097148           0     2097148
+Read Time:           21.88280
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+Trial Time:          23.69700
+Trial Time:          15.62683
+Trial Time:          15.52411
+Trial Time:          15.53533
+Trial Time:          15.46914
+Trial Time:          15.54846
+Trial Time:          15.57464
+Trial Time:          15.44170
+Trial Time:          15.48182
+Trial Time:          15.53469
+Trial Time:          15.51103
+Trial Time:          15.46636
+Trial Time:          15.48437
+Trial Time:          15.48505
+Trial Time:          15.47916
+Trial Time:          15.50513
+Trial Time:          15.45892
+Trial Time:          15.47949
+Trial Time:          15.43035
+Trial Time:          15.43944
+Average Time:        15.90865
+pid: 26895
+execution time 340.65 (s)
+./scripts/run_bench.sh: line 98: 26889 Killed                  ${DIR}/scripts/memory_stat.sh ${LOG_DIR}
++memory
++cpuset
+26789
+disabled

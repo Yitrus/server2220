@@ -1,0 +1,26 @@
+[ 4505.474053] pebs disable
+[ 4513.693960] run_bench.sh (8732): drop_caches: 3
+[ 4515.720016] pebs_init
+[ 4515.914749] perf: interrupt took too long (2919 > 2500), lowering kernel.perf_event_max_sample_rate to 68500
+[ 4516.155796] perf: interrupt took too long (4093 > 3648), lowering kernel.perf_event_max_sample_rate to 48750
+[ 4516.398903] perf: interrupt took too long (5265 > 5116), lowering kernel.perf_event_max_sample_rate to 37750
+[ 4516.696448] perf: interrupt took too long (6631 > 6581), lowering kernel.perf_event_max_sample_rate to 30000
+[ 4517.010399] perf: interrupt took too long (8442 > 8288), lowering kernel.perf_event_max_sample_rate to 23500
+[ 4517.358589] perf: interrupt took too long (10608 > 10552), lowering kernel.perf_event_max_sample_rate to 18750
+[ 4517.810451] perf: interrupt took too long (13435 > 13260), lowering kernel.perf_event_max_sample_rate to 14750
+[ 4518.445795] perf: interrupt took too long (17013 > 16793), lowering kernel.perf_event_max_sample_rate to 11750
+[ 4519.470488] perf: interrupt took too long (21281 > 21266), lowering kernel.perf_event_max_sample_rate to 9250
+[ 4520.910882] perf: interrupt took too long (26756 > 26601), lowering kernel.perf_event_max_sample_rate to 7250
+[ 4523.056370] perf: interrupt took too long (33486 > 33445), lowering kernel.perf_event_max_sample_rate to 5750
+[ 4523.631094] perf: interrupt took too long (42011 > 41857), lowering kernel.perf_event_max_sample_rate to 4750
+[ 4523.799397] perf: interrupt took too long (52664 > 52513), lowering kernel.perf_event_max_sample_rate to 3750
+[ 4530.774047] total_accesses: 167845 max_dram_hits: 45022 cur_hits: 167845 
+[ 4540.561900] total_accesses: 112733 max_dram_hits: 33720 cur_hits: 106120 
+[ 4553.773675] total_accesses: 77581 max_dram_hits: 17559 cur_hits: 61418 
+[ 4566.589465] total_accesses: 64589 max_dram_hits: 18892 cur_hits: 40822 
+[ 4590.789104] total_accesses: 37215 max_dram_hits: 11569 cur_hits: 24284 
+[ 4595.092489] perf: interrupt took too long (66015 > 65830), lowering kernel.perf_event_max_sample_rate to 3000
+[ 4595.467289] perf: interrupt took too long (82600 > 82518), lowering kernel.perf_event_max_sample_rate to 2250
+[ 4876.435009] nr_sampled: 962693, nr_throttled: 0, nr_lost: 0
+[ 4876.435022] total runtime: 2511976274 ns, total cputime: 360716000 us, cpu usage: 6
+[ 4876.435042] pebs disable

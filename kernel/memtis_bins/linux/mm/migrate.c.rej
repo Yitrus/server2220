@@ -1,0 +1,10 @@
+--- mm/migrate.c
++++ mm/migrate.c
+@@ -1934,6 +1934,7 @@ int migrate_pages(struct list_head *from, new_folio_t get_new_folio,
+ 		}
+ 
+ 		nr_pages += folio_nr_pages(folio);
++		trace_mm_migrate_page_each(folio);
+ 		if (nr_pages >= NR_MAX_BATCHED_MIGRATION)
+ 			break;
+ 	}

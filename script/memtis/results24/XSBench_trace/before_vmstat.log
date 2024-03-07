@@ -1,0 +1,84 @@
+pgmigrate_success 55330008
+pgmigrate_fail 4
+thp_migration_success 106972
+thp_migration_fail 0
+thp_migration_split 0
+thp_fault_alloc 66625
+thp_fault_fallback 0
+thp_fault_fallback_charge 0
+thp_collapse_alloc 879
+thp_collapse_alloc_failed 0
+thp_file_alloc 0
+thp_file_fallback 0
+thp_file_fallback_charge 0
+thp_file_mapped 0
+thp_split_page 0
+thp_split_page_failed 0
+thp_deferred_split_page 13
+thp_split_pmd 40
+thp_split_pud 0
+thp_zero_page_alloc 1
+thp_zero_page_alloc_failed 0
+thp_swpout 0
+thp_swpout_fallback 0
+htmm_nr_promoted 21798173
+htmm_nr_demoted 32978491
+htmm_nr_sampled 0
+htmm_missed_dramread 0
+htmm_missed_nvmread 0
+htmm_missed_write 0
+htmm_alloc_dram 25628523
+htmm_alloc_nvm 15095780
+MemTotal:       1184226820 kB
+MemFree:        1146346224 kB
+MemAvailable:   1145035148 kB
+Buffers:           10096 kB
+Cached:          2378204 kB
+SwapCached:            0 kB
+Active:           238140 kB
+Inactive:       19675056 kB
+Active(anon):        512 kB
+Inactive(anon): 17497856 kB
+Active(file):     237628 kB
+Inactive(file):  2177200 kB
+Unevictable:        3264 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                32 kB
+Writeback:             0 kB
+AnonPages:      17520988 kB
+Mapped:           405500 kB
+Shmem:              9164 kB
+KReclaimable:     505256 kB
+Slab:             741184 kB
+SReclaimable:     505256 kB
+SUnreclaim:       235928 kB
+KernelStack:       17088 kB
+PageTables:        54952 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    592113408 kB
+Committed_AS:   21335416 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      159884 kB
+VmallocChunk:          0 kB
+Percpu:            61632 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1773568 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      490980 kB
+DirectMap2M:     6287360 kB
+DirectMap1G:    1181745152 kB
